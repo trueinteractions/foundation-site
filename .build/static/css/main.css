@@ -1,0 +1,15 @@
+.hero {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.hero-cta-buttons {
+  margin-top: 300px;
+}
+
+.hero-social-buttons-container {
+  text-align: center;
+  width: 100%;
+}
