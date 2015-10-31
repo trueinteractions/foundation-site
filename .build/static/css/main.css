@@ -1,7 +1,7 @@
 .hero {
+  top: 0;
   width: 100%;
-  min-height: 500px;
-  border: 1px solid black;
+  min-height: 200px;
   text-align: center;
 }
 
@@ -12,4 +12,18 @@
 .hero-social-buttons-container {
   text-align: center;
   width: 100%;
+  padding: 0.5rem 0 0.5rem 0;
+  background-color: #FFE5C6;
+  vertical-align: middle;
+}
+
+.why-use {
+  padding: 2rem 0 2rem 0;
+  width: 100%;
+  background-color: #cfffff;
+}
+
+.what-can-you-do {
+  padding: 1rem 0 0 0;
+  background-color: #ffc0cb; 
 }
