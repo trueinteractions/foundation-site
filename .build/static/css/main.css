@@ -24,6 +24,24 @@
 }
 
 .what-can-you-do {
-  padding: 1rem 0 0 0;
+  padding: 1rem 0 1rem 0;
   background-color: #ffc0cb; 
+}
+
+.industry-tabs {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.how-to-use {
+  width: 100%; 
+  padding: 1rem 0 1rem 0;
+  background-color: #e6e6fa;
+}
+
+.get-started {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  background-color: #dfffd3;
 }
