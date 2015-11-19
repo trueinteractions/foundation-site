@@ -10,6 +10,15 @@
 	text-align: center;
 }
 
+.hero-icons {
+	margin: 0 0.5rem 0 2rem;
+	height: 25px;
+}
+
+.hero-github-icon {
+	background-image: url('static/images/github.png')
+}
+
 .hero-headline {
 	margin-top: 200px;
 }
@@ -85,6 +94,15 @@
 
 .recommended .title {
 	font-size: 1.5rem;
+}
+
+.panel-transparent.min-height {
+	min-height: 17rem;
+}
+
+.panel-transparent {
+	padding: 1.25rem;
+	color: #333;
 }
 
 @media only screen and (min-width: 768px){
