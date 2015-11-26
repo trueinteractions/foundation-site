@@ -58,7 +58,6 @@
 
 .tabs .tab-title>a {
 	background-color: transparent;
-	border-radius: 5px;
 	transition: background .20s ease-in-out;
 	-moz-transition: background .20s ease-in-out;
 	-webkit-transition: background .20s ease-in-out;
@@ -66,7 +65,6 @@
 
 .tabs .tab-title>a:hover {
 	background-color: #fff;
-	border-radius: 5px;
 	transition: background .20s ease-in-out;
 	-moz-transition: background .20s ease-in-out;
 	-webkit-transition: background .20s ease-in-out;
