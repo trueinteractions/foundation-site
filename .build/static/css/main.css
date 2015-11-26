@@ -1,3 +1,6 @@
+// Colors:
+// red: #d84416
+
 .top-bar-section {
 	background-color: #fff;
 	color: #000;
@@ -35,19 +38,31 @@
 	text-align: center;
 	width: 100%;
 	padding: 0.5rem 0 0.5rem 0;
-	background-color: #FFE5C6;
+	background-color: #3f3f3c;
 	vertical-align: middle;
+}
+
+.hero-social-buttons-container a {
+	color: rgba(244, 232, 211, 0.9);
+}
+
+.fa.fa-lg.fa-github-alt {
+	margin: 0 0.5rem 0 1.5rem;
+}
+
+.fa.fa-lg.fa-twitter {
+	margin: 0 0.5rem 0 1.5rem;
 }
 
 .why-use {
 	padding: 2rem 0 2rem 0;
 	width: 100%;
-	background-color: #cfffff;
+	background-color: rgba(244,232,211,0.25);
 }
 
 .what-can-you-do {
 	padding: 1rem 0 1rem 0;
-	background-color: #ffc0cb;
+	background-color: rgba(244,232,211,0.25);
 }
 
 .industry-tabs {
@@ -64,34 +79,56 @@
 }
 
 .tabs .tab-title>a:hover {
-	background-color: #fff;
+	background-color: rgba(63, 63, 60, 0.4);
 	transition: background .20s ease-in-out;
 	-moz-transition: background .20s ease-in-out;
 	-webkit-transition: background .20s ease-in-out;
 }
 
+.tabs .tab-title.active>a {
+	color: white;
+	background-color: #3f3f3c;
+}
+
 .how-to-use {
 	width: 100%;
 	padding: 1rem 0 1rem 0;
-	background-color: #e6e6fa;
+	background-color: #3f3f3c;
+}
+
+.how-to-use h3 {
+	color: white;
 }
 
 .get-started {
 	width: 100%;
 	padding: 1rem 0 0 0;
-	background-color: #dfffd3;
+	background-color: #3f3f3c;
+}
+
+.get-started h3 {
+	color: white;
+	margin-bottom: 1rem;
 }
 
 .who-is-using {
 	width: 100%;
-	padding: 1rem 0 0 0;
-	background-color: #f3d3ff;
+	padding: 4rem 0 0 0;
+	background-color: rgba(244,232,211,0.25);
 }
 
 .product-matrix-section {
 	width:100%;
 	padding: 1rem 0 1rem 0;
-	background-color: #d3f5ff;
+	background-color: rgba(244,232,211,0.25);
+}
+
+.left-shadow {
+	box-shadow: -1px 1px 5px rgba(128, 128, 128, 0.26);
+}
+
+.right-shadow {
+	box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.26);
 }
 
 .pricing-table {

@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
 {% include 'top-nav.html' %}
 
 <section class="hero">
@@ -30,9 +28,9 @@
 <section class="hero-social-buttons-container">
 	<a href="https://github.com/trueinteractions/tint2/releases" class=""><b>Latest Release:</b> 2.2.2 </a>
 	<a href="https://github.com/trueinteractions/tint2">
-		<img class="hero-icons" src="static/images/github.png" /><b>1.6k Stars</b> on Github</a>
+		<i class="fa fa-lg fa-github-alt"></i><b>1.6k Stars</b> on Github</a>
 	<a href="https://twitter.com/tintjs">
-		<img src="static/images/twitter.png" class="hero-icons"/><b>@tintjs</b> on Twitter
+		<i class="fa fa-lg fa-twitter"></i><b>@tintjs</b> on Twitter
 	</a>
 </section>
 
@@ -219,7 +217,7 @@
 <section class="product-matrix-section" id="pricing">
 	<h2 class="text-center">Single Developer</h2>
 	<div class="row collapse">
-		<div class="large-4 columns">
+		<div class="large-4 columns left-shadow">
 			<ul class="pricing-table left-side">
 				<li class="title">Educational</li>
 				<li class="price">$99</li>
@@ -245,7 +243,7 @@
 			</ul>
 		</div>
 
-		<div class="large-4 columns">
+		<div class="large-4 columns right-shadow">
 			<ul class="pricing-table right-side">
 				<li class="title">Professional</li>
 				<li class="price">$299</li>
@@ -269,5 +267,4 @@
 </section>
 
 {% include 'bottom-nav.html' %}
-
 {% endblock content%}
