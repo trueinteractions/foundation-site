@@ -354,8 +354,9 @@ header nav a {
     line-height: 150px;
     margin-left: 20px;
     color: white;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform:uppercase;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
