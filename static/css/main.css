@@ -4,7 +4,14 @@
 .top-bar-section {
 	background-color: #212121;
 	color: #000;
+}
 
+.button {
+	background-color: #ff1b2f;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+	background-color: #ff0015;
 }
 
 nav {
@@ -23,8 +30,8 @@ nav {
 	color:white;
 	margin-left:20%;
 	margin-right:20%;
-	margin-top:1.5em;
-	margin-bottom:1.5em;
+	margin-top:1.3em;
+	margin-bottom:1.3em;
 	font-weight:200;
 }
 
@@ -99,7 +106,7 @@ nav {
 }
 
 .what-can-you-do {
-	padding: 1rem 0 1rem 0;
+	padding: 2.5em;
 	background-color: rgba(244,232,211,0.25);
 }
 
@@ -259,15 +266,15 @@ nav {
 .footer .contact li {
 	margin-bottom: 2rem; }
 .footer .contact li p {
-	padding-left: 5rem; }
+	padding-left: 2rem; }
 .footer .contact i {
 	position: absolute;
 	background-color: #33383b;
 	color: #fff;
-	font-size: 2rem;
+	font-size: 1rem;
 	border-radius: 50%;
 	line-height: 1;
-	margin: 0 0 0 -4rem;
+	margin: 0 0 0 -2rem;
 	vertical-align: middle;
 	padding: .25em .45em; }
 .footer .copywrite {
@@ -319,7 +326,6 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: #212121;
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     -ms-transition: height 0.3s;
@@ -361,6 +367,7 @@ header nav a:hover {
 }
 header.smaller {
     height: 75px;
+    background-color:#212121;
 }
 header.smaller h1#logo {
     width: 150px;
