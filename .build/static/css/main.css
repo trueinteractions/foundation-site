@@ -14,6 +14,9 @@ nav {
 
 #logo img {
     width: 1.9em;
+    float:none;
+	vertical-align: middle;
+    height: 100%;
  }
 
 .hero {
@@ -22,9 +25,9 @@ nav {
 	min-height: 200px;
 	text-align: center;
 	background: url('/static/images/Background_stars.jpg') no-repeat center center;
-background-size: cover;
-display: table;
-width: 100%;
+	background-size: cover;
+	display: table;
+	width: 100%;
 }
 
 .hero-icons {
@@ -106,7 +109,7 @@ width: 100%;
 
 .how-to-use {
 	width: 100%;
-	padding: 1rem 0 1rem 0;
+	padding: 2.5rem;
 	background-color: #212121;
 }
 
@@ -116,8 +119,14 @@ width: 100%;
 
 .get-started {
 	width: 100%;
-	padding: 1rem 0 0 0;
+	padding: 2.5rem;
 	background-color: #212121;
+}
+
+.image-placeholder * {
+	color:rgba(0,0,0,0.5) !important;
+	text-align:center;
+	background-color:rgba(0,0,0,0.4);
 }
 
 .get-started h3 {
@@ -125,15 +134,21 @@ width: 100%;
 	margin-bottom: 1rem;
 }
 
+.full-width {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .who-is-using {
 	width: 100%;
-	padding: 4rem 0 0 0;
+	padding: 2.5rem;
 	background-color: rgba(244,232,211,0.25);
 }
 
 .product-matrix-section {
 	width:100%;
-	padding: 1rem 0 1rem 0;
+	padding: 2.5rem;
 	background-color: rgba(244,232,211,0.25);
 }
 
@@ -163,6 +178,10 @@ width: 100%;
 
 .recommended .title {
 	font-size: 1.5rem;
+}
+
+.ideation {
+	margin-top:2.5em;
 }
 
 .panel-transparent.min-height {
@@ -286,8 +305,6 @@ header {
 header h1#logo {
     display: inline-block;
     height: 150px;
-    line-height: 150px;
-    float: left;
     padding-left: 24px;
     font-family: "Oswald", sans-serif;
     font-size: 60px;
@@ -324,8 +341,9 @@ header.smaller {
 header.smaller h1#logo {
     width: 150px;
     height: 75px;
-    line-height: 75px;
     font-size: 30px;
+    padding:0px;
+    margin:0px;
 }
 header.smaller nav a {
     line-height: 75px;
