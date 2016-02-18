@@ -23,6 +23,14 @@ nav {
 	color:white;
 }
 
+.lunar-image {
+	background-image:url('/static/images/lunar.png');
+	background-position:80% 2.5rem;
+	background-repeat:no-repeat;
+	background-size:400px 400px;
+	background-color:#fff2e7;
+}
+
 .hero {
 	top: 0;
 	width: 100%;
@@ -78,7 +86,6 @@ nav {
 .why-use {
 	padding: 2rem 0 2rem 0;
 	width: 100%;
-	background-color: rgba(244,232,211,0.25);
 }
 
 .what-can-you-do {
