@@ -130,7 +130,10 @@ nav {
 .image-placeholder * {
 	color:rgba(0,0,0,0.5) !important;
 	text-align:center;
-	background-color:rgba(0,0,0,0.4);
+	background-color:rgba(0,0,0,0.2);
+	min-height:150px;
+	line-height:150px;
+	margin-top:3em;
 }
 
 .get-started h3 {
