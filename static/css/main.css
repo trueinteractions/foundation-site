@@ -21,6 +21,16 @@ nav {
 
 .text-hero {
 	color:white;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top:1.5em;
+	margin-bottom:1.5em;
+	font-weight:200;
+}
+
+.text-light {
+	font-weight:500;
+	font-size:0.75em;
 }
 
 .lunar-image {
@@ -66,7 +76,7 @@ nav {
 .hero-social-buttons-container {
 	text-align: center;
 	width: 100%;
-	padding: 0.5rem 0 0.5rem 0;
+	padding: 1.125rem 0;
 	background-color: #212121;
 	vertical-align: middle;
 }
@@ -364,6 +374,7 @@ header.smaller nav a {
 }
 
 @media all and (max-width: 660px) {
+
     header h1#logo {
         display: block;
         float: none;
