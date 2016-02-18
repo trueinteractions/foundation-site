@@ -19,6 +19,10 @@ nav {
     height: 100%;
  }
 
+.text-hero {
+	color:white;
+}
+
 .hero {
 	top: 0;
 	width: 100%;
