@@ -13,7 +13,12 @@
 	font-family: Andale Mono;
 	letter-spacing:0;
 	text-transform:uppercase;
+}
 
+.wordmark {
+	background-image:url(/static/images/tint-wordmark.svg);
+	background-repeat:no-repeat;
+	height:70px;
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
