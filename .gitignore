@@ -1,4 +1,5 @@
 .build/
 .git/
 plugins/
+node_modules/
 .DS_Store
