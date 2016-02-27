@@ -96,9 +96,6 @@
 				<p>
 					Simple, yet powerful, Tint program cross-platform desktop apps with the languages and tools you already know; HTML, CSS and Javascript. Tint lets you to use desktop UI elements and the latest HTML 5 APIs. It handles the low-level, intricate, cross-platform build details; so you can focus on creating awesome desktop apps.
 				</p>
-				<p>
-					Voluptate tenderloin laboris meatloaf in laborum, beef capicola tempor ball tip culpa. Kielbasa ham hock officia, short ribs doner landjaeger t-bone sausage magna chicken ipsum frankfurter. Filet mignon minim rump tenderloin nulla. Chuck ham hock aliquip, nostrud salami rump cillum fugiat alcatra meatloaf drumstick in jowl pork loin tri-tip
-				</p>
 			</div>
 			<div class="clearfix">
 				<a href="#" class="button radius right">Why Tint?</a>
@@ -265,6 +262,7 @@
 	<h2 class="text-center">Single Developer</h2>
 	<div class="row collapse">
 		<div class="large-4 columns left-shadow">
+
 			<ul class="pricing-table left-side">
 				<li class="title">Educational</li>
 				<li class="price">$99</li>
@@ -272,9 +270,42 @@
 				<li class="bullet-item">GUI Compiler and Bundler</li>
 				<li class="bullet-item">3 Months Email Support</li>
 				<li class="bullet-item">3 Months of Upgrades</li>
-				<li class="cta-button cta-top-padding"><a class="button" href="#">Buy Now</a></li>
+				<li class="cta-button cta-top-padding"><a data-reveal-id="buyEducational" class="button radius" href="#">Buy Now</a>
+
+					<!-- Buy Single Modal -->
+					<div id="buyEducational" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<h2 id="modalTitle">Educational Version</h2>
+						<p class="lead">Your couch.  It is mine.</p>
+						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+
+						<form method="post" action="/api/order">
+	<div class="row">
+    <label class="medium-6 large-3 columns">
+			<span>First Name</span>
+			<input name="firstName" type="text" placeholder="First Name"/>
+		</label>
+
+    <label class="medium-6 large-3 columns">
+			<span>Last Name</span>
+			<input name="lastName" type="text" placeholder="Last Name"/>
+		</label>
+
+    <label class="medium-12 large-6 columns">
+			<span>Email</span>
+			<input name="email" type="email" placeholder="Email"/>
+		</label>
+	</div>
+
+	<button type="submit">Submit</button>
+</form>
+
+
+						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				</li>
 			</ul>
 		</div>
+
 
 		<div class="large-4 columns recommended">
 			<ul class="pricing-table">
@@ -286,7 +317,16 @@
 				<li class="bullet-item">1 Year Email Support</li>
 				<li class="bullet-item">1 Year of Upgrades</li>
 				<li class="bullet-item">1 Year of Beta Previews</li>
-				<li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+				<li class="cta-button"><a data-reveal-id="buyCommercial" class="button radius" href="#">Buy Now</a>
+
+					<!-- Buy Commercial Modal -->
+					<div id="buyCommercial" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<h2 id="modalTitle">Commercial Version</h2>
+						<p class="lead">Your couch.  It is mine.</p>
+						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				</li>
 			</ul>
 		</div>
 
@@ -299,7 +339,16 @@
 				<li class="bullet-item">GUI Compiler and Bundler</li>
 				<li class="bullet-item">6 Months Email Support</li>
 				<li class="bullet-item">6 Months of Upgrades</li>
-				<li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+				<li class="cta-button"><a data-reveal-id="buyProfessional" class="button radius" href="#">Buy Now</a>
+
+					<!-- Buy Professional Modal -->
+					<div id="buyProfessional" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+						<h2 id="modalTitle">Professional Version</h2>
+						<p class="lead">Your couch.  It is mine.</p>
+						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -318,7 +367,7 @@
 <footer class="footer">
 	<div class="row">
 		<div class="small-12 medium-6 large-5 columns">
-			<p class="logo">Tint</p>
+			<p class="wordmark">Tint</p>
 			<p class="footer-links">
 				<a href="#">Home</a>
 				<a href="#">Getting Started</a>
@@ -327,7 +376,7 @@
 				<a href="#">Faq</a>
 				<a href="#">Contact</a>
 			</p>
-			<p class="copywrite">Tint © 2015</p>
+			<p class="copywrite">Tint © 2016</p>
 		</div>
 		<div class="small-12 medium-6 large-4 columns">
 			<ul class="contact">

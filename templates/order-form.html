@@ -1,0 +1,49 @@
+<form method="post" action="/api/order">
+	<div class="row">
+    <label class="medium-6 large-3 columns">
+			<span>First Name</span>
+			<input name="customerFirstName" type="text" placeholder="First Name"/>
+		</label>
+
+    <label class="medium-6 large-3 columns">
+			<span>Last Name</span>
+			<input name="customerLastName" type="text" placeholder="Last Name"/>
+		</label>
+
+    <label class="medium-12 large-6 columns">
+			<span>Email</span>
+			<input name="customerEmail" type="email" placeholder="Email"/>
+		</label>
+	</div>
+
+	<div class="row">
+    <label class="medium-12 column">
+      <span>Billing Address</span>
+      <input name="billingAddress" type="text" placeholder="Street Address"/>
+    </label>
+	</div>
+
+	<div class="row">
+    <label class="medium-4 column">
+			<span>City</span>
+			<input name="billingCity" type="text" placeholder="City"/>
+		</label>
+
+		<label class="medium-2 column">
+			<span>State</span>
+			<input name="billingState" type="text" placeholder="State"/>
+		</label>
+
+		<label class="medium-3 column">
+			<span>Zip Code</span>
+			<input name="billingZip" type="text" placeholder="Zip Code"/>
+		</label>
+
+		<label class="medium-3 column">
+			<span>Country</span>
+			<input name="billingContry" type="text" placeholder="Country"/>
+		</label>
+	</div>
+
+	<button type="submit">Submit</button>
+</form>
