@@ -219,10 +219,13 @@
 				<li class="cta-button cta-top-padding"><a data-reveal-id="buyEducational" class="button radius" href="#">Buy Now</a>
 
 					<!-- Buy Single Modal -->
-					<div id="buyEducational" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+					<div id="buyEducational" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Educational Version</h2>
 						<form method="post" action="/api/order">
-							<span name="amount">$99.00</span>
+							<input name="amount" class="u-none" value="99.00"></input>
+							<div class="row purchase-price">
+								<h4 class="column">Price: $99.00 USD</h4>
+							</div>
 
 							{% include 'order-form.html' %}
 
@@ -251,7 +254,10 @@
 					<div id="buyCommercial" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Commercial Version</h2>
 						<form method="post" action="/api/order">
-							<span name="amount">$499.00</span>
+							<input name="amount" class="u-none" value="499.00"></input>
+							<div class="row purchase-price">
+								<h4 class="column">Price: $499.00 USD</h4>
+							</div>
 
 							{% include 'order-form.html' %}
 
@@ -277,7 +283,10 @@
 					<div id="buyProfessional" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Professional Version</h2>
 						<form method="post" action="/api/order">
-							<span name="amount">$299.00</span>
+							<input name="amount" class="u-none" value="299.00"></input>
+							<div class="row purchase-price">
+								<h4 class="column">Price: $299.00 USD</h4>
+							</div>
 
 							{% include 'order-form.html' %}
 

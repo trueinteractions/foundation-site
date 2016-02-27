@@ -433,3 +433,11 @@ header.smaller nav a {
         line-height: 35px;
     }
 }
+
+.u-none {
+	display: none !important;
+}
+
+.purchase-price {
+	font-size: 24px;
+}
