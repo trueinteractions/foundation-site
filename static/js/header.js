@@ -11,5 +11,16 @@ function init() {
             }
         }
     });
+
+	var $latestRelease = $('.latest-release');
+	$.getJSON('https://api.github.com/repos/trueinteractions/tint2/releases/latest', function(res) {
+		$latestRelease.text(res.tag_name);
+	});
+
+	var $githubStars = $('.github-stars');
+	$.getJSON('https://api.github.com/repos/trueinteractions/tint2', function(res) {
+		$githubStars.text(res.stargazers_count.toLocaleString());
+	});
+
 }
 window.onload = init();

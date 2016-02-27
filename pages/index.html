@@ -27,11 +27,11 @@
 </section>
 
 <section class="hero-social-buttons-container">
-	<a href="https://github.com/trueinteractions/tint2/releases" class="text-light">Latest Release: 2.2.2 </a>
+	<a href="https://github.com/trueinteractions/tint2/releases" class="text-light">Latest Release: <span class="latest-release">2.2.2</span></a>
 	<a href="https://github.com/trueinteractions/tint2" class="text-light">
-		<i class="fa fa-lg fa-github-alt"></i>1.6k Stars on Github</a>
+		<i class="fa fa-lg fa-github-alt"></i><span class="github-stars">1.6k</span> Stars on Github</a>
 	<a href="https://twitter.com/tintjs" class="text-light">
-		<i class="fa fa-lg fa-twitter"></i>@tintjson Twitter
+		<i class="fa fa-lg fa-twitter"></i>@tintjs on Twitter
 	</a>
 </section>
 
@@ -221,10 +221,12 @@
 					<!-- Buy Single Modal -->
 					<div id="buyEducational" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Educational Version</h2>
-						<p class="lead">Your couch.  It is mine.</p>
-						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+						<form method="post" action="/api/order">
+							<span name="amount">$99.00</span>
 
-						{% include 'order-form.html' %}
+							{% include 'order-form.html' %}
+
+						</form>
 
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
@@ -248,8 +250,12 @@
 					<!-- Buy Commercial Modal -->
 					<div id="buyCommercial" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Commercial Version</h2>
-						<p class="lead">Your couch.  It is mine.</p>
-						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+						<form method="post" action="/api/order">
+							<span name="amount">$499.00</span>
+
+							{% include 'order-form.html' %}
+
+						</form>
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
 				</li>
@@ -270,8 +276,12 @@
 					<!-- Buy Professional Modal -->
 					<div id="buyProfessional" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Professional Version</h2>
-						<p class="lead">Your couch.  It is mine.</p>
-						<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+						<form method="post" action="/api/order">
+							<span name="amount">$299.00</span>
+
+							{% include 'order-form.html' %}
+
+						</form>
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 					</div>
 				</li>
