@@ -37,7 +37,7 @@ app.post('/api/order', function(req, res) {
 		billingCountry: details.billingCountry
 	};
 
-	authNet.submitTransaction(order, creditCard, prospect).then(function(response) {
+	payments.submitTransaction(order, creditCard, prospect).then(function(response) {
 		console.log(response);
 		// res.send({
 		// 	transactionId: res.transactionId,
