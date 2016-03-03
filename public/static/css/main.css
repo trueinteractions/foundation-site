@@ -281,9 +281,7 @@ h1,h2,h3,h4,h5 {
 .footer .contact li {
 	margin-bottom: 2rem; }
 .footer .contact li p {
-	padding-left: 2rem;
-	font-weight:400;
-}
+	padding-left: 2rem; }
 .footer .contact i {
 	position: absolute;
 	background-color: #33383b;
@@ -308,9 +306,7 @@ h1,h2,h3,h4,h5 {
 	color: #fff;
 	padding: 3rem 0 2rem;
 	margin: 0;
-	font-size: 0.75rem; 
-	font-weight:300;
-}
+	font-size: 0.875rem; }
 .footer .footer-links a::after {
 	content: "•";
 	padding: 0 0.2rem 0 0.4rem; }

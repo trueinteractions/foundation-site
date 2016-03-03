@@ -1,6 +1,60 @@
-{% extends 'base.html' %}
-{% block content %}
-{% include 'top-nav.html' %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+	<link rel="stylesheet" href="/static/css/main.css">
+
+	
+	<title>Default</title>
+	
+
+</head>
+<body>
+	
+<header role="navigation">
+ 
+        <div class="container clearfix">
+        <h1 id="logo">
+     <img src="/static/images/tConstellation.svg" alt="TINT" />
+      
+      
+        </h1>
+
+  <nav>
+    <!-- Right Nav Section -->
+  
+     <a href="#">Getting Started</a>
+     <a href="#">Reference</a>
+     <a href="#pricing">Pricing</a>
+     <a href="#">Blog</a>
+     <a href="#">Account</a>
+      <!-- <li class="has-form">
+        <div class="row collapse">
+          <div class="large-8 small-9 columns">
+            <input type="text" placeholder="Find Stuff">
+          </div>
+          <div class="large-4 small-3 columns">
+            <a href="#" class="alert button expand">Search</a>
+          </div>
+        </div>
+      </li> -->
+   </nav>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <!-- <li><a href="#">Left Nav Button</a></li> -->
+    </ul>
+  </section>
+</header>
+
+
 
 <section class="hero">
 	<div class="hero-headline row">
@@ -227,7 +281,76 @@
 								<h4 class="column">Price: $99.00 USD</h4>
 							</div>
 
-							{% include 'order-form.html' %}
+							<div class="row">
+	<label class="medium-6 large-3 columns">
+		<span>First Name</span>
+		<input name="customerFirstName" type="text" placeholder="First Name"/>
+	</label>
+
+	<label class="medium-6 large-3 columns">
+		<span>Last Name</span>
+		<input name="customerLastName" type="text" placeholder="Last Name"/>
+	</label>
+
+	<label class="medium-12 large-6 columns">
+		<span>Email</span>
+		<input name="customerEmail" type="email" placeholder="Email"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-12 column">
+		<span>Billing Address</span>
+		<input name="billingAddress" type="text" placeholder="Street Address"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-4 column">
+		<span>City</span>
+		<input name="billingCity" type="text" placeholder="City"/>
+	</label>
+
+	<label class="medium-2 column">
+		<span>State</span>
+		<input name="billingState" type="text" placeholder="State"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Zip Code</span>
+		<input name="billingZip" type="text" placeholder="Zip Code"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Country</span>
+		<input name="billingContry" type="text" placeholder="Country"/>
+	</label>
+</div>
+
+<div class="row">
+  <label class="medium-4 column">
+    <span>Credit Card Number</span>
+    <input name="creditCardNumber" type="text" placeholder="Credit Card Number"/>
+  </label>
+
+	<label class="medium-2 column">
+    <span>Expiration Month</span>
+    <input name="expirationMonth" type="text" placeholder="MM"/>
+	</label>
+
+	<label class="medium-2 column">
+    <span>Expiration Year</span>
+    <input name="expirationYear" type="text" placeholder="YYYY"/>
+	</label>
+
+	<label class="medium-2 column" for="">
+    <span>Security Code</span>
+    <input name="cvv" type="text" placeholder="000 (Amex - 0000)"/>
+	</label>
+</div>
+
+<button type="submit">Submit</button>
+
 
 						</form>
 
@@ -259,7 +382,76 @@
 								<h4 class="column">Price: $499.00 USD</h4>
 							</div>
 
-							{% include 'order-form.html' %}
+							<div class="row">
+	<label class="medium-6 large-3 columns">
+		<span>First Name</span>
+		<input name="customerFirstName" type="text" placeholder="First Name"/>
+	</label>
+
+	<label class="medium-6 large-3 columns">
+		<span>Last Name</span>
+		<input name="customerLastName" type="text" placeholder="Last Name"/>
+	</label>
+
+	<label class="medium-12 large-6 columns">
+		<span>Email</span>
+		<input name="customerEmail" type="email" placeholder="Email"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-12 column">
+		<span>Billing Address</span>
+		<input name="billingAddress" type="text" placeholder="Street Address"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-4 column">
+		<span>City</span>
+		<input name="billingCity" type="text" placeholder="City"/>
+	</label>
+
+	<label class="medium-2 column">
+		<span>State</span>
+		<input name="billingState" type="text" placeholder="State"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Zip Code</span>
+		<input name="billingZip" type="text" placeholder="Zip Code"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Country</span>
+		<input name="billingContry" type="text" placeholder="Country"/>
+	</label>
+</div>
+
+<div class="row">
+  <label class="medium-4 column">
+    <span>Credit Card Number</span>
+    <input name="creditCardNumber" type="text" placeholder="Credit Card Number"/>
+  </label>
+
+	<label class="medium-2 column">
+    <span>Expiration Month</span>
+    <input name="expirationMonth" type="text" placeholder="MM"/>
+	</label>
+
+	<label class="medium-2 column">
+    <span>Expiration Year</span>
+    <input name="expirationYear" type="text" placeholder="YYYY"/>
+	</label>
+
+	<label class="medium-2 column" for="">
+    <span>Security Code</span>
+    <input name="cvv" type="text" placeholder="000 (Amex - 0000)"/>
+	</label>
+</div>
+
+<button type="submit">Submit</button>
+
 
 						</form>
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -288,7 +480,76 @@
 								<h4 class="column">Price: $299.00 USD</h4>
 							</div>
 
-							{% include 'order-form.html' %}
+							<div class="row">
+	<label class="medium-6 large-3 columns">
+		<span>First Name</span>
+		<input name="customerFirstName" type="text" placeholder="First Name"/>
+	</label>
+
+	<label class="medium-6 large-3 columns">
+		<span>Last Name</span>
+		<input name="customerLastName" type="text" placeholder="Last Name"/>
+	</label>
+
+	<label class="medium-12 large-6 columns">
+		<span>Email</span>
+		<input name="customerEmail" type="email" placeholder="Email"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-12 column">
+		<span>Billing Address</span>
+		<input name="billingAddress" type="text" placeholder="Street Address"/>
+	</label>
+</div>
+
+<div class="row">
+	<label class="medium-4 column">
+		<span>City</span>
+		<input name="billingCity" type="text" placeholder="City"/>
+	</label>
+
+	<label class="medium-2 column">
+		<span>State</span>
+		<input name="billingState" type="text" placeholder="State"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Zip Code</span>
+		<input name="billingZip" type="text" placeholder="Zip Code"/>
+	</label>
+
+	<label class="medium-3 column">
+		<span>Country</span>
+		<input name="billingContry" type="text" placeholder="Country"/>
+	</label>
+</div>
+
+<div class="row">
+  <label class="medium-4 column">
+    <span>Credit Card Number</span>
+    <input name="creditCardNumber" type="text" placeholder="Credit Card Number"/>
+  </label>
+
+	<label class="medium-2 column">
+    <span>Expiration Month</span>
+    <input name="expirationMonth" type="text" placeholder="MM"/>
+	</label>
+
+	<label class="medium-2 column">
+    <span>Expiration Year</span>
+    <input name="expirationYear" type="text" placeholder="YYYY"/>
+	</label>
+
+	<label class="medium-2 column" for="">
+    <span>Security Code</span>
+    <input name="cvv" type="text" placeholder="000 (Amex - 0000)"/>
+	</label>
+</div>
+
+<button type="submit">Submit</button>
+
 
 						</form>
 						<a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -307,5 +568,71 @@
 	</div>
 </section>
 
-{% include 'bottom-nav.html' %}
-{% endblock content%}
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+<footer class="footer">
+	<div class="row">
+		<div class="small-12 medium-6 large-5 columns">
+			<p class="wordmark">Tint</p>
+			<p class="footer-links">
+				<a href="#">Home</a>
+				<a href="#">Getting Started</a>
+				<a href="#">Reference</a>
+				<a href="#">Blog</a>
+				<a href="#">Faq</a>
+				<a href="#">Contact</a>
+			</p>
+			<p class="copywrite">Tint © 2016</p>
+		</div>
+		<div class="small-12 medium-6 large-4 columns">
+			<ul class="contact">
+				<li><p><i class="fi-marker"></i>720 East Arrowhead Lane<br /> Salt Lake City, UT 84107</p></li>
+				<li><p><i class="fi-mail"></i>sales@trueinteractions.com</p></li>
+				<li><p><i class="fi-mail"></i>support@trueinteractions.com</p></li>
+			</ul>
+		</div>
+		<div class="small-12 medium-12 large-3 columns">
+			<p class="about subheader">Uhm, ok so, man came up to me the other day and said: I'd like to sell you a coffin kid, and I said only if its the last thing i do.</p>
+			<ul class="inline-list social">
+				<a href="https://twitter.com/tintjs"><i class="fi-social-twitter"></i></a>
+				<a href="https://github.com/trueinteractions/tint2"><i class="fi-social-github"></i></a>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.1.3/jquery.placeholder.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
+		<script src="/static/js/classie.js"></script>
+		<script src="/static/js/header.js"></script>
+
+		
+
+    <script>
+      $(document).foundation();
+
+      $(document).ready(function() {
+
+        $('a[href^="#"]').on('click',function (e) {
+          e.preventDefault();
+
+          var target = this.hash;
+          var $target = $(target);
+
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+          }, 900, 'swing');
+        })
+      })
+    </script>
+	
+</body>
+</html>

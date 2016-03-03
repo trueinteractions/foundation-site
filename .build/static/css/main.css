@@ -388,6 +388,7 @@ header nav a:hover {
 header.smaller {
     height: 75px;
     background-color:#212121;
+		opacity: 0.9;
 }
 header.smaller h1#logo {
     width: 150px;
@@ -435,4 +436,12 @@ header.smaller nav a {
     header.smaller nav a {
         line-height: 35px;
     }
+}
+
+.u-none {
+	display: none !important;
+}
+
+.purchase-price {
+	font-size: 24px;
 }
