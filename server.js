@@ -10,7 +10,7 @@ var payments = new AuthorizeNet({
 	TRANSACTION_KEY: process.env.AUTHORIZE_NET_TRANSACTION_KEY
 });
 
-app.use(express.static('public'));
+app.use(express.static('.build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
