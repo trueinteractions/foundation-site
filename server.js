@@ -24,7 +24,7 @@ app.post('/api/order', function(req, res) {
 		creditCardNumber: details.creditCardNumber,
 		expirationMonth: details.expirationMonth,
 		expirationYear: details.expirationYear,
-		cvv: details.cvv
+		cvv2: details.cvv
 	};
 	var prospect = {
 		customerFirstName: details.customerFirstName,
@@ -37,13 +37,16 @@ app.post('/api/order', function(req, res) {
 		billingCountry: details.billingCountry
 	};
 
+	console.log(creditCard);
+
 	payments.submitTransaction(order, creditCard, prospect).then(function(response) {
 		console.log(response);
 		// res.send({
 		// 	transactionId: res.transactionId,
 		// 	message: 'Thank you for you purchase. You will receive an email for you records.'
 		// });
-	});
+		res.redirect('/');
+	}).catch(new Error);
 });
 
 app.listen(port, function() {
