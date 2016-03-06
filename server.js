@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('./mail-in/mailin');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -9,6 +10,8 @@ var payments = new AuthorizeNet({
 	API_LOGIN_ID: process.env.AUTHORIZE_NET_API_LOGIN,
 	TRANSACTION_KEY: process.env.AUTHORIZE_NET_TRANSACTION_KEY
 });
+
+var mail = new Mailin('https://api.sendinblue.com/v2.0', process.env.MAIL_SERVER_API);
 
 app.use(express.static('.build'));
 app.use(bodyParser.json());
@@ -35,7 +38,6 @@ app.post('/api/order', function(req, res) {
 		billingState: details.billingState,
 		billingZip: details.billingZip,
 		billingCountry: details.billingCountry,
-
 		shippingFirstName: details.customerFirstName,
 		shippingLastName: details.customerLastName,
 		shippingAddress: details.billingAddress,
@@ -47,16 +49,31 @@ app.post('/api/order', function(req, res) {
 
 	payments.submitTransaction(order, creditCard, prospect).then(function(response) {
 		console.log(response);
+		var customerName = details.customerFirstName + ' ' + details.customerLastName;
 
-		var tempVars = {
-			name: details.customerFirstName + ' ' + details.customerLastName,
-			transactionId: response.transactionId
+		var transaction = {
+			to: {},
+			from: ['sales@trueinteractions.com'],
+			html: '',
+			subject: 'Your Recent Tint 2 Purchase',
+			name: customerName,
+			amount: details.amount,
+			version: details.version,
+			transactionId: response.transactionId,
+			prod: !!process.env.PRODUCTION
 		};
 
-		app.render('order-success', tempVars, function(err, html) {
+		transaction.to[details.customerEmail] = customerName;
+
+		app.render('order-success', transaction, function(err, html) {
+			transaction.html = html;
+
 			if (err) {
 				res.send(err);
 			} else {
+				mail.send_email(transaction).on('complete', function(data) {
+					console.log(data);
+				});
 				res.send(html);
 			}
 		});

@@ -3,26 +3,26 @@ $(document).ready(function() {
 	var ccformCom = $('.cc-form-com');
 	var ccformPro = $('.cc-form-pro');
 
-	ccformEdu.on('submit', function(e) {
-		e.preventDefault();
-		$.post('/api/order', ccformEdu.serialize()).then(function(res) {
+	function submitOrder(form) {
+		$.post('/api/order', form.serialize()).then(function(res) {
 			$('.success-modal-content').html(res);
 			$('#orderSuccessModal').foundation('reveal', 'open');
-			ccformEdu[0].reset();
+			form[0].reset();
 		});
+	}
+
+	ccformEdu.on('submit', function(e) {
+		e.preventDefault();
+		submitOrder(ccformEdu);
 	});
 
 	ccformCom.on('submit', function(e) {
 		e.preventDefault();
-		$.post('/api/order', ccformCom.serialize()).then(function(res) {
-			console.log(res);
-		});
+		submitOrder(ccformCom);
 	});
 
 	ccformPro.on('submit', function(e) {
 		e.preventDefault();
-		$.post('/api/order', ccformPro.serialize()).then(function(res) {
-			console.log(res);
-		});
+		submitOrder(ccformPro);
 	});
 });
