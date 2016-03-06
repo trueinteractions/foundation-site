@@ -13,9 +13,9 @@ var payments = new AuthorizeNet({
 app.use(express.static('.build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'jade');
 
 app.post('/api/order', function(req, res) {
-	console.log(req.body);
 	var details = req.body;
 	var order = {
 		amount: details.amount
@@ -47,10 +47,20 @@ app.post('/api/order', function(req, res) {
 
 	payments.submitTransaction(order, creditCard, prospect).then(function(response) {
 		console.log(response);
-		res.send({
-			transactionId: response.transactionId,
-			message: 'Thank you for you purchase. You will receive an email for you records.'
+
+		var tempVars = {
+			name: details.customerFirstName + ' ' + details.customerLastName,
+			transactionId: response.transactionId
+		};
+
+		app.render('order-success', tempVars, function(err, html) {
+			if (err) {
+				res.send(err);
+			} else {
+				res.send(html);
+			}
 		});
+
 	}).catch(res.send);
 });
 

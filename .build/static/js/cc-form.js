@@ -6,7 +6,8 @@ $(document).ready(function() {
 	ccformEdu.on('submit', function(e) {
 		e.preventDefault();
 		$.post('/api/order', ccformEdu.serialize()).then(function(res) {
-			$('#buyEducational').html('<p>' + res.message + '</p>');
+			$('.success-modal-content').html(res);
+			$('#orderSuccessModal').foundation('reveal', 'open');
 		});
 	});
 
