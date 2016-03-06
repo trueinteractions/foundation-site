@@ -8,6 +8,7 @@ $(document).ready(function() {
 		$.post('/api/order', ccformEdu.serialize()).then(function(res) {
 			$('.success-modal-content').html(res);
 			$('#orderSuccessModal').foundation('reveal', 'open');
+			ccformEdu[0].reset();
 		});
 	});
 
