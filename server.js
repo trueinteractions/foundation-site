@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/api/order', function(req, res) {
+	console.log(req.body);
 	var details = req.body;
-	console.log(details);
 	var order = {
 		amount: details.amount
 	};
@@ -34,19 +34,24 @@ app.post('/api/order', function(req, res) {
 		billingCity: details.billingCity,
 		billingState: details.billingState,
 		billingZip: details.billingZip,
-		billingCountry: details.billingCountry
-	};
+		billingCountry: details.billingCountry,
 
-	console.log(creditCard);
+		shippingFirstName: details.customerFirstName,
+		shippingLastName: details.customerLastName,
+		shippingAddress: details.billingAddress,
+		shippingCity: details.billingCity,
+		shippingState: details.billingState,
+		shippingZip: details.billingZip,
+		shippingCountry: details.billingCountry
+	};
 
 	payments.submitTransaction(order, creditCard, prospect).then(function(response) {
 		console.log(response);
-		// res.send({
-		// 	transactionId: res.transactionId,
-		// 	message: 'Thank you for you purchase. You will receive an email for you records.'
-		// });
-		res.redirect('/');
-	}).catch(new Error);
+		res.send({
+			transactionId: response.transactionId,
+			message: 'Thank you for you purchase. You will receive an email for you records.'
+		});
+	}).catch(res.send);
 });
 
 app.listen(port, function() {
