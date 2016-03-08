@@ -1,0 +1,31 @@
+
+<div class="screenshots">
+<?js 
+    var oscoll = [
+                    ['_yosemite_','MacOS X Yosemite'],
+                    ['_mountainlion_','MacOS X Mountain Lion'],
+                    ['_mavericks_','MacOS X Mavericks'],
+                    ['_win7_','Windows 7'],
+                    ['_win8_','Windows 8'],
+                    ['_win10_','Windows 10']
+                 ];
+    for(var d=0; d < oscoll.length; d++) {
+        var fs = process.require('fs');
+        var baseFile = this.basePath + oscoll[d][0];
+        baseFile = baseFile.replace('examples/','images/');
+        var baseUrl = baseFile.replace('./.build/', '');
+
+        var files = fs.readdirSync('./.build/docs/images/');
+        files.forEach(function(file) {
+            if(("images/"+file).indexOf(baseUrl.replace('images/','')) > -1) {
+?>
+        <figure>
+          <img src="images/<?js=file?>"/>
+          <figcaption><?js=oscoll[d][1]?></figcaption>
+        </figure>
+<?js
+            }
+        });
+    }
+?>
+</div>

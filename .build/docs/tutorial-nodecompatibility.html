@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Tutorial: Node Compatibility</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+ <header class="ui menu">
+    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  
+  <div class="ui grid">
+    <article class="sixteen wide column">
+    <h1>Node Compatibility</h1><p>Tint is fully compatible with node.</p>
+<h2>What does this mean?</h2><ul>
+<li>Binary compatibility - Node compiled projects work with Tint, without modification. C++ object, C functions, calling conventions and the C++/C API and exported symbols are the same as in Node.</li>
+<li>Command line compatibility - Node command line arguments are honored by Tint. Tint also reproduces the exact same command line output as node, unmodified or appended.</li>
+<li>Event loop order and contract - Tint executes event loop callbacks in the same order as Node.</li>
+<li>API compatibility - Any and all API's and their behavior is retained by Tint.</li>
+<li>Stability compatibility - Tint always aims to use the latest stable release of Node.</li>
+</ul>
+<h2>Known Incompatibilities</h2><p>There are two exceptions to the compatibility.</p>
+<ul>
+<li><p>Exiting - Tint requests an application runtime event loop, this is incompatible with node's exit-if-theres-nothing philosophy. The application event loop does not exit unless explicitly asked to.</p>
+</li>
+<li><p>Using native modules in Windows - Tint is binary compatible and supports native modules on Windows, due to the nature of how node-gyp and node loads binary modules on Windows the name of the executable must be &quot;node.exe&quot; for many node native modules to successfully register.  While work at node-gyp, io.js and node is on-going to resolve this incompatibility there is a workaround, simply renaming tint.exe to node.exe fixes the loading problems. Once the issue is fixed upstream this workaround is no longer necessary.</p>
+</li>
+</ul>
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

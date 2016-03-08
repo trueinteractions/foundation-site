@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: System</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+  <header class="ui menu">
+    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  <div class="ui grid">
+    <article class="sixteen wide column">
+
+      <section class="overview">
+        <h1>System</h1>
+          <div class="ui message overview">
+          <h3>Overview</h3>
+          <p>The system class contains methods for getting OS standard file system icons,
+       preferences, settings and information.</p>
+        </div>
+        <div class="ui grid family">
+          <div class="four wide column ancestors">
+            <h4>Ancestors</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column descendants">
+            <h4>Descendants</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column see-also">
+            <h4>See Also</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+
+      
+      <section class="members">
+        <h2>Members</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="home"> <i class="dropdown icon"></i> home </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets the users home directory, returns it as a string.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><span class="type-signature"></span></span>
+              <span class="fake-name">system.home</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="mousePosition"> <i class="dropdown icon"></i> mousePosition </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Contains an object with the 'x' and 'y' properties with the current position of
+             the mouse cursor in context to the active screen.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><span class="type-signature"></span></span>
+              <span class="fake-name">system.mousePosition</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="methods">
+        <h2>Methods</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="beep"> 
+            <i class="dropdown icon"></i> beep()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Plays the default alert noise for the OS. This may produce visual effects if the user
+             has accessibility features enabled.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.beep()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="clickAt"> 
+            <i class="dropdown icon"></i> clickAt(x, y)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Left clicks at the specified X, Y coordinates. This causes a
+             real left click mouse event within the operating system
+             at the specified coordinates and is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clickAt(x, y)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the left of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the top of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="clickAtControl"> 
+            <i class="dropdown icon"></i> clickAtControl(control)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Left clicks at the center of the specified Tint Control. This causes a
+             real left click event within the operating system and is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clickAtControl(control)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>control</td>
+                  <td class="fake-type">Control</td>
+                  <td>The control to left click at.  The center of the control is
+                         calculated as the target click area.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="clipboardClear"> 
+            <i class="dropdown icon"></i> clipboardClear()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Clears the clipboards data.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clipboardClear()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>Whether the clipboard clear was successful or not.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="clipboardContainsType"> 
+            <i class="dropdown icon"></i> clipboardContainsType(datatype)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Returns true or false if the type specified is on the clipboard.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clipboardContainsType(datatype)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>datatype</td>
+                  <td class="fake-type">string</td>
+                  <td>The type to search for data, 'text', 'image', 'rtf', 'html', 'video', 'audio'</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>Whether the clipboard contains the type specified.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="clipboardGet"> 
+            <i class="dropdown icon"></i> clipboardGet(datatype)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets the clipboard data, for text data a string is returned, for binary data a Buffer object is.
+             In addition, this may return native objects as fully formed javascript objects depending on the type.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clipboardGet(datatype)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>datatype</td>
+                  <td class="fake-type">string</td>
+                  <td>The type to search for data, 'text', 'image', 'rtf', 'html', 'video', 'audio'</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">Buffer</td>
+                  <td>A node Buffer object with the requested data or false if the operation was unsuccessful.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="clipboardSet"> 
+            <i class="dropdown icon"></i> clipboardSet(data, datatype)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sets the clipboards data and adds the specified type to it. The type is case sensitive.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.clipboardSet(data, datatype)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>data</td>
+                  <td class="fake-type">string</td>
+                  <td>The data to set on the clipboard (Buffer data or string usually).</td>
+                </tr>
+              
+                <tr>
+                  <td>datatype</td>
+                  <td class="fake-type">string</td>
+                  <td>The type to search for data, 'text', 'image', 'rtf', 'html', 'video', 'audio'</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">Object</td>
+                  <td>An object with one function, "release" which releases the data back to memory once
+                  it should no longer be available in the clipboard.  IMPORTANT: Data placed in the
+                  clipboard is not automatically memory managed on some platforms, ensure you release
+                  data before setting new data on the clipboard as a precautionary measure. Note if an
+                  error occurs this operation returns false.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="getIconForFile"> 
+            <i class="dropdown icon"></i> getIconForFile(file)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Returns an image (data uri base 64 encoded) for the icon used by the system shell.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.getIconForFile(file)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>file</td>
+                  <td class="fake-type">string</td>
+                  <td>The path to the file to return its icon used in the system shell.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="mouseDownAt"> 
+            <i class="dropdown icon"></i> mouseDownAt(x, y)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sends a left 'mouse down' at the specified X, Y coordinates. This causes a
+             real left click mouse down event within the operating system
+             at the specified coordinates and is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.mouseDownAt(x, y)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the left of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the top of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="mouseUpAt"> 
+            <i class="dropdown icon"></i> mouseUpAt(x, y)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sends a left 'mouse up' at the specified X, Y coordinates. This causes a
+             real left click mouse up event within the operating system
+             at the specified coordinates and is not simulated.  This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.mouseUpAt(x, y)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the left of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the top of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="openFile"> 
+            <i class="dropdown icon"></i> openFile(file)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Opens the file in the default application thats set to handle it.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.openFile(file)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>file</td>
+                  <td class="fake-type">string</td>
+                  <td>The file to open in the default file type handler for the OS.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="openURL"> 
+            <i class="dropdown icon"></i> openURL(url)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Opens the url in the default web browser installed on the OS.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.openURL(url)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>url</td>
+                  <td class="fake-type">string</td>
+                  <td>The url to open in the default web browser.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="rightClickAt"> 
+            <i class="dropdown icon"></i> rightClickAt(x, y)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Right clicks at the specified control. This causes a
+             real right-click mouse event within the operating system
+             at the specified coordinates and is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.rightClickAt(x, y)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the left of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the top of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="rightClickAtControl"> 
+            <i class="dropdown icon"></i> rightClickAtControl(control)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The right click at control method can be used for testing.  This causes a
+             real right-click event within the operating system and is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.rightClickAtControl(control)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>control</td>
+                  <td class="fake-type">Control</td>
+                  <td>The control to right click at.  The center of the control is
+                         calculated as the target click area.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="scrollAt"> 
+            <i class="dropdown icon"></i> scrollAt(x, y, upOrDown)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sends a scroll event through the operating system at the specified X, Y
+             coordinates, note this is not simulated. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.scrollAt(x, y, upOrDown)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the left of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td class="fake-type">integer</td>
+                  <td>The amount of pixels from the top of the virtual screen (e.g., all
+                   of the connected monitors normalized into a coordinate system).</td>
+                </tr>
+              
+                <tr>
+                  <td>upOrDown</td>
+                  <td class="fake-type">boolean</td>
+                  <td>The direction to scroll vertically up or down (true/false).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="scrollAtControl"> 
+            <i class="dropdown icon"></i> scrollAtControl(control, upOrDown)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Scrolls a control vertically up or down based on the value of upOrDown. This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.scrollAtControl(control, upOrDown)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>control</td>
+                  <td class="fake-type">Control</td>
+                  <td>The control to scroll.</td>
+                </tr>
+              
+                <tr>
+                  <td>upOrDown</td>
+                  <td class="fake-type">boolean</td>
+                  <td>The direction to scroll vertically up or down (true/false).</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="sendKey"> 
+            <i class="dropdown icon"></i> sendKey(input)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sends a key down and key up event through the OS, note the currently focused application, window and
+             control will receive this event (and may not be the running application).  This is mainly used for
+             testing and should be avoided in production applications.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.sendKey(input)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>input</td>
+                  <td class="fake-type">string</td>
+                  <td>The character to send as a key up and key down event. Note this must be one single character
+                      e.g., 'a', 'b', or 'A', or 'B'.  For a carrage return use 'ENTER' or 'RETURN', for shift use
+                      'SHIFT', etc.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="showFile"> 
+            <i class="dropdown icon"></i> showFile(file)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Shows the location of a file or directory in the system's standard shell, explorer or finder.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.showFile(file)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>file</td>
+                  <td class="fake-type">string</td>
+                  <td>The path to the file or directory to show and select in the systems shell, explorer or finder.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="takeSnapshotOfActiveScreen"> 
+            <i class="dropdown icon"></i> takeSnapshotOfActiveScreen()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a screenshot of the current active screen and returns it as a
+             string that is a base64 encoded PNG image.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.takeSnapshotOfActiveScreen()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">string</td>
+                  <td>A base 64 encoded PNG of the screenshot.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="takeSnapshotOfControl"> 
+            <i class="dropdown icon"></i> takeSnapshotOfControl(control)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a snapshot of a Tint Control and returns back a base 64 encoded string that
+             represents a PNG image.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.takeSnapshotOfControl(control)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>control</td>
+                  <td class="fake-type">Control</td>
+                  <td>The Tint control to take a snapshot of.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">string</td>
+                  <td>A base 64 encoded PNG of the snapshot.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="takeSnapshotOfCurrentWindow"> 
+            <i class="dropdown icon"></i> takeSnapshotOfCurrentWindow()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a screenshot of the current focused window in the running application.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.takeSnapshotOfCurrentWindow()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">string</td>
+                  <td>A base 64 encoded PNG of the screenshot.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="takeSnapshotOfTopWindow"> 
+            <i class="dropdown icon"></i> takeSnapshotOfTopWindow()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a screenshot of the current top (but not necessarily focused) window in the running application.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.takeSnapshotOfTopWindow()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">string</td>
+                  <td>A base 64 encoded PNG of the screenshot.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="takeSnapshotOfWindow"> 
+            <i class="dropdown icon"></i> takeSnapshotOfWindow(window)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a screenshot of the window passed in and returns a base 64 encoded string
+             that represents a PNG image.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.takeSnapshotOfWindow(window)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>window</td>
+                  <td class="fake-type">Window</td>
+                  <td>The window object to take a snapshot of.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">string</td>
+                  <td>A base 64 encoded PNG of the screenshot.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="trashFile"> 
+            <i class="dropdown icon"></i> trashFile(file)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Moves the file or directory to the recycling bin or trash on the OS.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">system.trashFile(file)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>file</td>
+                  <td class="fake-type">string</td>
+                  <td>The file or directory to move to the trash or recycling bin.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

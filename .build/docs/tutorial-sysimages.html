@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Tutorial: Using System Images</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+ <header class="ui menu">
+    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  
+  <div class="ui grid">
+    <article class="sixteen wide column">
+    <p><h1>Using System Images</h1><p>System icons are a way of providing continuity and cohesion in an application. They can be used anywhere an image is needed in Tint.  Instead of providing a URL for an image, pass in the name of the icon to use.  These are referred to in the documentation as a 'named image'.</p><div class="ui message important"><h3>Copyright Notice</h3> <p>These images are used for reference, they should not be downloaded or reproduced. In addition, they may vary per operating system version. These images may not be embedded in a program, but only referenced using a 'named image'. Mac OSX icons are copyright Apple, Inc. Windows icons are copyright Microsoft, Inc.</p> </div><table class="ui table parameters system-images"></p>
+<p><tr><th>Name</th><th>Mac OSX Yosemite</th><th>Windows 7</th></tr></p>
+<p><tr><td>action</td><td><img src="images/sys/action_yosemite.png"/></td><td><img src="images/sys/action_win7.png"/></td></tr><tr><td>add</td><td><img src="images/sys/add_yosemite.png"/></td><td><img src="images/sys/add_win7.png"/></td></tr><tr><td>advanced</td><td><img src="images/sys/advanced_yosemite.png"/></td><td><img src="images/sys/advanced_win7.png"/></td></tr><tr><td>application</td><td><img src="images/sys/application_yosemite.png"/></td><td><img src="images/sys/application_win7.png"/></td></tr><tr><td>back-inverse</td><td><img src="images/sys/back-inverse_yosemite.png"/></td><td><img src="images/sys/back-inverse_win7.png"/></td></tr><tr><td>back</td><td><img src="images/sys/back_yosemite.png"/></td><td><img src="images/sys/back_win7.png"/></td></tr><tr><td>bookmarks</td><td><img src="images/sys/bookmarks_yosemite.png"/></td><td><img src="images/sys/bookmarks_win7.png"/></td></tr><tr><td>caution</td><td><img src="images/sys/caution_yosemite.png"/></td><td><img src="images/sys/caution_win7.png"/></td></tr><tr><td>colors</td><td><img src="images/sys/colors_yosemite.png"/></td><td><img src="images/sys/colors_win7.png"/></td></tr><tr><td>computer</td><td><img src="images/sys/computer_yosemite.png"/></td><td><img src="images/sys/computer_win7.png"/></td></tr><tr><td>everyone</td><td><img src="images/sys/everyone_yosemite.png"/></td><td><img src="images/sys/everyone_win7.png"/></td></tr><tr><td>folder</td><td><img src="images/sys/folder_yosemite.png"/></td><td><img src="images/sys/folder_win7.png"/></td></tr><tr><td>forward-inverse</td><td><img src="images/sys/forward-inverse_yosemite.png"/></td><td><img src="images/sys/forward-inverse_win7.png"/></td></tr><tr><td>forward</td><td><img src="images/sys/forward_yosemite.png"/></td><td><img src="images/sys/forward_win7.png"/></td></tr><tr><td>general</td><td><img src="images/sys/general_yosemite.png"/></td><td><img src="images/sys/general_win7.png"/></td></tr><tr><td>group</td><td><img src="images/sys/group_yosemite.png"/></td><td><img src="images/sys/group_win7.png"/></td></tr><tr><td>home</td><td><img src="images/sys/home_yosemite.png"/></td><td><img src="images/sys/home_win7.png"/></td></tr><tr><td>info</td><td><img src="images/sys/info_yosemite.png"/></td><td><img src="images/sys/info_win7.png"/></td></tr><tr><td>lock</td><td><img src="images/sys/lock_yosemite.png"/></td><td><img src="images/sys/lock_win7.png"/></td></tr><tr><td>network</td><td><img src="images/sys/network_yosemite.png"/></td><td><img src="images/sys/network_win7.png"/></td></tr><tr><td>reload-inverse</td><td><img src="images/sys/reload-inverse_yosemite.png"/></td><td><img src="images/sys/reload-inverse_win7.png"/></td></tr><tr><td>reload</td><td><img src="images/sys/reload_yosemite.png"/></td><td><img src="images/sys/reload_win7.png"/></td></tr><tr><td>remove</td><td><img src="images/sys/remove_yosemite.png"/></td><td><img src="images/sys/remove_win7.png"/></td></tr><tr><td>reveal</td><td><img src="images/sys/reveal_yosemite.png"/></td><td><img src="images/sys/reveal_win7.png"/></td></tr><tr><td>share</td><td><img src="images/sys/share_yosemite.png"/></td><td><img src="images/sys/share_win7.png"/></td></tr><tr><td>status-available</td><td><img src="images/sys/status-available_yosemite.png"/></td><td><img src="images/sys/status-available_win7.png"/></td></tr><tr><td>status-none</td><td><img src="images/sys/status-none_yosemite.png"/></td><td><img src="images/sys/status-none_win7.png"/></td></tr><tr><td>status-partially-available</td><td><img src="images/sys/status-partially-available_yosemite.png"/></td><td><img src="images/sys/status-partially-available_win7.png"/></td></tr><tr><td>status-unavailable</td><td><img src="images/sys/status-unavailable_yosemite.png"/></td><td><img src="images/sys/status-unavailable_win7.png"/></td></tr><tr><td>stop-inverse</td><td><img src="images/sys/stop-inverse_yosemite.png"/></td><td><img src="images/sys/stop-inverse_win7.png"/></td></tr><tr><td>stop</td><td><img src="images/sys/stop_yosemite.png"/></td><td><img src="images/sys/stop_win7.png"/></td></tr><tr><td>unlock</td><td><img src="images/sys/unlock_yosemite.png"/></td><td><img src="images/sys/unlock_win7.png"/></td></tr><tr><td>user</td><td><img src="images/sys/user_yosemite.png"/></td><td><img src="images/sys/user_win7.png"/></td></tr><tr><td>view-as-columns</td><td><img src="images/sys/view-as-columns_yosemite.png"/></td><td><img src="images/sys/view-as-columns_win7.png"/></td></tr><tr><td>view-as-preview</td><td><img src="images/sys/view-as-preview_yosemite.png"/></td><td><img src="images/sys/view-as-preview_win7.png"/></td></tr><tr><td>view-as-list</td><td><img src="images/sys/view-as-list_yosemite.png"/></td><td><img src="images/sys/view-as-list_win7.png"/></td></tr><tr><td>view-as-objects</td><td><img src="images/sys/view-as-objects_yosemite.png"/></td><td><img src="images/sys/view-as-objects_win7.png"/></td></tr><tr><td>view-as-tree</td><td><img src="images/sys/view-as-tree_yosemite.png"/></td><td><img src="images/sys/view-as-tree_win7.png"/></td></tr><tr><td>trash</td><td><img src="images/sys/trash_yosemite.png"/></td><td><img src="images/sys/trash_win7.png"/></td></tr><tr><td>trash-full</td><td><img src="images/sys/trash-full_yosemite.png"/></td><td><img src="images/sys/trash-full_win7.png"/></td></tr></table></p>
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

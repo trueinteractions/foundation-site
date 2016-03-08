@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Tutorial: Window Styles and Behaviors</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+ <header class="ui menu">
+    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  
+  <div class="ui grid">
+    <article class="sixteen wide column">
+    <h1>Window Styles and Behaviors</h1><p>Tint supports a variety of options to customize a windows appearance. One important note about
+windows is they are not visible until Window.visible is set to true.</p>
+<h2>Placement</h2><h3>Making a Window Visible or Hidden</h3><p>Making the window visible or hidden simply uses the Window.visible property. 
+This accept either true or false for a value. Note that when a window is
+initially created its not visible (e.g., Window.visible == false).</p>
+<h3>Changing the Height, Width and Position</h3><p>Changing the height and width is done in logical pixel units.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+
+var win = new Window();
+win.height = 500; // change the height to 800
+win.width = 200; // change the width to 200
+win.visible = true; // now show the window.</code></pre><p>Notice that the windows height and width were set before it was made
+visible, this is so the user does not see the change in the width and height, in
+other words; this is done while the window is not visible (the default value).</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+
+var win = new Window();
+win.visible = true; // show the window, let the user see the w/h change.
+win.height = 200; // change the height to 800
+win.width = 500; // change the width to 200</code></pre><h3>Animating the Height and Width</h3><p>The placement and size of the window can be animated using the property Window.animateOnPositionChange and
+the property Window.animateOnSizeChange.  These are both true or false values (boolean) that when set to
+true will animate the window to the new position or size based on default values provided by the OS. </p>
+<p>From our example above we can create an animated window change by setting the
+Window.animateOnSizeChange to true prior to setting the width or height property.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+
+var win = new Window();
+win.animateOnSizeChange = true;
+win.visible = true; // show the window, animate its size change.
+win.height = 200; // change the height to 800
+win.width = 500; // change the width to 200</code></pre><h2>Frame Decorations</h2><h3>Creating a Normal Frame</h3><p>This is the regular window frame created by default.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+var btn = new Button();
+btn.left = btn.top = 0;
+btn.width = 200;
+btn.height = 50;
+btn.title = &quot;Window Test&quot;;
+win.appendChild(btn);
+win.visible = true;</code></pre><p><img src="images/window_0_win7.png" alt="Windows 7 - Normal Frame">
+<img src="images/window_0_mac.png" alt="MacOSX - Normal Frame"></p>
+<h3>Creating a Transparent Frame</h3><p>To create a transparent frame, set the property <code>backgroundColor</code> to 'transparent' and the property <code>frame</code> to false.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+win.backgroundColor = 'transparent';
+win.frame = false;
+var btn = new Button();
+btn.left = btn.top = 0;
+btn.width = 200;
+btn.height = 50;
+btn.title = &quot;Window Test&quot;;
+win.appendChild(btn);
+win.visible = true;</code></pre><p><img src="images/window_1_win7.png" alt="Windows 7 - Transparent Frame">
+<img src="images/window_1_mac.png" alt="MacOSX - Transparent Frame"></p>
+<h3>Creating a Floating Frame</h3><p>A floating frame is a frame with no titlebar or &quot;decorations&quot; (buttons) but can be resized. A floating frame can be useful for displaying information ona n interactive panel but not wanting the user to have the capability of moving the frame (or perhaps the movement is controlled in more sophisticated ways). This can be acheived by setting the the property <code>frame</code> to false and ensuring <code>resizable</code> is set to true.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+win.resizable = true;
+win.frame = false;
+var btn = new Button();
+btn.left = btn.top = 0;
+btn.width = 200;
+btn.height = 50;
+btn.title = &quot;Window Test&quot;;
+win.appendChild(btn);
+win.visible = true;</code></pre><p><img src="images/window_2_win7.png" alt="Windows 7 - Transparent Frame">
+<img src="images/window_2_mac.png" alt="MacOSX - Transparent Frame"></p>
+<h3>Creating a Splash Screen</h3><p>A splash screen is typically used to display information and automatically closes itself.  This is useful for displaying loading screens while other activity is on-going. Splash screens cannot be closed, resized or moved and do not have any frame decorations, borders or titlebars.  To create a splash screen set the window property <code>frame</code> to false and <code>resizable</code> to false.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+win.resizable = false;
+win.frame = false;
+var btn = new Button();
+btn.left = btn.top = 0;
+btn.width = 200;
+btn.height = 50;
+btn.title = &quot;Window Test&quot;;
+win.appendChild(btn);
+win.visible = true;</code></pre><p><img src="images/window_3_win7.png" alt="Windows 7 - Transparent Frame">
+<img src="images/window_3_mac.png" alt="MacOSX - Transparent Frame"></p>
+<h3>Creating a Textured Frame</h3><p>A textured frame typically causes the window content to mix with the frame decorations.  This creates a feel of a dialog and less of a content-driven window.  This affect can be acheived by setting the <code>textured</code> property to true on the window object.</p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+win.textured = true;
+var btn = new Button();
+btn.left = btn.top = 0;
+btn.width = 200;
+btn.height = 50;
+btn.title = &quot;Window Test&quot;;
+win.appendChild(btn);
+win.visible = true;</code></pre><p>It's important to note that non-textured windows are the default on Microsoft Windows, on OSX a textured window is the default.</p>
+<p><img src="images/window_4_win7.png" alt="Windows 7 - Transparent Frame">
+<img src="images/window_4_mac.png" alt="MacOSX - Transparent Frame"></p>
+<h3>Controlling Resizing Behaviors</h3><p>There are two options when controlling the resizing behavior of an application.  The first option is to use the <code>resizable</code> property on the Window object.  This is a boolean value that sets whether the window displays a resize control and does not permit the width/height to be changed by the user (e.g., through the menu or otherwise). </p>
+<p>The second way is to set the frame of the window to false AND the resizable property to false, then manually draw (and control the windows width and height) when a user interacts with the control.  The first option is easier to manage and produce a window that is not resizable, while the second harder option gives you full control over the windows behavior and style. </p>
+<p>It's important to point out that both Microsoft and Apple's HCI guidelines suggest not overriding behavior of a window as its non-forward-facing compatible, e.g., if new behaviors that interact with resizing are introduced into the OS an application manually controlling a behavior will begin to seem dated or out of place in the OS.  </p>
+<pre class="prettyprint source lang-javascript"><code>require('Common');
+var win = new Window();
+win.resizable = false;
+win.frame = false;
+win.visible = true;</code></pre><h3>Making a Window Fullscreen</h3><p>Full screen windows are useful for situations where intense focus on the content of an application is necessary.  A full screen window must first be permitted by the application however.  This is controlled by the property <code>canBeFullscreen</code> on the window object.  Setting this to true changes the behavior of maximizing and restoring the window on OSX Mavericks (and up) in addition to Windows 8.1.  It has no affect on the behavior of standard frame controls on Windows 7. Once the window is permitted to be full screen the <code>fullscreen</code> property can be set to true or false to take the window into fullscreen mode or pull it out of fullscreen mode. </p>
+<h4>Fullscreen and Kiosk Mode</h4><p>If a menu is not set, the property alwaysOnTop is set to true and the maximize, minimize and restore buttons are disabled (either manually, or through the frame being set to false) THE WINDOW WILL NOT BE ABLE TO BE EXITED OUT BY THE USER THROUGH ANY MEANS.  This is whats referred to as &quot;kiosk&quot; mode where the window may not exit through any normal means (even control or command tab will not switch application contexts).</p>
+<p>If you accidently set the window in this mode the computer will need to be restarted, so do provide some sort of way of exiting the fullscreen mode (either through a password on the window that will exit it or other means).</p>
+<h3>Minimizing, Maximizing and Close Buttons</h3><p>Individual buttons and controls can be disabled while preserving the ability for a window to be closed, minimized or maximized. This may be useful for tool panels and windows that may not need all the frame decorations. The <code>maximizeButton</code>, <code>minimizeButton</code> and <code>closeButton</code> properties on the window object can be used to remove the button from the window frame (on some OS' it shows the button as greyed out).</p>
+<p>See the resizable property for disabling the capabilities for a window to be resized, see the frame property for disabling the capabilities for the window to be moved.</p>
+<h3>Background Colors</h3><p>Background colors can be set for the content area of the window.  Depending on the OS and its version the background color MAY extend into the frame and window decorations area, but not always.  You should not rely on the backgroudn color to be present in any part of the window other than the content area. </p>
+<p>If tight styling is needed on the window frame a custom window frame can be built to handle resizing, closing, maximizing and minimizing an application in addition to having a full corner-to-corner style and brand. </p>
+<p>Note that Apple and Microsoft strongly discourage using custom window frames as it causes confusion to users as its non-forward-facing compatible, e.g., when upgrading to a new look-and-feel OS version an application implementing a custom frame will begin to seem dated or out of place.</p>
+<h2>Panels</h2><p>Panels are special types of windows that can be docked and turned into a regular control.  They usually are used for tool windows or other floating behaviors.  The Panel object can be used just like the Window object in Tint to produce tool windows. </p>
+<h2>Dialogs</h2><p>Dialogs are special types of windows that ask the user for necessary information to continue.  They typically are the top most window in a stack of windows and prevent interaction with any other windows until dismissed or an action is taken by the user.  Tint provides standard dialogs that can be used to open/save files, ask the user questions on preferences, and other selections such as fonts and colors.</p>
+<h3>File Dialogs have Special Permissions</h3><p>File dialogs have a special meaning in operating systems.  If an application is sandboxed by the OS or by the user due to security permissions it has no ability to read or write to any files outside of its own application data folder (e.g., its current working directory).</p>
+<p>To allow access to open other files or folders File Dialogs can be used to ask the user where they would like to open or save to. </p>
+<p>If a user selects a file through a file dialog the application then receives read permission (if the dialog was an open dialog) or read/write permission (if the dialog was a save dialog).  Note that this persists through the life of the application.  Folder selections are treated in much the same way but the length of access only exists until the application is shut down. </p>
+<p>Since this is an OS-level call the operating system suspends all code execution while the file or save dialog is running. This means any callbacks, IO or network events will also go uncaptured!  When using a file dialog ensure the design of the application supports being temporarily suspended during the file dialog call.</p>
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

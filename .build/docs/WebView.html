@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: WebView</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+  <header class="ui menu">
+    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  <div class="ui grid">
+    <article class="sixteen wide column">
+
+      <section class="overview">
+        <h1>WebView</h1>
+          <div class="ui message overview">
+          <h3>Overview</h3>
+          <p>The WebView allows HTML content to be embedded in an application as a normal control. It uses WebKit on OSX
+             and the latest version of IE installed when on Windows (forcing IE9 or above).</p>
+        </div>
+        <div class="ui grid family">
+          <div class="four wide column ancestors">
+            <h4>Ancestors</h4>
+            <ol class="ui list">
+              
+              <li><a href="Control.html">Control</a></li>
+              
+              <li><a href="Container.html">Container</a></li>
+              
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column descendants">
+            <h4>Descendants</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column see-also">
+            <h4>See Also</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <section class="constructs">
+        <h2>Constructors</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="WebView">
+            <i class="dropdown icon"></i> 
+            <span class="fake-type">new</span> 
+            WebView 
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Creates a new webview control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">new WebView()</code></pre>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="members">
+        <h2>Members</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="loading"> <i class="dropdown icon"></i> loading </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the page is loading. If set to true (when false) it reloads the current page, when
+             set to false (when true) it stops loading the current page.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">webview.loading</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="location"> <i class="dropdown icon"></i> location </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the URL location of the HTML document rendered in the WebView.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">webview.location</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="progress"> <i class="dropdown icon"></i> progress </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets the progress of loading all resources (if the page is currently loading).  Note this will return
+             -1 when the progress is indeterminate (e.g., the page is not loading or the progress could not be determined).
+             The number returned is between 0 and 1, e.g., 0.5 represents 50% loaded.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">webview.progress</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setInterval(function() { console.log(webView.progress); }, 10);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="title"> <i class="dropdown icon"></i> title </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets the title of the HTML document loaded in the webview.  If nothing is loaded or is in the process of loading
+             this will throw an error.  LIsten to the 'title' event to know when the title of the HTML docuemnt is available.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">webview.title</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setTimeout(function() { console.log(webView.title); }, 4000);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="useragent"> <i class="dropdown icon"></i> useragent </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the user agent string used.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">webview.useragent</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setTimeout(function() { console.log(webView.useragent); }, 2000);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="methods">
+        <h2>Methods</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="back"> 
+            <i class="dropdown icon"></i> back()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Moves to the previously rendered page.  If no previously rendered page is available this takes no action.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.back()</code></pre>
+            </div>
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="boundsOfElement"> 
+            <i class="dropdown icon"></i> boundsOfElement(selector, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Returns an object with a x, y, width and height relative to the web view for any css query selector
+             passed in for the first argument, the second argument is the callback to receive the result (as its first argument).
+             This is mainly useful as a means for unit testing web pages and checking for elements positions.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.boundsOfElement(selector, callback)</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "somewebpage.html";
+webView.addEventListener('load', function() {
+  webView.boundsOfElement('.someclass', function(rect) { 
+    console.log('.someclass was ' + rect.width + ' wide ' + rect.height + ' tall.'); 
+  });
+});</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>selector</td>
+                  <td class="fake-type">string</td>
+                  <td>A css selector (e.g., the same as querySelector) to find on the page. (#someid or .someclass)</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function which is called when the execution finishes.  The result is an object with 
+                           width, height, x, and y properties that are passed as the first argument.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="execute"> 
+            <i class="dropdown icon"></i> execute(javascript, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>This will execute the passed in javascript in the window context of the top frame of the currently loaded page.  The result is
+             passed back when the callback is ran.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.execute(javascript, callback)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>javascript</td>
+                  <td class="fake-type">string</td>
+                  <td>Executes the javascript (passed in as a string) in the window context of the top frame of the page.</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function which is called when the execution finishes.  The result is passed as the first argument.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="forward"> 
+            <i class="dropdown icon"></i> forward()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Moves to the history forward to the next rendered page.  If no "next" rendered page is available this takes no action.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.forward()</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setTimeout(function() { webView.location = "https://www.bing.com"; }, 1000);
+setTimeout(function() { webView.location = "https://www.reddit.com"; }, 2000);
+setTimeout(function() { webView.location = "https://www.slashdot.org"; }, 3000);
+setTimeout(function() { webView.back(); }, 4000);
+setTimeout(function() { webView.back(); }, 5000);
+setTimeout(function() { console.log(webView.location); }, 6000);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="postMessage"> 
+            <i class="dropdown icon"></i> postMessage(message)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Posts an HTML "Message" event to the top frame (and window) of the HTML page. The HTML page can listen to window message events
+             to receive these messages.  Strings are only allowed to be passed, complex objects may be serialized via JSON to transfer them back and forth.
+             See the event 'message' to listen for messages sent from the HTML page back to Tint.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.postMessage(message)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>message</td>
+                  <td class="fake-type">string</td>
+                  <td>The string or message to pass.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="reload"> 
+            <i class="dropdown icon"></i> reload()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Reloads the current page.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.reload()</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setTimeout(function() { webView.reload(); }, 1000);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="stop"> 
+            <i class="dropdown icon"></i> stop()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Stops loading the current page, if nothing is currently loading this takes no action.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.stop()</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+setTimeout(function() { webView.stop(); }, 1000);</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="events">
+        <h2>Events</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="console"> <i class="dropdown icon"></i> console </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a new console messages appears, the first argument is the type of console
+             message (info, log, warn, error) as a string, the second parameter is an array of all the arguments
+             the console object was ran with. This only fires for console.warn(), console.log(), console.error() and
+             console.info(), it does not fire for console.assert, console.dir, or console.group.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('console', function() { ... });</code></pre>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.top=webView.right=webView.bottom=0;
+webView.location = "https://www.google.com";
+// redirect all console output to our actual console..
+webView.addEventListener('console', function (type, args) {
+  if(type === 'log') console.log(args);
+  else if(type === 'error') console.error(args);
+  else if(type === 'info') console.info(args);
+  else if(type === 'warn') console.warn(args);
+});</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+
+            
+            
+            
+          </div>
+        
+          <div class="title" id="error"> <i class="dropdown icon"></i> error </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when an unrecoverable error occurs, such as being unable to retrieve the requested page for the top frame,
+             or when a security error has occured.  The callback function is passed the translated description of 
+             the error message that occured.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('error', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="load"> <i class="dropdown icon"></i> load </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a new request for a HTML document at the top frame has loaded and the document object
+             model is ready.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('load', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="loading"> <i class="dropdown icon"></i> loading </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a new request for a HTML document at the top frame is committed, this means the
+             new URL has passed security requirement checks, but has yet to begin making a network request
+             or render any parts of the page.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('loading', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="location-change"> <i class="dropdown icon"></i> location-change </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a change in location occurs (E.g., a new URL has been requested). This differs from a 
+             load (or loading) event in-that it does not fire if the current page is reloaded and the URL or
+             location has not changed.  The event handler is passed two arguments, the first is the old URL,
+             and the second is the new URL.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('location-change', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="message"> <i class="dropdown icon"></i> message </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the top frame HTML document has executed window.postMessageToHost().  The message is a string
+             passed into the callback provided as the first argument.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('message', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="new-window"> <i class="dropdown icon"></i> new-window </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>When a new window is requested, this event is fired. The event handler 
+             is passed a new WebView that can be used for a new window (or alternatively)
+             a new tab. It is the responsibility of the event handler to attach the
+             web view to a window, tab (or other GUI item). If the event handler chooses
+             not to open the web site in a new window, the webview can simply be discarded.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('new-window', function() { ... });</code></pre>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.right=webView.top=webView.bottom=0;
+win.visible = true;
+webView.location = "https://www.google.com";
+webView.addEventListener('new-window', function(newWebView) {
+  // Create a new window for the "new-window" event. Alternatively we could
+  // create a new tab or simply add another webview to the current window.
+  // the webview does not necessarily need to be onscreen. The webview can be
+  // held offscreen until the load event occurs to check its url and then dispose
+  // or attach it to a visible UI window/panel/etc.
+  var newWin = new Window();
+  newWin.appendChild(newWebView);
+  newWebView.left=newWebView.right=newWebView.top=newWebView.bottom=0;
+  newWin.visible = true;
+  // Note we could alternatively do nothing with the web view preventing any
+  // and all new web views from loading.
+});</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+
+            
+            
+            
+          </div>
+        
+          <div class="title" id="policy"> <i class="dropdown icon"></i> policy </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires the callback for the event to ask if the page about to be loaded should be blocked.  
+             The URL for the target resource or navigation is passed in to the event callback.  If false (and only strictly false) 
+             is returned by the event handler the request is blocked.  If any other value is returned (including undefined or null)
+             the resource is allowed to load and continue.  This event is useful if you want to screen URL's being loaded and
+             deny navigation and resource requests based on the URL (e.g., such as a net nanny or for security reasons).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('policy', function() { ... });</code></pre>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+var webView = new WebView();
+win.appendChild(webView);
+webView.left=webView.right=webView.top=webView.bottom=0;
+win.visible = true;
+webView.addEventListener('policy', function(url) {
+   if(url === "https://www.google.com") {
+     console.log('blocking requests to google!');
+     return false;
+   }
+});
+webView.location = "https://www.google.com";</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+
+            
+            
+            
+          </div>
+        
+          <div class="title" id="redirect"> <i class="dropdown icon"></i> redirect </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a redirect from a server request occurs.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('redirect', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="request"> <i class="dropdown icon"></i> request </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a new request for a HTML document at the top frame has occured, but before loaded or load has occured.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('request', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="unload"> <i class="dropdown icon"></i> unload </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when a page in the top frame is unloaded.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">webview.addEventListener('unload', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
