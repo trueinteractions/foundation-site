@@ -11,7 +11,7 @@
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
     "jsdoc": "^3.4.0",
-    "json-prettify": "^1.2.0"
+    "json-prettify": "^1.2.0",
     "jade": "^1.11.0",
     "restler": "^3.4.0"
   },
