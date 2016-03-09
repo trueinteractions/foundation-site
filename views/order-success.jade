@@ -1,0 +1,14 @@
+h2 Tint 2 #{version} Purchase
+
+h3 Thank you #{name}
+	
+p You will see a charge on your credit card statement from 'True Interactions' for $#{amount}.
+
+p Transaction id: #{transactionId}
+	
+p
+	| If you have any questions please contact us at 
+	a(href='mailto:support@trueinteractions.com') support@trueinteractions.com
+	
+if !prod
+	p This is only a test. No transactions have actually taken place.

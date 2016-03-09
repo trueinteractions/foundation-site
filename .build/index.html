@@ -275,8 +275,9 @@
 					<!-- Buy Single Modal -->
 					<div id="buyEducational" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Educational Version</h2>
-						<form method="post" action="/api/order">
+						<form class="cc-form-edu" method="post" action="/api/order">
 							<input name="amount" class="u-none" value="99.00"></input>
+							<input name="version" class="u-none" value="Educational"></input>
 							<div class="row purchase-price">
 								<h4 class="column">Price: $99.00 USD</h4>
 							</div>
@@ -376,8 +377,9 @@
 					<!-- Buy Commercial Modal -->
 					<div id="buyCommercial" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Commercial Version</h2>
-						<form method="post" action="/api/order">
+						<form class="cc-form-com" method="post" action="/api/order">
 							<input name="amount" class="u-none" value="499.00"></input>
+							<input name="version" class="u-none" value="Commercial"></input>
 							<div class="row purchase-price">
 								<h4 class="column">Price: $499.00 USD</h4>
 							</div>
@@ -474,8 +476,9 @@
 					<!-- Buy Professional Modal -->
 					<div id="buyProfessional" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 						<h2 id="modalTitle">Professional Version</h2>
-						<form method="post" action="/api/order">
+						<form class="cc-form-pro" method="post" action="/api/order">
 							<input name="amount" class="u-none" value="299.00"></input>
+							<input name="version" class="u-none" value="Professional"></input>
 							<div class="row purchase-price">
 								<h4 class="column">Price: $299.00 USD</h4>
 							</div>
@@ -568,6 +571,14 @@
 	</div>
 </section>
 
+<!-- Order Success / Failure Modal -->
+<div id="orderSuccessModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+
+	<div class="success-modal-content">
+	</div>
+	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
 <footer class="footer">
@@ -613,8 +624,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.tab.min.js"></script>
 		<script src="/static/js/classie.js"></script>
 		<script src="/static/js/header.js"></script>
-
-		
+		<script src="/static/js/cc-form.js"></script>
 
     <script>
       $(document).foundation();
@@ -635,4 +645,6 @@
     </script>
 	
 </body>
+
+
 </html>
