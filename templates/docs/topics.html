@@ -15,15 +15,9 @@
 </head>
 <body>
  <header class="ui menu">
-    <div id="logo" class="item"><a href="index.html">&nbsp;</a></div>
-    <div class="ui dropdown item">
-      Topics
-      <i class="dropdown icon"></i>
-      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
-        <?js for(var i=0; i < this.nav.tutorials.length; i++) { ?>
-        <a class="item" href="tutorial-<?js=this.nav.tutorials[i].name ?>.html"> <?js=this.nav.tutorials[i].title ?> </a>
-        <?js } ?>
-      </div>
+    <a id="logo" href="/index.html">Tint</a>
+    <div class="ui item">
+      <a href="/docs/tutorial-gettingstarted.html">Getting Started</a>
     </div>
     <div class="ui dropdown item">
       Reference
@@ -31,6 +25,15 @@
       <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
         <?js for(var i=0; i < this.nav.classes.length; i++) { ?>
         <a class="item" href="<?js=this.nav.classes[i].id ?>.html"> <?js=this.nav.classes[i].name ?> </a>
+        <?js } ?>
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        <?js for(var i=0; i < this.nav.tutorials.length; i++) { ?>
+        <a class="item" href="tutorial-<?js=this.nav.tutorials[i].name ?>.html"> <?js=this.nav.tutorials[i].title ?> </a>
         <?js } ?>
       </div>
     </div>

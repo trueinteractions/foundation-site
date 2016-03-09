@@ -38,24 +38,31 @@ header {
 
 header > #logo {
   background-image: url(/static/images/tConstellation.svg);
-  padding-left: 3em;
   background-repeat: no-repeat;
   background-position:left center;
   line-height:2em;
   letter-spacing: .05em;
-  margin-left:19px;
+  margin-left:18px;
 }
 
-header > #logo > a {
-  color:rgba(0,0,0,0.8) !important;
+header > a {
+  color: transparent;
+  padding: 14px;
+}
+header > a:hover, header > a:visited {
+  color: transparent !important;
 }
 
-header > .dropdown.item {
+header > .item {
   color: white !important;
   font-weight: 500;
   font-size: 14px !important;
   text-transform: uppercase !important;
   font-family: Andale Mono;
+}
+
+header > .item > a {
+  color:white !important;
 }
 
 header > .dropdown.item * {
