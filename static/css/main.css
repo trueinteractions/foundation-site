@@ -59,6 +59,33 @@ nav {
 	background-color:#fff2e7;
 }
 
+.steps {
+	color: #efefef;
+    list-style-position: inside !important;
+    padding-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.75em;
+    font-weight:200;
+    padding-bottom:20px;
+}
+
+.how-does-tint-work {
+	background-image: url('/static/images/tintapp.png');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: padding;
+    padding-top: 325px;
+    text-align: center;
+}
+
+.how-does-tint-work p span {
+    color: #bfbfbf;
+    font-size: 3em;
+    margin-left:5px;
+    margin-right:5px;
+}
+
 .hero {
 	top: 0;
 	width: 100%;
@@ -151,7 +178,7 @@ h1,h2,h3,h4,h5 {
 
 .how-to-use {
 	width: 100%;
-	padding: 5rem 0 5rem 0;
+	padding: 5rem 0 2rem 0;
 	background-color: #212121;
 }
 
@@ -161,7 +188,7 @@ h1,h2,h3,h4,h5 {
 
 .get-started {
 	width: 100%;
-	padding: 5rem 0 5rem 0;
+	padding: 0.5rem 0 2rem 0;
 	background-color: #212121;
 }
 
@@ -176,7 +203,7 @@ h1,h2,h3,h4,h5 {
 
 .get-started h3 {
 	color: white;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .full-width {
@@ -193,7 +220,7 @@ h1,h2,h3,h4,h5 {
 
 .product-matrix-section {
 	width:100%;
-	padding: 0 5rem 5rem 5rem 5rem;
+	padding: 2rem;
 	background-color: rgba(244,232,211,0.25);
 }
 
@@ -203,6 +230,19 @@ h1,h2,h3,h4,h5 {
 
 .right-shadow {
 	box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.26);
+}
+
+.dear-sir {
+	width: 100%;
+    text-align: center;
+    display: block;
+    color: #999;
+    text-transform: uppercase;
+    padding: px;
+    font-family: Andale Mono;
+    letter-spacing: -0.5px;
+    line-height: 3em;
+    font-size: 0.75em;
 }
 
 .pricing-table {
