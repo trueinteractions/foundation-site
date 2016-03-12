@@ -1,69 +1,111 @@
 <div class="row">
-	<label class="medium-6 large-3 columns">
-		<span>First Name</span>
-		<input name="customerFirstName" type="text" placeholder="First Name"/>
-	</label>
+  <fieldset>
+    <legend>Contact</legend>
 
-	<label class="medium-6 large-3 columns">
-		<span>Last Name</span>
-		<input name="customerLastName" type="text" placeholder="Last Name"/>
-	</label>
-
-	<label class="medium-12 large-6 columns">
-		<span>Email</span>
-		<input name="customerEmail" type="email" placeholder="Email"/>
-	</label>
+    <label class="columns">
+      <span>Email</span>
+      <input name="customerEmail" required type="email" placeholder="Email"/>
+      <small class="error">An email address is required.</small>
+    </label>
+  </fieldset>
 </div>
 
 <div class="row">
-	<label class="medium-12 column">
-		<span>Billing Address</span>
-		<input name="billingAddress" type="text" placeholder="Street Address"/>
-	</label>
+  <fieldset>
+    <legend>Billing Address</legend>
+
+    <label class="medium-12 column">
+      <span>Street Address</span>
+      <input name="billingAddress" required type="text" placeholder="Street Address"/>
+      <small class="error">Address Required</small>
+    </label>
+
+    <div class="row column">
+      <label class="medium-4 column">
+        <span>City</span>
+        <input name="billingCity" required type="text" placeholder="City"/>
+        <small class="error">City Required</small>
+      </label>
+
+      <label class="medium-2 column">
+        <span>State</span>
+        <input name="billingState" required type="text" placeholder="State"/>
+        <small class="error">State Required</small>
+      </label>
+
+      <label class="medium-3 column">
+        <span>Zip Code</span>
+        <input name="billingZip" required type="text" placeholder="Zip Code"/>
+        <small class="error">Zip Code Required</small>
+      </label>
+
+      <label class="medium-3 column">
+        <span>Country</span>
+        <input name="billingContry" required type="text" placeholder="Country"/>
+        <small class="error">Country Required</small>
+      </label>
+    </div>
+
+  </fieldset>
 </div>
 
-<div class="row">
-	<label class="medium-4 column">
-		<span>City</span>
-		<input name="billingCity" type="text" placeholder="City"/>
-	</label>
+<div class="relative row">
 
-	<label class="medium-2 column">
-		<span>State</span>
-		<input name="billingState" type="text" placeholder="State"/>
-	</label>
+  <!-- (c) 2005, 2016. Authorize.Net is a registered trademark of CyberSource Corporation -->
+  <div class="AuthorizeNetSeal">
+    <script type="text/javascript" language="javascript">
+      var ANS_customer_id="2dc0fa59-104f-4575-b2e0-347ba1aa7297";</script>
+    <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" > </script>
+    <a href="http://www.authorize.net/" id="AuthorizeNetText" target="_blank">E-Commerce Solutions</a>
+  </div>
 
-	<label class="medium-3 column">
-		<span>Zip Code</span>
-		<input name="billingZip" type="text" placeholder="Zip Code"/>
-	</label>
+  <fieldset>
+    <legend>Payment</legend>
 
-	<label class="medium-3 column">
-		<span>Country</span>
-		<input name="billingContry" type="text" placeholder="Country"/>
-	</label>
+    <div class="row">
+      <label class="medium-8 large-6 columns">
+        <span>Name (As It Appears On Card)</span>
+        <input name="customerName" required type="text" placeholder="Name"/>
+        <small class="error">Name Required</small>
+      </label>
+
+
+    </div>
+
+    <div class="row">
+      <label class="medium-8 large-6 column">
+        <span>Credit Card Number</span>
+        <input name="creditCardNumber" required pattern="card" type="number" placeholder="Credit Card Number"/>
+        <small class="error">Credit Card Required</small>
+      </label>
+    </div>
+
+
+    <div class="row">
+      <label class="medium-4 large-3 column">
+        <span>Expiration Month</span>
+        <input name="expirationMonth" required maxlength="2" type="number" placeholder="MM"/>
+        <small class="error">Expiration Month Required</small>
+      </label>
+    </div>
+
+    <div class="row">
+      <label class="medium-4 large-3 column">
+        <span>Expiration Year</span>
+        <input name="expirationYear" maxlength="4" required maxlength="4" type="number" placeholder="YYYY"/>
+        <small class="error">Expiration Year Required</small>
+      </label>
+    </div>
+
+    <div class="row">
+      <label class="medium-4 large-3 column">
+        <span>Security Code</span>
+        <input name="cvv" required pattern="cvv" max="9999" maxlength="4" type="number" placeholder="000 - or - 0000"/>
+        <small class="error">Valid Security Code Required</small>
+      </label>
+    </div>
+
+  </fieldset>
 </div>
 
-<div class="row">
-  <label class="medium-4 column">
-    <span>Credit Card Number</span>
-    <input name="creditCardNumber" type="text" placeholder="Credit Card Number"/>
-  </label>
-
-	<label class="medium-2 column">
-    <span>Expiration Month</span>
-    <input name="expirationMonth" type="text" placeholder="MM"/>
-	</label>
-
-	<label class="medium-2 column">
-    <span>Expiration Year</span>
-    <input name="expirationYear" type="text" placeholder="YYYY"/>
-	</label>
-
-	<label class="medium-2 column" for="">
-    <span>Security Code</span>
-    <input name="cvv" type="text" placeholder="000 (Amex - 0000)"/>
-	</label>
-</div>
-
-<button type="submit">Submit</button>
+<button class="right" type="submit">Submit</button>
