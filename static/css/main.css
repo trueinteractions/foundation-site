@@ -503,3 +503,7 @@ header.smaller nav a {
     left: 0;
   }
 }
+
+.cc-form-error {
+  color: red;
+}

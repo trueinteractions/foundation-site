@@ -75,6 +75,7 @@ app.post('/api/order', function(req, res) {
 
     transaction.to[details.customerEmail] = details.customerName;
 
+    // Render success template for email and client
     app.render('order-success', transaction, function(err, html) {
       transaction.html = html;
 
@@ -88,7 +89,13 @@ app.post('/api/order', function(req, res) {
       }
     });
 
-  }).catch(res.send);
+  }).catch(function(err) {
+    if (err) {
+      res.status(422).send(err.message);
+    }
+    console.log(err);
+  });
+
 });
 
 app.listen(port, function() {
