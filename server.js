@@ -3,6 +3,7 @@ require('./mail-in/mailin');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var compress = require('compression');
 var port = process.env.PORT || 5000;
 
 var AuthorizeNet = require('authorize-net');
@@ -13,6 +14,7 @@ var payments = new AuthorizeNet({
 
 var mail = new Mailin('https://api.sendinblue.com/v2.0', process.env.MAIL_SERVER_API);
 
+app.use(compress());
 app.use(express.static('.build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

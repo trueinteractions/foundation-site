@@ -233,16 +233,14 @@ h1,h2,h3,h4,h5 {
 }
 
 .dear-sir {
-	width: 100%;
-    text-align: center;
-    display: block;
-    color: #999;
-    text-transform: uppercase;
-    padding: px;
-    font-family: Andale Mono;
-    letter-spacing: -0.5px;
-    line-height: 3em;
-    font-size: 0.75em;
+  text-align: center;
+  color: #999;
+  text-transform: uppercase;
+  padding: px;
+  font-family: Andale Mono;
+  letter-spacing: -0.5px;
+  line-height: 3em;
+  font-size: 0.75em;
 }
 
 .pricing-table {
