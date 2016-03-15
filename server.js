@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var port = process.env.PORT || 5000;
 
+
 var AuthorizeNet = require('authorize-net');
 var payments = new AuthorizeNet({
   API_LOGIN_ID: process.env.AUTHORIZE_NET_API_LOGIN,
@@ -33,15 +34,23 @@ app.post('/api/order', function(req, res) {
     };
   }
 
-  var order = {
-    amount: details.amount
+  var licenses = {
+    Educational: 99.00,
+    Professional: 299.00,
+    Commercial: 499.00
   };
+
+  var order = {
+    amount: licenses[details.version]
+  };
+
   var creditCard = {
     creditCardNumber: details.creditCardNumber,
     expirationMonth: details.expirationMonth,
     expirationYear: details.expirationYear,
     cvv2: details.cvv
   };
+
   var prospect = {
     customerFirstName: splitName(details.customerName).first,
     customerLastName: splitName(details.customerName).last,
@@ -69,7 +78,7 @@ app.post('/api/order', function(req, res) {
       html: '',
       subject: 'Your Recent Tint 2 Purchase',
       name: details.customerName,
-      amount: details.amount,
+      amount: order.amount,
       version: details.version,
       transactionId: response.transactionId,
       prod: !!process.env.PRODUCTION

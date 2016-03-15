@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var ccformPro = $('.cc-form-pro');
 
 	function submitOrder(form) {
+    form.find('button[type=submit]').prop('disabled', true);
 		$.post('/api/order', form.serialize())
       .success(function(res) {
         $('.success-modal-content').html(res);
