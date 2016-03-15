@@ -68,8 +68,6 @@
         <input name="customerName" required type="text" placeholder="Name"/>
         <small class="error">Name Required</small>
       </label>
-
-
     </div>
 
     <div class="row">
@@ -80,11 +78,10 @@
       </label>
     </div>
 
-
     <div class="row">
       <label class="medium-4 large-3 column">
         <span>Expiration Month</span>
-        <input name="expirationMonth" required pattern="/^\d{2}$/" maxlength="2" type="number" placeholder="MM"/>
+        <input name="expirationMonth" required type="number" placeholder="MM"/>
         <small class="error">Expiration Month Required</small>
       </label>
     </div>
@@ -92,7 +89,7 @@
     <div class="row">
       <label class="medium-4 large-3 column">
         <span>Expiration Year</span>
-        <input name="expirationYear" pattern="/^\d{4}$/" required maxlength="4" type="number" placeholder="YYYY"/>
+        <input name="expirationYear" required type="number" placeholder="YYYY"/>
         <small class="error">Expiration Year Required</small>
       </label>
     </div>
