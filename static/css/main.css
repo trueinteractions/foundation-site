@@ -82,8 +82,8 @@ nav {
 .how-does-tint-work p span {
     color: #bfbfbf;
     font-size: 3em;
-    margin-left:5px;
-    margin-right:5px;
+    margin-left:7.5px;
+    margin-right:7.5px;
 }
 
 .hero {
@@ -149,6 +149,13 @@ h1,h2,h3,h4,h5 {
 .what-can-you-do {
 	padding: 5rem 0 5rem 0;
 	background-color: rgba(244,232,211,0.25);
+}
+
+.what-can-you-do .row.large-uncollapse {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
 }
 
 .industry-tabs {
@@ -267,6 +274,9 @@ h1,h2,h3,h4,h5 {
 
 .ideation {
 	margin-top:2.5em;
+	height: 200px;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
 }
 
 .panel-transparent.min-height {

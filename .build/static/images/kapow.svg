@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="150px" height="150px" viewBox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+<image display="none" overflow="visible" width="1303" height="1112" id="Sketch" xlink:href="FD0BA8C1E601FE74.png"  transform="matrix(0.7064 0 0 0.7064 17.1274 -86.5307)">
+</image>
+<circle fill="#D6C9B6" cx="75" cy="22.3" r="15.7"/>
+<circle fill="#F4E8D3" cx="75.5" cy="21.8" r="10.2"/>
+<circle fill="#FFFFFF" cx="79.7" cy="17.6" r="6"/>
+<circle fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="75" cy="22.3" r="15.7"/>
+<polyline fill="#A2DDDA" points="80.5,58.7 121,82.4 75,111.8 28.5,82.4 69,58.7 "/>
+<ellipse fill="#23B5B5" cx="73.4" cy="84.2" rx="22.3" ry="13.4"/>
+<path fill="#D6C9B6" d="M80.7,69.7c8.2,1.5,14.2,6.1,14.2,11.5c0,6.6-8.9,12-19.9,12s-19.9-5.4-19.9-12c0-5.4,5.9-10,14-11.5"/>
+<path fill="#F4E8D3" d="M79.9,70.1c6.1,1.1,10.6,4.5,10.6,8.6c0,5-6.6,9-14.9,9s-14.9-4-14.9-9c0-4,4.4-7.5,10.5-8.6"/>
+<path fill="#7F7F7A" d="M80,38.3v42.4v0c-3.1,1.8-6.9,1.8-10,0v0V38.3"/>
+<polygon fill="#1A9692" points="28,83 28,107 74.4,135.5 74.8,111.8 "/>
+<polygon fill="#63635D" points="75,43 75,81 70,80.7 70,41 "/>
+<polygon fill="#23B5B5" points="121,83 121,107 74.4,135.5 74.2,111.8 "/>
+<polygon fill="#23B5B5" points="68.1,92.4 56.1,99.8 46.5,94.2 57.8,87.5 "/>
+<path fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M80,38.3v42.4v0c-3.1,1.8-6.9,1.8-10,0v0V38.3"/>
+<path fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M80.7,69.7c8.2,1.5,14.2,6.1,14.2,11.5c0,6.6-8.9,12-19.9,12s-19.9-5.4-19.9-12c0-5.4,5.9-10,14-11.5"/>
+<polyline fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	80.5,58.7 121,82.4 75,111.8 28.5,82.4 69,58.7 "/>
+<polyline fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	121,83 121,107.2 74.7,136.7 28,107.4 28,83 "/>
+<line fill="none" stroke="#545452" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="75" y1="112" x2="75" y2="137"/>
+<path fill="#545452" d="M71.1,43.4c0,0,3.9,2.5,7.9,0.1V38h-8L71.1,43.4z"/>
+</svg>
