@@ -148,7 +148,7 @@ h1,h2,h3,h4,h5 {
 
 .what-can-you-do {
 	padding: 5rem 0 5rem 0;
-	background-color: rgba(244,232,211,0.25);
+	background-color: rgba(255,242,231,1);
 }
 
 .what-can-you-do .row.large-uncollapse {
@@ -227,8 +227,12 @@ h1,h2,h3,h4,h5 {
 
 .product-matrix-section {
 	width:100%;
-	padding: 2rem;
+	padding: 0.1rem 2rem;
 	background-color: rgba(244,232,211,0.25);
+}
+
+.product-matrix-section h2 {
+	padding-bottom: 2rem;
 }
 
 .left-shadow {

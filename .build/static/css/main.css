@@ -148,7 +148,7 @@ h1,h2,h3,h4,h5 {
 
 .what-can-you-do {
 	padding: 5rem 0 5rem 0;
-	background-color: rgba(244,232,211,0.25);
+	background-color: rgba(255,242,231,1);
 }
 
 .what-can-you-do .row.large-uncollapse {
@@ -227,8 +227,12 @@ h1,h2,h3,h4,h5 {
 
 .product-matrix-section {
 	width:100%;
-	padding: 2rem;
+	padding: 0.1rem 2rem;
 	background-color: rgba(244,232,211,0.25);
+}
+
+.product-matrix-section h2 {
+	padding-bottom: 2rem;
 }
 
 .left-shadow {
@@ -240,16 +244,14 @@ h1,h2,h3,h4,h5 {
 }
 
 .dear-sir {
-	width: 100%;
-    text-align: center;
-    display: block;
-    color: #999;
-    text-transform: uppercase;
-    padding: px;
-    font-family: Andale Mono;
-    letter-spacing: -0.5px;
-    line-height: 3em;
-    font-size: 0.75em;
+  text-align: center;
+  color: #999;
+  text-transform: uppercase;
+  padding: px;
+  font-family: Andale Mono;
+  letter-spacing: -0.5px;
+  line-height: 3em;
+  font-size: 0.75em;
 }
 
 .pricing-table {
@@ -494,4 +496,26 @@ header.smaller nav a {
 
 .purchase-price {
 	font-size: 24px;
+}
+
+.relative {
+  position: relative;
+}
+
+.AuthorizeNetSeal {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 640px) {
+  .AuthorizeNetSeal {
+    position: absolute;
+    top: 470px;
+    left: 0;
+  }
+}
+
+.cc-form-error {
+  color: red;
 }
