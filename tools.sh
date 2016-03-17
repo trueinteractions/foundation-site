@@ -10,3 +10,7 @@ if [ "$1" = "build" ]; then
 	rm -rf ./.build/docs/*.html > /dev/null
 	./node_modules/.bin/jsdoc -c docs.json
 fi
+
+if [ "$1" = optimize ]; then
+  imageOptim -j -a -q -c -d ./static/images/
+fi
