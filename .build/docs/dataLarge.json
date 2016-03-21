@@ -1005,11 +1005,11 @@
             "comment": "/** \n   * @event open\n   * @memberof Application\n   * @description The open event is fired when a file type or scheme that the application is assigned\n   *              to handle (through Application.registerScheme or Application.registerFileType) is \n   *              attempted to be opened through a web browser, file browser, or through a seperate\n   *              application.  The first argument passed in is an array of url's requesting to be\n   *              opened. Note that if your application is not currently running your application is\n   *              automatically opened and the open event is fired immediately when an event handler\n   *              (function callback) is assigned to the open event.\n   */"
           , "meta": {
               "range": [
-                27445
-              , 28172
+                27500
+              , 28227
             ]
             , "filename": "Application_mac.js"
-            , "lineno": 588
+            , "lineno": 589
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Application"
             , "code": {}
             , "shortpath": "Application/Application_mac.js"
@@ -1282,7 +1282,7 @@
             , "lineno": 26
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Box"
             , "code": {
-                "id": "astnode100001849"
+                "id": "astnode100001857"
               , "name": "Box"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -1610,7 +1610,7 @@
             , "lineno": 19
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Button"
             , "code": {
-                "id": "astnode100002262"
+                "id": "astnode100002270"
               , "name": "Button"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -1828,7 +1828,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/ButtonGroup"
             , "code": {
-                "id": "astnode100002913"
+                "id": "astnode100002921"
               , "name": "ButtonGroup"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -2054,7 +2054,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Color"
             , "code": {
-                "id": "astnode100004040"
+                "id": "astnode100004048"
               , "name": "Color"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -2374,7 +2374,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Color"
             , "code": {
-                "id": "astnode100003619"
+                "id": "astnode100003627"
               , "name": "ColorPanel"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -2506,7 +2506,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Color"
             , "code": {
-                "id": "astnode100003873"
+                "id": "astnode100003881"
               , "name": "ColorWell"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -4402,7 +4402,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Date"
             , "code": {
-                "id": "astnode100007463"
+                "id": "astnode100007471"
               , "name": "DateWell"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -4796,7 +4796,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Dialog"
             , "code": {
-                "id": "astnode100007946"
+                "id": "astnode100007954"
               , "name": "Dialog"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -5000,7 +5000,7 @@
             , "lineno": 16
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/DropDown"
             , "code": {
-                "id": "astnode100008641"
+                "id": "astnode100008649"
               , "name": "DropDown"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6152,7 +6152,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Fonts"
             , "code": {
-                "id": "astnode100010578"
+                "id": "astnode100010586"
               , "name": "Font"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6483,7 +6483,7 @@
             , "lineno": 16
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Fonts"
             , "code": {
-                "id": "astnode100010240"
+                "id": "astnode100010248"
               , "name": "FontPanel"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6645,7 +6645,7 @@
             , "lineno": 15
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Image"
             , "code": {
-                "id": "astnode100011243"
+                "id": "astnode100011251"
               , "name": "ImageWell"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6823,7 +6823,7 @@
             , "lineno": 138
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Menu"
             , "code": {
-                "id": "astnode100012651"
+                "id": "astnode100012659"
               , "name": "Menu"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -7389,7 +7389,7 @@
             , "lineno": 25
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Menu"
             , "code": {
-                "id": "astnode100011680"
+                "id": "astnode100011688"
               , "name": "MenuItem"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -7847,7 +7847,7 @@
             , "lineno": 19
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Notification"
             , "code": {
-                "id": "astnode100013428"
+                "id": "astnode100013436"
               , "name": "Notification"
               , "type": "FunctionDeclaration"
               , "paramnames": []
@@ -8010,7 +8010,7 @@
             , "lineno": 29
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Panel"
             , "code": {
-                "id": "astnode100014040"
+                "id": "astnode100014048"
               , "name": "Panel"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8251,7 +8251,7 @@
             , "lineno": 23
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/PopOver"
             , "code": {
-                "id": "astnode100014315"
+                "id": "astnode100014323"
               , "name": "PopOver"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8486,7 +8486,7 @@
             , "lineno": 20
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/ProgressBar"
             , "code": {
-                "id": "astnode100014924"
+                "id": "astnode100014932"
               , "name": "ProgressBar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8903,7 +8903,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Scroll"
             , "code": {
-                "id": "astnode100015541"
+                "id": "astnode100015549"
               , "name": "Scroll"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8999,7 +8999,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/SecureTextInput"
             , "code": {
-                "id": "astnode100016301"
+                "id": "astnode100016309"
               , "name": "SecureTextInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9376,7 +9376,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/SelectInput"
             , "code": {
-                "id": "astnode100016428"
+                "id": "astnode100016436"
               , "name": "SelectInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9506,7 +9506,7 @@
             , "lineno": 18
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Slider"
             , "code": {
-                "id": "astnode100016779"
+                "id": "astnode100016787"
               , "name": "Slider"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9793,7 +9793,7 @@
             , "lineno": 23
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Split"
             , "code": {
-                "id": "astnode100016973"
+                "id": "astnode100016981"
               , "name": "Split"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -10259,7 +10259,7 @@
             , "lineno": 29
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/StatusBar"
             , "code": {
-                "id": "astnode100017619"
+                "id": "astnode100017627"
               , "name": "StatusBar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -12518,7 +12518,7 @@
             , "lineno": 39
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Table"
             , "code": {
-                "id": "astnode100020118"
+                "id": "astnode100020126"
               , "name": "Table"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13038,7 +13038,7 @@
             , "lineno": 18
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/TextInput"
             , "code": {
-                "id": "astnode100021546"
+                "id": "astnode100021554"
               , "name": "TextInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13207,7 +13207,7 @@
             , "lineno": 84
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Toolbar"
             , "code": {
-                "id": "astnode100022595"
+                "id": "astnode100022603"
               , "name": "Toolbar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13540,7 +13540,7 @@
             , "lineno": 16
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Toolbar"
             , "code": {
-                "id": "astnode100022123"
+                "id": "astnode100022131"
               , "name": "ToolbarItem"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -14501,7 +14501,7 @@
             , "lineno": 178
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/WebView"
             , "code": {
-                "id": "astnode100025893"
+                "id": "astnode100025901"
               , "name": "WebView"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -16002,7 +16002,7 @@
             , "lineno": 25
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Window"
             , "code": {
-                "id": "astnode100027607"
+                "id": "astnode100027615"
               , "name": "Window"
               , "type": "FunctionDeclaration"
               , "paramnames": [
