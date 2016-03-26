@@ -3,7 +3,7 @@
 {% include 'top-nav.html' %}
 <script>
 function download() {
-  if(window.navigator.platform.indexOf('mac') > -1) {
+  if(window.navigator.platform.toLowerCase().indexOf('mac') > -1) {
     window.location = 'https://s3.amazonaws.com/tint-downloads/Tint+2.3.5.dmg';
   } else {
     window.location = 'https://s3.amazonaws.com/tint-downloads/tint-2.3.5-x64.msi';
