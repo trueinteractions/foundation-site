@@ -1,14 +1,20 @@
 h2 Tint 2 #{version} Purchase
 
 h3 Thank you #{name}
-	
+
 p You will see a charge on your credit card statement from 'True Interactions' for $#{amount} USD.
 
 p Transaction id: #{transactionId}
-	
+
+h4 Download Tint v2.3.5
+p 
+  a(href="https://s3.amazonaws.com/tint-downloads/tint-2.3.5-x64.msi") Windows
+  |  - 
+  a(href='https://s3.amazonaws.com/tint-downloads/Tint+2.3.5.dmg') OS X
+
 p
-	| If you have any questions please contact us at 
-	a(href='mailto:support@trueinteractions.com') support@trueinteractions.com
-	
+  | If you have any questions please contact us at 
+  a(href='mailto:support@trueinteractions.com') support@trueinteractions.com
+
 if !prod
-	p This is only a test. No transactions have actually taken place.
+  p This is only a test. No transactions have actually taken place.

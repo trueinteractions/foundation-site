@@ -10,9 +10,11 @@ $(document).ready(function() {
         $('.success-modal-content').html(res);
         $('#orderSuccessModal').foundation('reveal', 'open');
         form[0].reset();
+        form.find('button[type=submit]').prop('disabled', false);
       }).error(function(err) {
         $('.cc-form-error').html(err.responseText);
         console.log(err);
+        form.find('button[type=submit]').prop('disabled', false);
     });
 	}
 
