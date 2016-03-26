@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: MenuItem</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+  <header class="ui menu">
+    <a id="logo" href="/index.html">Tint</a>
+    <div class="ui item">
+      <a href="/docs/tutorial-gettingstarted.html">Getting Started</a>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  <div class="ui grid">
+    <article class="sixteen wide column">
+
+      <section class="overview">
+        <h1>MenuItem</h1>
+          <div class="ui message overview">
+          <h3>Overview</h3>
+          <p>A menu item object is an individual item within a menu. It allows you to stylize and
+             control the click behavior of the menu item.  In addition its capabilities give access
+             to providing application wide "hot keys" such as copy, and paste. MenuItem objects can
+             only be appended to a Menu object.</p>
+        </div>
+        <div class="ui grid family">
+          <div class="four wide column ancestors">
+            <h4>Ancestors</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column descendants">
+            <h4>Descendants</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column see-also">
+            <h4>See Also</h4>
+            <ol class="ui list">
+              
+              <li><a href="Menu.html">Menu</a></li>
+              
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <section class="constructs">
+        <h2>Constructors</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="MenuItem">
+            <i class="dropdown icon"></i> 
+            <span class="fake-type">new</span> 
+            MenuItem 
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Creates a new menuitem object.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">new MenuItem(title, key, modifier)</code></pre>
+            </div>
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="members">
+        <h2>Members</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="checked"> <i class="dropdown icon"></i> checked </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether this menu item is "activated" or "highlighted" or
+             "checked".  This is expressed differently depending on the native OS, on
+             most operating systems it shows a checkbox next to the menu item, on some
+             operating systems it affects the background color and highlight. By default
+             this is false.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">menuitem.checked</span>
+              <span class="fake-note">(default false)</span>
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="custom"> <i class="dropdown icon"></i> custom </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets a custom control you'd like to place in the menu item.
+             This is useful if you need to render more than just an icon or text in the
+             menu item.  It provides a way for users to enhance menu functionality. Any
+             Control can be added and will have its width and height constrained to the
+             system defined area, the layout will also be dictated by the operating system.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><a href="Control.html">Control</a></span></span>
+              <span class="fake-name">menuitem.custom</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="enabled"> <i class="dropdown icon"></i> enabled </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the menu item is enabled or greyed out (disabled)
+             Note that the item is still visible but does not respond to clicks and
+             is visually denoted as inactive to the user.  This is useful when you want
+             to express that the choice or selection in the menu item is not available
+             at the moment.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">menuitem.enabled</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="image"> <i class="dropdown icon"></i> image </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the image that will be used for the menu item.
+             This is placed as an icon next to menu items label. This can
+             be any URL, including the app:// schema for referencing packaged
+             resources, or it can be a named system icon resource.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">menuitem.image</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="key"> <i class="dropdown icon"></i> key </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets what key (in combination with modifiers), when pressed,
+             activates this menu.  This is useful when you want to provide a
+             keyboard shortcut to a menu item so the user doesn't need to navigate
+             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for
+             a key).  Each menu item must have a unique key and modifier combination
+             (if one in set).  This is optional.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">menuitem.key</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="modifiers"> <i class="dropdown icon"></i> modifiers </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets what modifiers (in combination with key), when pressed,
+             activates this menu.  This is useful when you want to provide a
+             keyboard shortcut to a menu item so the user doesn't need to navigate
+             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for
+             a key and 'cmd' for a modifier).  Each menu item must have a unique key 
+             and modifier combination (if one in set).  This is optional.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">menuitem.modifiers</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="submenu"> <i class="dropdown icon"></i> submenu </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the submenu associated with this menu item.  If the
+             menu item has sub items or a sub-menu of its own it can be set here.
+             This by default is not set and null.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><a href="Menu.html">Menu</a></span></span>
+              <span class="fake-name">menuitem.submenu</span>
+              <span class="fake-note">(default null)</span>
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="title"> <i class="dropdown icon"></i> title </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the text label used for this menu item.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">menuitem.title</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="tooltip"> <i class="dropdown icon"></i> tooltip </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the tooltip that is shown to the user if they
+             hover over the menu item for more than a few seconds. This can be thought
+             of as a description of what the menu item does. It shows as a fading in
+             off-mouse window that lets the user know more about what the menu item
+             does.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">menuitem.tooltip</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="visible"> <i class="dropdown icon"></i> visible </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the menu item is shown or hidden. The default is true.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">menuitem.visible</span>
+              <span class="fake-note">(default true)</span>
+            </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="methods">
+        <h2>Methods</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="addEventListener"> 
+            <i class="dropdown icon"></i> addEventListener(eventName, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Adds an event listener for various control level events. The first
+             parameter is the name of the event, the second parameter is the function
+             to call when the event happens (e.g., a callback).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">menuitem.addEventListener(eventName, callback)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>eventName</td>
+                  <td class="fake-type">string</td>
+                  <td>The name of the event to start listening to.</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function that will be called when it occurs.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="removeEventListener"> 
+            <i class="dropdown icon"></i> removeEventListener(eventName, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Removes an event listener for various application level events. The first
+             parameter is the name of the event, the second parameter is the function
+             that was originally given as the callback for addEventListener.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">menuitem.removeEventListener(eventName, callback)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>eventName</td>
+                  <td class="fake-type">string</td>
+                  <td>The name of the event to stop listening to.</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function that would have been called.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="events">
+        <h2>Events</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="click"> <i class="dropdown icon"></i> click </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the user clicks on the menu item or activates it with the keyboard shortcuts/arrows.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">menuitem.addEventListener('click', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

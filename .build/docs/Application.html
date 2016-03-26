@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Application</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+  <header class="ui menu">
+    <a id="logo" href="/index.html">Tint</a>
+    <div class="ui item">
+      <a href="/docs/tutorial-gettingstarted.html">Getting Started</a>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  <div class="ui grid">
+    <article class="sixteen wide column">
+
+      <section class="overview">
+        <h1>Application</h1>
+          <div class="ui message overview">
+          <h3>Overview</h3>
+          <p>An object always available named 'application' that allows control over
+           multiple window contexts and the ability to listen or respond to OS events.
+           You can use the application object to change its icon, name or request
+           attention from the user.
+
+           Important: The Application object is created automatically.</p>
+        </div>
+        <div class="ui grid family">
+          <div class="four wide column ancestors">
+            <h4>Ancestors</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column descendants">
+            <h4>Descendants</h4>
+            <ol class="ui list">
+              <li>None</li>
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column see-also">
+            <h4>See Also</h4>
+            <ol class="ui list">
+              
+              <li><a href="process.html">process</a></li>
+              
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+
+      
+      <section class="members">
+        <h2>Members</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="appearance"> <i class="dropdown icon"></i> appearance </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Returns 'dark' or 'light' if the desktops brightness (e.g., color hue, saturation and
+             brightness) should require a status icon or other OS elements that provide contrast to
+             other elements.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">application.appearance</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="exitAfterWindowsClose"> <i class="dropdown icon"></i> exitAfterWindowsClose </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets if the application should quit (or exit returning 0) when the
+             last remaining window is closed (Note: hidden windows still count as open
+             windows and will prevent applications from closing). The default for this is
+             true.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">application.exitAfterWindowsClose</span>
+              <span class="fake-note">(default true)</span>
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="icon"> <i class="dropdown icon"></i> icon </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The icon property allows you to set or get the current image associated
+             with the application (and subsequently used in the dock/task bar or on
+             window decorations).  The string must be a valid URL or path to an image
+             on the file system or application resource (For best results use 512x512 
+             PNG image).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">application.icon</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="name"> <i class="dropdown icon"></i> name </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The name property is used to get or set the process name in the task
+             manager, or when the application is shown.  Note that the packaged
+             application name should match this name.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">application.name</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="packaged"> <i class="dropdown icon"></i> packaged </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets a true or false boolean value if the application is packaged
+             or is being ran as a script.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">application.packaged</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="storage"> <i class="dropdown icon"></i> storage </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The storage property contains previously stored information as a string
+             that persists between startup and shutdown. This is a useful place to
+             store user preferences, or light amounts of data unrelated to a specific
+             file or task the user is taking. It's recommended to use JSON.parse and
+             JSON.stringify to store structure JSON data.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">application.storage</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="visible"> <i class="dropdown icon"></i> visible </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the visibility of the application.  This will reveal or hide
+             all windows associated with the application.  Note that other OS/UI elements
+             may not be hidden, such as modal dialogs, or indicator icons in the taskbar.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">application.visible</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="methods">
+        <h2>Methods</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="addEventListener"> 
+            <i class="dropdown icon"></i> addEventListener(eventName, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Adds an event listener for various application level events. The first
+             parameter is the name of the event, the second parameter is the function
+             to call when the event happens (e.g., a callback).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.addEventListener(eventName, callback)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>eventName</td>
+                  <td class="fake-type">string</td>
+                  <td>The name of the application event to start listening to.</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function that will be called when it occurs.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="attention"> 
+            <i class="dropdown icon"></i> attention(critical)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Animates the icon in the dock or task bar to "bounce" (on OSX) or "highlight" 
+             (in Windows). If false (or nothing) is passed into this the animation 
+             is played for a short time (depending on OS preferences), if true is passed in 
+             (e.g., a critical alert is needed) the icon continues to animate until a window
+             or the application icon in the dock is clicked.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.attention(critical)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>critical</td>
+                  <td class="fake-type">boolean</td>
+                  <td></td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">Object</td>
+                  <td>An object with one function "cancel" allowing you to cancel the request.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="copy"> 
+            <i class="dropdown icon"></i> copy()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Invokes a copy operation, this takes whatever is currently selected in the
+             focused window and control and places it into the clipboard.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.copy()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="cut"> 
+            <i class="dropdown icon"></i> cut()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Invokes a cut operation, this takes whatever is currently selected in the
+             focused window and control and places it into the clipboard and removes the
+             selected element from the application (usually text or images)</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.cut()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="delete"> 
+            <i class="dropdown icon"></i> delete()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Deletes the currently selected value for the currently focused window
+             and control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.delete()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="isRegisteredForFileType"> 
+            <i class="dropdown icon"></i> isRegisteredForFileType(filetype)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Checks to see if the application is responsible for handling open requests from
+             the operating system for the specified file type extension (e.g., jpg, txt).
+             Returns a true or false boolean to indicate whether the application is registered
+             for the file type.  Note: this method has undefined behavior when the application
+             has not been bundled or packaged.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.isRegisteredForFileType(filetype)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>filetype</td>
+                  <td class="fake-type">string</td>
+                  <td>A file extention without the leading period (e.g., txt, jpg)</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>A true or false value if the file type is registered</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="isRegisteredForScheme"> 
+            <i class="dropdown icon"></i> isRegisteredForScheme(scheme)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Checks to see if the application is responsible for handling open URI requests from
+             the operating system for the specified scheme (e.g., http, ftp, https, etc).
+             Returns a true or false boolean to indicate whether the application is registered
+             for the scheme.  Note: this method has undefined behavior when the application
+             has not been bundled or packaged.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.isRegisteredForScheme(scheme)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>scheme</td>
+                  <td class="fake-type">string</td>
+                  <td>A URI scheme (e.g., http, https, ftp, mailto, tel, etc)</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>A true or false value if the scheme is registered</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="paste"> 
+            <i class="dropdown icon"></i> paste()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Invokes a paste operation, this takes whatever is currently in the clipboard
+             and sends a paste operation to the focused window and control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.paste()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="redo"> 
+            <i class="dropdown icon"></i> redo()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>This repeats the last rewound value of the currently focused window and
+             control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.redo()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="registerFileType"> 
+            <i class="dropdown icon"></i> registerFileType(filetype)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Registers for the specified file type by its extension (e.g., txt, jpg, png). If successful
+             the application is launched (if not running) and the application's 'open' event is fired with
+             the location of the file when the user requests the file to be opened through the OS. This
+             is an expensive operation and should be run sparingly (usually only on install). If
+             the application is successfully assigned to the file type the method returns true,
+             otherwise false.  This has undefined behavior if the application is not packaged or
+             bundled. Note, operating systems may reserve and protect specific file types from 
+             being re-assigned for security and user experience reasons. This only needs to be
+             executed once in the life time of the application being installed on the system. In
+             addition applications that misbehave may find the OS will ignore these requests. It's
+             generally best practice to check if the registered file type is already assigned 
+             (using isRegisteredForFileType) before requesting assignment. As a general courtesy, 
+             ask the user to become the default handler for a file type (unless the file type is 
+             exclusive to your application and proprietary) before requesting assignment.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.registerFileType(filetype)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>filetype</td>
+                  <td class="fake-type">string</td>
+                  <td>A file extention without the leading period (e.g., txt, jpg)</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>A true or false value indicating if the operation was successful.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="registerHotKey"> 
+            <i class="dropdown icon"></i> registerHotKey(key, modifiers, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The registerHotKey function attempts to assign a global hot key (or shortcut keyboard command) for the application. If a global
+             hot key cannot be registered it assignts it as a local (application) hot key, if that is unsuccessful the successful
+             property in the return object is set to false. Note the hot key may not be registered as a global
+             hot key depending on security settings on Windows, or due to accessibility settings on OSX.
+             Application entitlements or manually setting the application as an accessible or elevated privileged application will allow it
+             to register a global hot key. To register a normal hot key, it's customary to use the Menu and MenuItem classes.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.registerHotKey(key, modifiers, callback)</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var returnedObject = application.registerHotKey('m','ctrl',function() { 
+ console.log('control m was pressed! ')
+});
+// note that the returned object can be used to subsequently unregister
+// this hot key, e.g., returnedObject.unregister();</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>key</td>
+                  <td class="fake-type">string</td>
+                  <td>The character for the hot key, for example copy or ctrl+C, the character would be 'c', case does not matter.</td>
+                </tr>
+              
+                <tr>
+                  <td>modifiers</td>
+                  <td class="fake-type">string</td>
+                  <td>A comma delimited list of modifiers, options are 'alt', 'ctrl', 'cmd', or 'shift'.  For example 'shift,ctrl'</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function executed when the hot key or shortcut is pressed.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">Object</td>
+                  <td>An object with the properites: {global,successful,unregister}. 'global' indicates if the hot key successfully registered beyond the
+                  application context, 'successful' if the registeration was accepted by the OS, and 'unregister' is a 
+                  function that can be executed to remove the hot key registration.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="registerScheme"> 
+            <i class="dropdown icon"></i> registerScheme(scheme)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Registers for the specified scheme (e.g., ftp, http, https).  If successful
+             the application is launched (if not running) and the application's 'open' event is fired with
+             the full URL when the user requests the url to be opened through the OS. This
+             is an expensive operation and should be run sparingly (usually only on install). If
+             the application is successfully assigned as the opener for the scheme the method returns true,
+             otherwise false.  This has undefined behavior if the application is not packaged or
+             bundled. Note, operating systems may reserve and protect specific schemes from 
+             being re-assigned for security and user experience reasons (such as tel on phones). 
+             This only needs to be executed once in the life time of the application being 
+             installed on the system. In addition applications that misbehave may find the OS will 
+             ignore these requests. It's generally best practice to check if the registered scheme 
+             is already assigned (using isRegisteredForScheme) before requesting assignment. As a general courtesy, 
+             ask the user to become the default handler for a scheme (unless the scheme is 
+             exclusive to your application and proprietary) before requesting assignment.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.registerScheme(scheme)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>scheme</td>
+                  <td class="fake-type">string</td>
+                  <td>A URI scheme as a string (e.g., ftp, https, http)</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">boolean</td>
+                  <td>A true or false value indicating if the operation was successful.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="removeEventListener"> 
+            <i class="dropdown icon"></i> removeEventListener(eventName, callback)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Removes an event listener for various application level events. The first
+             parameter is the name of the event, the second parameter is the function
+             that was originally given as the callback for addEventListener.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.removeEventListener(eventName, callback)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>eventName</td>
+                  <td class="fake-type">string</td>
+                  <td>The name of the application event to stop listening to.</td>
+                </tr>
+              
+                <tr>
+                  <td>callback</td>
+                  <td class="fake-type">function</td>
+                  <td>The function that would have been called.</td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="resource"> 
+            <i class="dropdown icon"></i> resource(path)
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Takes a path to an application resource and returns a Buffer 
+             object.  This is useful if you need to get access to packaged 
+             resources.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.resource(path)</code></pre>
+            </div>
+            
+            
+            
+
+            
+            <h5>Parameters</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td>path</td>
+                  <td class="fake-type">string</td>
+                  <td></td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          
+            <h5>Returns</h5>
+            <table class="ui table parameters">
+              <thead><tr><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+              
+                <tr>
+                  <td class="fake-type">Buffer</td>
+                  <td></td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
+
+          </div>
+        
+          <div class="title" id="selectAll"> 
+            <i class="dropdown icon"></i> selectAll()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Selects all the values in the UI of the currently focused window and
+             control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.selectAll()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="undo"> 
+            <i class="dropdown icon"></i> undo()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>This rewinds a controls value (e.g., perhaps text in a textbox) for the
+             currently focused window and control.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.undo()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="unregisterAllHotKeys"> 
+            <i class="dropdown icon"></i> unregisterAllHotKeys()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Removes all hot keys assigned by the application (with the exception of Menu related hot keys).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.unregisterAllHotKeys()</code></pre>
+            </div>
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="events">
+        <h2>Events</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="appearance-changed"> <i class="dropdown icon"></i> appearance-changed </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The appearance changed event fires when the overall contrast, color or hue of the default colors and
+             appearance has changed. The callback is passed one value "light" or "dark" to indicate the new appearance.
+             This event is useful for switching the default icons in a status bar, or other interface elements to ensure
+             they're still usable.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.addEventListener('appearance-changed', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="open"> <i class="dropdown icon"></i> open </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The open event is fired when a file type or scheme that the application is assigned
+             to handle (through Application.registerScheme or Application.registerFileType) is 
+             attempted to be opened through a web browser, file browser, or through a seperate
+             application.  The first argument passed in is an array of url's requesting to be
+             opened. Note that if your application is not currently running your application is
+             automatically opened and the open event is fired immediately when an event handler
+             (function callback) is assigned to the open event.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">application.addEventListener('open', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

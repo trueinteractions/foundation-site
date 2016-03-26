@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Tutorial: Packaging Applications</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+ <header class="ui menu">
+    <a id="logo" href="/index.html">Tint</a>
+    <div class="ui item">
+      <a href="/docs/tutorial-gettingstarted.html">Getting Started</a>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  
+  <div class="ui grid">
+    <article class="sixteen wide column">
+    <h1>Packaging</h1><p>Tint contains a command line tool for packaging Windows and OSX applications into a single executable that can be distributed. This allows developers (once finished developing applications) to distribute them through familiar channels to users (such as in an App Store or downloadable from the web).</p>
+<p>To create an application you'll need to create a package file first.  Most node (and tint) apps contain a file called &quot;package.json&quot;.  This file has very little to no meaning for your application while its running (as no information from it is used), but it is important for bundling the application as the information used in it describes what your application does, who built it, its icon, name and more information (such as dependencies).  Tint translates information in this package file into &quot;manifest&quot; information an operating system will read from your application prior to a user opening it. </p>
+<h3>Package Format</h3><p>Note: This is not an exhaustive list of the options that you can have in a package.json file, just the ones that are required for Tint. </p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;name&quot;: &quot;shortname&quot;,
+  &quot;longname&quot;: &quot;My Application Name&quot;,
+  &quot;namespace&quot;: &quot;com.trueinteractions&quot;,
+  &quot;version&quot;: &quot;2.0.1&quot;,
+  &quot;description&quot;: &quot;App description, no more than 50 characters&quot;,
+  &quot;author&quot;: &quot;Company Name, or Your Name&quot;,
+  &quot;sources&quot;: {
+    &quot;directory&quot;:&quot;.&quot;
+  },
+  &quot;icon&quot;: {
+    &quot;osx&quot;:[&quot;./tintruntime.png&quot;],
+    &quot;windows&quot;:[&quot;./tintruntime.png&quot;]
+  },
+  &quot;main&quot;: &quot;lib/main.js&quot;,
+  &quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;https://github.com/some/repo.git&quot;
+  },
+  &quot;bugs&quot;: {
+    &quot;url&quot;: &quot;https://github.com/some/repo/issues&quot;
+  },
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;copyright&quot;: &quot;2014 True Interactions&quot;
+}</code></pre><p>A few things to point out, the icon resources must be a 512x512 PNG (RGBA) type image. A PNG image can be produced by popular imaging tools such as Photoshop. RGBA simply implies that using transparency is allowed, and 512x512 are the dimensions of the image, or resolution. </p>
+<p>The main property in the package tells Tint what javascript file will initially run when a user clicks on the application. The sources (and sources/directory) property sets the path where Tint will find all the sources to the application.</p>
+<p>The remaining properites are to provide information to the user and to properly namespace your application.  These are not optional values and do have an effect on how your application behaves.  An operating system creates unique entries for preferences and other items using the &quot;namespace&quot; property, its important to make this as unique as possible to your company or organization name and product.  The version information is encoded in the manifest as well, if it's not properly updated on each build, updates may not be properly applied. </p>
+<h3>Compiling a Build</h3><p>A command line tool called <code>tntbuild</code> for Tint exists to build executables for Windows and OSX and comes with Tint. To use the tool just pass in the path to the package.json file. </p>
+<pre class="prettyprint source"><code>$ tntbuild path/to/some/package.json</code></pre><p>The build for OSX and Windows will be in a newly created folder from where the command was ran called 'build'.</p>
+<p>There are also additional command line options you can specify to change the behavior of the build.  See <code>tntbuild --help</code> for more information.</p>
+<h3>Building for Windows on OSX and Vice Versa</h3><p>Tint can build Windows applications from OSX and OSX applications from Windows.  However, when building an OSX application from Windows you'll need to either transfer the OSX package to OSX and re-enable the execution bit on the package (as Windows does not have a concept of executable bits in the same sense). Windows applications build on OSX do not have this issue.</p>
+<p>On an OSX machine (or Linux) prior to packaging you'll need to run this command within a Terminal:</p>
+<pre class="prettyprint source lang-bash"><code>$ chmod +x ./YourAppName.app/Contents/MacOS/Runtime</code></pre><p>Using an installer on OSX (pkg) or Windows (msi) fixes this issue as well. </p>
+<h3>Excluding Files and Folders from a Build</h3><p>The package.json file provides a way for users to excempt or exclude files/folders from the build process, the option (from the root) sources.exclude can be any regular expression that is applied to each file to determine whether it is included or excluded, a match on a file excludes it from the build. </p>
+<p>For example:</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;name&quot;: &quot;shortname&quot;,
+  &quot;longname&quot;: &quot;My Application Name&quot;,
+  &quot;namespace&quot;: &quot;com.trueinteractions&quot;,
+  &quot;version&quot;: &quot;2.0.1&quot;,
+  &quot;description&quot;: &quot;App description, no more than 50 characters&quot;,
+  &quot;author&quot;: &quot;Company Name, or Your Name&quot;,
+  &quot;sources&quot;: {
+    &quot;directory&quot;:&quot;.&quot;,
+    &quot;exclude&quot;:&quot;someFile.png|someOtherFile.js&quot;
+  },
+  &quot;icon&quot;: {
+    &quot;osx&quot;:[&quot;./tintruntime.png&quot;],
+    &quot;windows&quot;:[&quot;./tintruntime.png&quot;]
+  },
+  &quot;main&quot;: &quot;lib/main.js&quot;,
+  &quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;https://github.com/some/repo.git&quot;
+  },
+  &quot;bugs&quot;: {
+    &quot;url&quot;: &quot;https://github.com/some/repo/issues&quot;
+  },
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;copyright&quot;: &quot;2014 True Interactions&quot;
+}</code></pre><p>In the above example any file with &quot;someFile.png&quot; or &quot;someOtherfile.js&quot; will be excluded, in addition folder names can be provided to exclude an entire folder.</p>
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

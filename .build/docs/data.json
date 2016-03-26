@@ -1,0 +1,2474 @@
+[
+    {
+      "title": "Application"
+    , "description": "An object always available named 'application' that allows control over\n           multiple window contexts and the ability to listen or respond to OS events.\n           You can use the application object to change its icon, name or request\n           attention from the user.\n\n           Important: The Application object is created automatically."
+    , "kind": "class"
+    , "url": "Application.html"
+  }
+  , {
+      "title": "Application.appearance"
+    , "description": "Returns 'dark' or 'light' if the desktops brightness (e.g., color hue, saturation and\n             brightness) should require a status icon or other OS elements that provide contrast to\n             other elements."
+    , "kind": "member"
+    , "url": "Application.html#appearance"
+  }
+  , {
+      "title": "Application.exitAfterWindowsClose"
+    , "description": "Gets or sets if the application should quit (or exit returning 0) when the\n             last remaining window is closed (Note: hidden windows still count as open\n             windows and will prevent applications from closing). The default for this is\n             true."
+    , "kind": "member"
+    , "url": "Application.html#exitAfterWindowsClose"
+  }
+  , {
+      "title": "Application.icon"
+    , "description": "The icon property allows you to set or get the current image associated\n             with the application (and subsequently used in the dock/task bar or on\n             window decorations).  The string must be a valid URL or path to an image\n             on the file system or application resource (For best results use 512x512 \n             PNG image)."
+    , "kind": "member"
+    , "url": "Application.html#icon"
+  }
+  , {
+      "title": "Application.name"
+    , "description": "The name property is used to get or set the process name in the task\n             manager, or when the application is shown.  Note that the packaged\n             application name should match this name."
+    , "kind": "member"
+    , "url": "Application.html#name"
+  }
+  , {
+      "title": "Application.packaged"
+    , "description": "Gets a true or false boolean value if the application is packaged\n             or is being ran as a script."
+    , "kind": "member"
+    , "url": "Application.html#packaged"
+  }
+  , {
+      "title": "Application.storage"
+    , "description": "The storage property contains previously stored information as a string\n             that persists between startup and shutdown. This is a useful place to\n             store user preferences, or light amounts of data unrelated to a specific\n             file or task the user is taking. It's recommended to use JSON.parse and\n             JSON.stringify to store structure JSON data."
+    , "kind": "member"
+    , "url": "Application.html#storage"
+  }
+  , {
+      "title": "Application.visible"
+    , "description": "Gets or sets the visibility of the application.  This will reveal or hide\n             all windows associated with the application.  Note that other OS/UI elements\n             may not be hidden, such as modal dialogs, or indicator icons in the taskbar."
+    , "kind": "member"
+    , "url": "Application.html#visible"
+  }
+  , {
+      "title": "Application.addEventListener"
+    , "description": "Adds an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "Application.html#addEventListener"
+  }
+  , {
+      "title": "Application.attention"
+    , "description": "Animates the icon in the dock or task bar to \"bounce\" (on OSX) or \"highlight\" \n             (in Windows). If false (or nothing) is passed into this the animation \n             is played for a short time (depending on OS preferences), if true is passed in \n             (e.g., a critical alert is needed) the icon continues to animate until a window\n             or the application icon in the dock is clicked."
+    , "kind": "method"
+    , "url": "Application.html#attention"
+  }
+  , {
+      "title": "Application.copy"
+    , "description": "Invokes a copy operation, this takes whatever is currently selected in the\n             focused window and control and places it into the clipboard."
+    , "kind": "method"
+    , "url": "Application.html#copy"
+  }
+  , {
+      "title": "Application.cut"
+    , "description": "Invokes a cut operation, this takes whatever is currently selected in the\n             focused window and control and places it into the clipboard and removes the\n             selected element from the application (usually text or images)"
+    , "kind": "method"
+    , "url": "Application.html#cut"
+  }
+  , {
+      "title": "Application.delete"
+    , "description": "Deletes the currently selected value for the currently focused window\n             and control."
+    , "kind": "method"
+    , "url": "Application.html#delete"
+  }
+  , {
+      "title": "Application.isRegisteredForFileType"
+    , "description": "Checks to see if the application is responsible for handling open requests from\n             the operating system for the specified file type extension (e.g., jpg, txt).\n             Returns a true or false boolean to indicate whether the application is registered\n             for the file type.  Note: this method has undefined behavior when the application\n             has not been bundled or packaged."
+    , "kind": "method"
+    , "url": "Application.html#isRegisteredForFileType"
+  }
+  , {
+      "title": "Application.isRegisteredForScheme"
+    , "description": "Checks to see if the application is responsible for handling open URI requests from\n             the operating system for the specified scheme (e.g., http, ftp, https, etc).\n             Returns a true or false boolean to indicate whether the application is registered\n             for the scheme.  Note: this method has undefined behavior when the application\n             has not been bundled or packaged."
+    , "kind": "method"
+    , "url": "Application.html#isRegisteredForScheme"
+  }
+  , {
+      "title": "Application.paste"
+    , "description": "Invokes a paste operation, this takes whatever is currently in the clipboard\n             and sends a paste operation to the focused window and control."
+    , "kind": "method"
+    , "url": "Application.html#paste"
+  }
+  , {
+      "title": "Application.redo"
+    , "description": "This repeats the last rewound value of the currently focused window and\n             control."
+    , "kind": "method"
+    , "url": "Application.html#redo"
+  }
+  , {
+      "title": "Application.registerFileType"
+    , "description": "Registers for the specified file type by its extension (e.g., txt, jpg, png). If successful\n             the application is launched (if not running) and the application's 'open' event is fired with\n             the location of the file when the user requests the file to be opened through the OS. This\n             is an expensive operation and should be run sparingly (usually only on install). If\n             the application is successfully assigned to the file type the method returns true,\n             otherwise false.  This has undefined behavior if the application is not packaged or\n             bundled. Note, operating systems may reserve and protect specific file types from \n             being re-assigned for security and user experience reasons. This only needs to be\n             executed once in the life time of the application being installed on the system. In\n             addition applications that misbehave may find the OS will ignore these requests. It's\n             generally best practice to check if the registered file type is already assigned \n             (using isRegisteredForFileType) before requesting assignment. As a general courtesy, \n             ask the user to become the default handler for a file type (unless the file type is \n             exclusive to your application and proprietary) before requesting assignment."
+    , "kind": "method"
+    , "url": "Application.html#registerFileType"
+  }
+  , {
+      "title": "Application.registerHotKey"
+    , "description": "The registerHotKey function attempts to assign a global hot key (or shortcut keyboard command) for the application. If a global\n             hot key cannot be registered it assignts it as a local (application) hot key, if that is unsuccessful the successful\n             property in the return object is set to false. Note the hot key may not be registered as a global\n             hot key depending on security settings on Windows, or due to accessibility settings on OSX.\n             Application entitlements or manually setting the application as an accessible or elevated privileged application will allow it\n             to register a global hot key. To register a normal hot key, it's customary to use the Menu and MenuItem classes."
+    , "kind": "method"
+    , "url": "Application.html#registerHotKey"
+  }
+  , {
+      "title": "Application.registerScheme"
+    , "description": "Registers for the specified scheme (e.g., ftp, http, https).  If successful\n             the application is launched (if not running) and the application's 'open' event is fired with\n             the full URL when the user requests the url to be opened through the OS. This\n             is an expensive operation and should be run sparingly (usually only on install). If\n             the application is successfully assigned as the opener for the scheme the method returns true,\n             otherwise false.  This has undefined behavior if the application is not packaged or\n             bundled. Note, operating systems may reserve and protect specific schemes from \n             being re-assigned for security and user experience reasons (such as tel on phones). \n             This only needs to be executed once in the life time of the application being \n             installed on the system. In addition applications that misbehave may find the OS will \n             ignore these requests. It's generally best practice to check if the registered scheme \n             is already assigned (using isRegisteredForScheme) before requesting assignment. As a general courtesy, \n             ask the user to become the default handler for a scheme (unless the scheme is \n             exclusive to your application and proprietary) before requesting assignment."
+    , "kind": "method"
+    , "url": "Application.html#registerScheme"
+  }
+  , {
+      "title": "Application.removeEventListener"
+    , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "Application.html#removeEventListener"
+  }
+  , {
+      "title": "Application.resource"
+    , "description": "Takes a path to an application resource and returns a {@link Buffer} \n             object.  This is useful if you need to get access to packaged \n             resources."
+    , "kind": "method"
+    , "url": "Application.html#resource"
+  }
+  , {
+      "title": "Application.selectAll"
+    , "description": "Selects all the values in the UI of the currently focused window and\n             control."
+    , "kind": "method"
+    , "url": "Application.html#selectAll"
+  }
+  , {
+      "title": "Application.undo"
+    , "description": "This rewinds a controls value (e.g., perhaps text in a textbox) for the\n             currently focused window and control."
+    , "kind": "method"
+    , "url": "Application.html#undo"
+  }
+  , {
+      "title": "Application.unregisterAllHotKeys"
+    , "description": "Removes all hot keys assigned by the application (with the exception of Menu related hot keys)."
+    , "kind": "method"
+    , "url": "Application.html#unregisterAllHotKeys"
+  }
+  , {
+      "title": "Application.event:appearance-changed"
+    , "description": "The appearance changed event fires when the overall contrast, color or hue of the default colors and\n             appearance has changed. The callback is passed one value \"light\" or \"dark\" to indicate the new appearance.\n             This event is useful for switching the default icons in a status bar, or other interface elements to ensure\n             they're still usable."
+    , "kind": "event"
+    , "url": "Application.html#appearance-changed"
+  }
+  , {
+      "title": "Application.event:open"
+    , "description": "The open event is fired when a file type or scheme that the application is assigned\n             to handle (through Application.registerScheme or Application.registerFileType) is \n             attempted to be opened through a web browser, file browser, or through a seperate\n             application.  The first argument passed in is an array of url's requesting to be\n             opened. Note that if your application is not currently running your application is\n             automatically opened and the open event is fired immediately when an event handler\n             (function callback) is assigned to the open event."
+    , "kind": "event"
+    , "url": "Application.html#open"
+  }
+  , {
+      "title": "Box"
+    , "description": "Creates a generic control that conatins other controls thats stylized. \n             The box control can group elements, set background colors, borders, radius, etc.\n             This control is useful if a group of elements needs a styled wrapper around it.\n             The default style is determined by the OS, setting any property resets all the\n             properties from the default OS style to a custom style (e.g., the border radius\n             resets to 0, background color sets to transparent, border width to 0, border\n             color to transparent)."
+    , "kind": "class"
+    , "url": "Box.html"
+  }
+  , {
+      "title": "Box.backgroundColor"
+    , "description": "Gets or sets the background color of the box. This should be a CSS-style\n             color attribute, such as rgba(0-255,0-255,0-255,0-1) or named color\n             such as \"red\" or a Color object."
+    , "kind": "member"
+    , "url": "Box.html#backgroundColor"
+  }
+  , {
+      "title": "Box.borderColor"
+    , "description": "Gets or sets the color of the border, this should be a CSS-style\n             color attribute, such as rgba(0-255,0-255,0-255,0-1) or named color\n             such as \"red\" or a Color object."
+    , "kind": "member"
+    , "url": "Box.html#borderColor"
+  }
+  , {
+      "title": "Box.borderRadius"
+    , "description": "Gets or sets the radius of the corners of the border."
+    , "kind": "member"
+    , "url": "Box.html#borderRadius"
+  }
+  , {
+      "title": "Box.borderWidth"
+    , "description": "Gets or sets the width of the border in logical pixels"
+    , "kind": "member"
+    , "url": "Box.html#borderWidth"
+  }
+  , {
+      "title": "Box.Box"
+    , "description": "Creates a new Box generic control."
+    , "kind": "constructor"
+    , "url": "Box.html#Box"
+  }
+  , {
+      "title": "Button"
+    , "description": "Creates a button for the user to active or indicate status or steps."
+    , "kind": "class"
+    , "url": "Button.html"
+  }
+  , {
+      "title": "Button.border"
+    , "description": "Gets or sets whether the button has a border around it."
+    , "kind": "member"
+    , "url": "Button.html#border"
+  }
+  , {
+      "title": "Button.default"
+    , "description": "Set whether this button is the default button for the window, e.g., what is executed if the \n             user presses enter on the window with no focus on a child element.."
+    , "kind": "member"
+    , "url": "Button.html#default"
+  }
+  , {
+      "title": "Button.enabled"
+    , "description": "Gets or sets the buttons availability and visual presentation to the user.\n             When set to false the button is grayed out and does not respond to clicks.\n             The default is true."
+    , "kind": "member"
+    , "url": "Button.html#enabled"
+  }
+  , {
+      "title": "Button.image"
+    , "description": "Gets or sets the associated image to be displayed on the button.  This can be\n             a named icon resource for the OS, or a URL to an image (including the app:// schema)."
+    , "kind": "member"
+    , "url": "Button.html#image"
+  }
+  , {
+      "title": "Button.state"
+    , "description": "Gets or sets whether the button is \"on\" or \"off\". This has different\n             meanings depending on the type of button, for radio, checkbox and \n             toggle type buttons this changes its visual style. This has no meaning\n             (visually) for normal buttons. The default is false."
+    , "kind": "member"
+    , "url": "Button.html#state"
+  }
+  , {
+      "title": "Button.title"
+    , "description": "Gets or sets the text label on the button."
+    , "kind": "member"
+    , "url": "Button.html#title"
+  }
+  , {
+      "title": "Button.type"
+    , "description": "Gets or sets the type of button, this can be \n             \"toggle\", \"checkbox\", \"radio\" or \"normal\"."
+    , "kind": "member"
+    , "url": "Button.html#type"
+  }
+  , {
+      "title": "Button.Button"
+    , "description": "Creates a new Button control."
+    , "kind": "constructor"
+    , "url": "Button.html#Button"
+  }
+  , {
+      "title": "ButtonGroup"
+    , "description": "Creates a set of buttons that can represent various states and\n             similar to a toggle button can be toggled between modes."
+    , "kind": "class"
+    , "url": "ButtonGroup.html"
+  }
+  , {
+      "title": "ButtonGroup.selected"
+    , "description": "Gets or sets the index of the button that is selected, the value must be\n             from 0 to the amount of buttons in the group.  This returns null if no item\n             is selected."
+    , "kind": "member"
+    , "url": "ButtonGroup.html#selected"
+  }
+  , {
+      "title": "ButtonGroup.appendChild"
+    , "description": "Append child adds the passed in button as a segment in the group."
+    , "kind": "method"
+    , "url": "ButtonGroup.html#appendChild"
+  }
+  , {
+      "title": "ButtonGroup.removeChild"
+    , "description": "Remove child removes the passed in button from the group."
+    , "kind": "method"
+    , "url": "ButtonGroup.html#removeChild"
+  }
+  , {
+      "title": "ButtonGroup.ButtonGroup"
+    , "description": "Creates a collection that buttons can be added to."
+    , "kind": "constructor"
+    , "url": "ButtonGroup.html#ButtonGroup"
+  }
+  , {
+      "title": "Color"
+    , "description": "Creates a new color, this is mainly a convenience class used to convert back to RGBA, most\n             color properties in Tint accept css-type values such as \"rgba(red,blue,green,alpha)\" or \n             named colors such as \"red\" or \"blue\"."
+    , "kind": "class"
+    , "url": "Color.html"
+  }
+  , {
+      "title": "Color.alpha"
+    , "description": "Gets the amount of translucency in the color."
+    , "kind": "member"
+    , "url": "Color.html#alpha"
+  }
+  , {
+      "title": "Color.blue"
+    , "description": "Gets the amount of blue in the color."
+    , "kind": "member"
+    , "url": "Color.html#blue"
+  }
+  , {
+      "title": "Color.green"
+    , "description": "Gets the amount of green in the color."
+    , "kind": "member"
+    , "url": "Color.html#green"
+  }
+  , {
+      "title": "Color.red"
+    , "description": "Gets the amount of red in the color."
+    , "kind": "member"
+    , "url": "Color.html#red"
+  }
+  , {
+      "title": "Color.Color"
+    , "description": "Creates a color object with the specified type and components."
+    , "kind": "constructor"
+    , "url": "Color.html#Color"
+  }
+  , {
+      "title": "ColorPanel"
+    , "description": "Creates a new color panel that allows the user to select a color. \n             This opens the native OS window that handles color selection."
+    , "kind": "class"
+    , "url": "ColorPanel.html"
+  }
+  , {
+      "title": "ColorPanel.allowAlpha"
+    , "description": "Gets or sets whether the user may select a color with an alpha component in it \n             (e.g., a semi-translucent color)."
+    , "kind": "member"
+    , "url": "ColorPanel.html#allowAlpha"
+  }
+  , {
+      "title": "ColorPanel.selected"
+    , "description": "Gets or sets the selected color in the color panel."
+    , "kind": "member"
+    , "url": "ColorPanel.html#selected"
+  }
+  , {
+      "title": "ColorPanel.visible"
+    , "description": "Gets or sets whether the color panel is visible or hidden."
+    , "kind": "member"
+    , "url": "ColorPanel.html#visible"
+  }
+  , {
+      "title": "ColorPanel.addEventListener"
+    , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "ColorPanel.html#addEventListener"
+  }
+  , {
+      "title": "ColorPanel.removeEventListener"
+    , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "ColorPanel.html#removeEventListener"
+  }
+  , {
+      "title": "ColorPanel.ColorPanel"
+    , "description": "Creates a new ColorPanel window that's hidden by default."
+    , "kind": "constructor"
+    , "url": "ColorPanel.html#ColorPanel"
+  }
+  , {
+      "title": "ColorPanel.event:colorchange"
+    , "description": "Fires when the user selects a new color in the panel."
+    , "kind": "event"
+    , "url": "ColorPanel.html#colorchange"
+  }
+  , {
+      "title": "ColorWell"
+    , "description": "Creates a simple color selector \"well\" or \"view\" to show the\n             current color. This control is useful when an application needs\n             to represent a current selected color."
+    , "kind": "class"
+    , "url": "ColorWell.html"
+  }
+  , {
+      "title": "ColorWell.color"
+    , "description": "Gets or sets the color represented by the ColorWell."
+    , "kind": "member"
+    , "url": "ColorWell.html#color"
+  }
+  , {
+      "title": "ColorWell.ColorWell"
+    , "description": "Creates a new ColorWell control."
+    , "kind": "constructor"
+    , "url": "ColorWell.html#ColorWell"
+  }
+  , {
+      "title": "Container"
+    , "description": "A generic standard container for other components, this component allows you to group\n             elements together in a single nested view. Most components within Tint's framework \n             inherit (or use) the functionality of this component as a starting point. This component\n             is useful when a set of components rely on one another to accomplish a common behavior. \n             \n             For example, a file selection may have both a text input and a button associated with it,\n             combining the two into a new control using the container is a good way of reusing controls."
+    , "kind": "class"
+    , "url": "Container.html"
+  }
+  , {
+      "title": "Container.children"
+    , "description": "List of children"
+    , "kind": "member"
+    , "url": "Container.html#children"
+  }
+  , {
+      "title": "Container.appendChild"
+    , "description": "Append child adds the passed in control as a child to this control."
+    , "kind": "method"
+    , "url": "Container.html#appendChild"
+  }
+  , {
+      "title": "Container.appendChild"
+    , "description": "Append child adds the passed in array (or several) controls as a children to this control."
+    , "kind": "method"
+    , "url": "Container.html#appendChild"
+  }
+  , {
+      "title": "Container.appendChildAt"
+    , "description": "Append child adds the passed in control as a child to this control."
+    , "kind": "method"
+    , "url": "Container.html#appendChildAt"
+  }
+  , {
+      "title": "Container.removeChild"
+    , "description": "Remove child removes the passed in control from the list of children controls it has."
+    , "kind": "method"
+    , "url": "Container.html#removeChild"
+  }
+  , {
+      "title": "Control"
+    , "description": "The control class is the base class that provides all common methods used\n             and available on almost every Tint control.  This cannot be initialized on its own\n             as its only purpose is to provide common functionality to other controls. To\n             initialize a basic control use Container or Box."
+    , "kind": "class"
+    , "url": "Control.html"
+  }
+  , {
+      "title": "Control.acceptsDroppedTypes"
+    , "description": "Is an array of types of content that are accepted for drag and drop operations\n             This may be 'text', 'image', 'rtf', 'html', 'video', 'audio', or 'file' types. For\n             custom types any unique string identifier may be used. On OSX its typical to use UTI's\n             while on windows mime types are preferred. Note this must be set to receive any drop\n             events.  See the drop and dropped event for more information on receiving drag and drop items."
+    , "kind": "member"
+    , "url": "Control.html#acceptsDroppedTypes"
+  }
+  , {
+      "title": "Control.alpha"
+    , "description": "Gets or sets the translucency of the control.  This is a range \n             from 0 to 1 (where 1 = completely visible, 0 = completely hidden)."
+    , "kind": "member"
+    , "url": "Control.html#alpha"
+  }
+  , {
+      "title": "Control.animateOnPositionChange"
+    , "description": "This controls whether position changes in this Control (or Window) should animate when changed.\n             The default operating system animation is used to animate different position changes."
+    , "kind": "member"
+    , "url": "Control.html#animateOnPositionChange"
+  }
+  , {
+      "title": "Control.animateOnSizeChange"
+    , "description": "This controls whether size changes to this Control (or Window) should animate when changed. \n             The default operating system animation is used to animate different size changes."
+    , "kind": "member"
+    , "url": "Control.html#animateOnSizeChange"
+  }
+  , {
+      "title": "Control.borderRadius"
+    , "description": "Sets or gets the border radius of the control. This is in pixels."
+    , "kind": "member"
+    , "url": "Control.html#borderRadius"
+  }
+  , {
+      "title": "Control.bottom"
+    , "description": "Gets or sets the preferred bottom position of the control.  If this is set to a number its translated as the amount\n             of pixels the bottom of the control should be to the bottom of the parent control.  If a percentage represented \n             as a string (E.g., '50%') is passed in, this is translated as positioning the bottom of the control at fifty percent of the parents height. \n             If a control is passed in, this is translated as positioning the bottom it to the top of the passed in control."
+    , "kind": "member"
+    , "url": "Control.html#bottom"
+  }
+  , {
+      "title": "Control.bounds"
+    , "description": "Gets an object with the properties width, height, x, and y that represent the position of the\n             control from its parent control (in logical pixels or adjusted for the monitors DPI or scalefactor)\n             where the coordinates start from the top (y) and left (x) of the parent. If the control is not on \n             a window (e.g., Note it can still in the UI, such as a status bar but not on a Tint window)\n             this throws an error."
+    , "kind": "member"
+    , "url": "Control.html#bounds"
+  }
+  , {
+      "title": "Control.boundsOnScreen"
+    , "description": "Gets an object with the properties width, height, x, and y that represent the position of the\n             control on the current screen (in logical pixels or adjusted for the monitors DPI or scalefactor)\n             where the coordinates start from the top (y) and left (x) of the screen. If the control is not on \n             a window (e.g., Note it can still in the UI, such as a status bar but not on a Tint window) \n             this throws an error."
+    , "kind": "member"
+    , "url": "Control.html#boundsOnScreen"
+  }
+  , {
+      "title": "Control.boundsOnWindow"
+    , "description": "Gets an object with the properties width, height, x, and y that represent the position of the\n             control on the current window content area (in logical pixels or adjusted for the monitors DPI or scalefactor)\n             where the coordinates start from the top (y) and left (x) of the window's content area. Note that\n             this takes into account non-content area of the window such as frame.  E.g., if your window is at 500 pixels\n             from the top, and your control is placed at 20 pixels from the top of the window the boundsOnWindow will return\n             500 + (the native windows titlebar height) + 20.  If the control is not on a window this throws an error."
+    , "kind": "member"
+    , "url": "Control.html#boundsOnWindow"
+  }
+  , {
+      "title": "Control.center"
+    , "description": "Gets or sets the preferred center position of the control. If the value of this is set to a number the control's\n             center (horizontally) is positioned to parent's center plus the offset (positive being below, negative above).\n             If the passed in value is a string representing a percentage (e.g., 50%) the control's center is\n             positioned to the parents center + the parents width/2 times the percentage. For example, to ensure the control is\n             positioned at half-of-center of the parents control (or in the first 1/4 of the width), use 50%. If a control\n             is set as the value the center of this controls is aligned to the center of the assigned control."
+    , "kind": "member"
+    , "url": "Control.html#center"
+  }
+  , {
+      "title": "Control.height"
+    , "description": "Gets or sets the preferred height of the control.  If the value of this is a number its translated as the pixel height\n             that the control should have.  If the value is a string representing a percentage (e.g., '50%') then the height is\n             set to 50% of the parents height.  Note that height cannot be calculated if both top and bottom are set (as the height\n             is implicitly set in that circumstance)."
+    , "kind": "member"
+    , "url": "Control.html#height"
+  }
+  , {
+      "title": "Control.left"
+    , "description": "Gets or sets the preferred left position of the control.  If this is set to a number its translated as the amount\n             of pixels to the right the control should be to the left of the parent control.  If a percentage represented \n             as a string (E.g., '50%') is passed in, this is translated as positioning the left of the control at fifty percent of the parents width. \n             If a control is passed in, this is translated as positioning the left of the control to the right of the passed in control."
+    , "kind": "member"
+    , "url": "Control.html#left"
+  }
+  , {
+      "title": "Control.middle"
+    , "description": "Gets or sets the preferred middle position of the control. If the value of this is set to a number the control's\n             middle (or verticla center) is positioned to parent's middle plus the offset (positive being below, negative above).\n             If the passed in value is a string representing a percentage (e.g., 50%) the control's middle (or vertical center) is\n             positioned to the parents middle + the parents height/2 times the percentage. For example, to ensure the control is\n             positioned at the half-of-middle of the parents control (or in the first 1/4 of the height), use 50%. If a control\n             is set as the value the middle of this controls is aligned to the middle of the assigned control."
+    , "kind": "member"
+    , "url": "Control.html#middle"
+  }
+  , {
+      "title": "Control.right"
+    , "description": "Gets or sets the preferred right position of the control.  If this is set to a number its translated as the amount\n             of pixels to the left of the parent's right the control should be.  If a percentage represented \n             as a string (E.g., '50%') is passed in, this is translated as positioning the right of the control at fifty percent of the parents width. \n             If a control is passed in, this is translated as positioning the right of the control to the left of the passed in control."
+    , "kind": "member"
+    , "url": "Control.html#right"
+  }
+  , {
+      "title": "Control.top"
+    , "description": "Gets or sets the preferred top position of the control.  If this is set to a number its considered the amount\n             of pixels below the top of the parent control.  If a percentage represented as a string (E.g., '50%') is passed in, this\n             is translated as positioning the top at fifty percent of the parents height. If a control is set to the top the top\n             is translated as placing it right below the assigned control element."
+    , "kind": "member"
+    , "url": "Control.html#top"
+  }
+  , {
+      "title": "Control.visible"
+    , "description": "Gets or sets whether the control is visible or not."
+    , "kind": "member"
+    , "url": "Control.html#visible"
+  }
+  , {
+      "title": "Control.visible"
+    , "description": "Gets or sets the tooltip that displays when the cursor hovers over the view."
+    , "kind": "member"
+    , "url": "Control.html#visible"
+  }
+  , {
+      "title": "Control.width"
+    , "description": "Gets or sets the preferred width of the control.  If the value of this is a number its translated as the pixel width\n             that the control should have.  If the value is a string representing a percentage (e.g., '50%') then the width is\n             set to 50% of the parents width.  Note that width cannot be calculated if both left and right are set (as the width\n             is implicitly set in that circumstance)."
+    , "kind": "member"
+    , "url": "Control.html#width"
+  }
+  , {
+      "title": "Control.addEventListener"
+    , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "Control.html#addEventListener"
+  }
+  , {
+      "title": "Control.focus"
+    , "description": "Focuses the control and subsequently any controls up the chain, if the control is on a \n             hidden item, an OS-level control (tray, menu or statusbar), or has not yet been added\n             to a parent the focus method has no effect. NOTE: Giving focus pulls the containing parent\n             to the front (including the window) and gives the control keyboard and mouse the rights to\n             respond to input first."
+    , "kind": "method"
+    , "url": "Control.html#focus"
+  }
+  , {
+      "title": "Control.moveAbove"
+    , "description": "Moves the rendering of the control above the z-index of the target control. \n             Passing in null tries to move the control to the very top above all others."
+    , "kind": "method"
+    , "url": "Control.html#moveAbove"
+  }
+  , {
+      "title": "Control.moveBelow"
+    , "description": "Moves the rendering of the control below the z-index of the target control. \n             Passing in null tries to move the control to the very top above all others."
+    , "kind": "method"
+    , "url": "Control.html#moveBelow"
+  }
+  , {
+      "title": "Control.removeEventListener"
+    , "description": "Removes an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "Control.html#removeEventListener"
+  }
+  , {
+      "title": "Control.event:dragenter"
+    , "description": "Fires when acceptsDroppedTypes is set to a type(s) and data of that type is dragged into \n             the view."
+    , "kind": "event"
+    , "url": "Control.html#dragenter"
+  }
+  , {
+      "title": "Control.event:dragexit"
+    , "description": "Fires when acceptsDroppedTypes is set to a type(s) and data of that type was dragged into \n             the view, and is now exiting."
+    , "kind": "event"
+    , "url": "Control.html#dragexit"
+  }
+  , {
+      "title": "Control.event:drop"
+    , "description": "Fires when acceptsDroppedTypes is set to a type(s) and data of that type is dragged into \n             the view and is being dropped into the view."
+    , "kind": "event"
+    , "url": "Control.html#drop"
+  }
+  , {
+      "title": "Control.event:dropped"
+    , "description": "Fires when acceptsDroppedTypes is set to a type(s) and data of that type is dragged into \n             the view and was dropped into the view's control.  This must return 'true' or 'false' to\n             indicate if it accepts or declines the drop request.  The callback for this event is \n             executed with an array passed in of the objects that were dropped.  The object contains\n             a type field that is the type of the dropped item, the data field contains a Buffer data\n             object for the data that was dropped. IMPORTANT: File and URL types may not necessarily\n             contain the contents of the URL or FILE, they have the location of the file or url as a string."
+    , "kind": "event"
+    , "url": "Control.html#dropped"
+  }
+  , {
+      "title": "Control.event:dropping"
+    , "description": "Fires when acceptsDroppedTypes is set to a type(s) and data of that type is dragged into \n             the view and is now ending. Note this does not indicate the success or failure of the drag\n             operation, only that it has finished."
+    , "kind": "event"
+    , "url": "Control.html#dropping"
+  }
+  , {
+      "title": "Control.event:keydown"
+    , "description": "Fires when a keyboard key is down but before its released."
+    , "kind": "event"
+    , "url": "Control.html#keydown"
+  }
+  , {
+      "title": "Control.event:keyup"
+    , "description": "Fires when a keyboard key is up and after the keydown event."
+    , "kind": "event"
+    , "url": "Control.html#keyup"
+  }
+  , {
+      "title": "Control.event:mousedown"
+    , "description": "Fires when a user presses the left mouse button down and before it's released."
+    , "kind": "event"
+    , "url": "Control.html#mousedown"
+  }
+  , {
+      "title": "Control.event:mouseenter"
+    , "description": "Fires when the mouse cursor enters the visible bounds of the control."
+    , "kind": "event"
+    , "url": "Control.html#mouseenter"
+  }
+  , {
+      "title": "Control.event:mouseexit"
+    , "description": "Fires when the mouse cursor leaves the visible bounds of the control."
+    , "kind": "event"
+    , "url": "Control.html#mouseexit"
+  }
+  , {
+      "title": "Control.event:mousemove"
+    , "description": "Fires when the mouse moves, and only when its moving over the control."
+    , "kind": "event"
+    , "url": "Control.html#mousemove"
+  }
+  , {
+      "title": "Control.event:mouseup"
+    , "description": "Fires when a user releases the left mouse button and after the mousedown event."
+    , "kind": "event"
+    , "url": "Control.html#mouseup"
+  }
+  , {
+      "title": "Control.event:rightmousedown"
+    , "description": "Fires when a user presses the right mouse button down and before it's released."
+    , "kind": "event"
+    , "url": "Control.html#rightmousedown"
+  }
+  , {
+      "title": "Control.event:rightmouseup"
+    , "description": "Fires when a user releases the right mouse button and after the rightmousedown event."
+    , "kind": "event"
+    , "url": "Control.html#rightmouseup"
+  }
+  , {
+      "title": "DateWell"
+    , "description": "Creates a date \"well\" or \"view\" that allows the user to select a date from a calendar.\n             A change in the date can be tracked using the \"mouseup\" event."
+    , "kind": "class"
+    , "url": "DateWell.html"
+  }
+  , {
+      "title": "DateWell.backgroundColor"
+    , "description": "Gets or sets the background color of the control."
+    , "kind": "member"
+    , "url": "DateWell.html#backgroundColor"
+  }
+  , {
+      "title": "DateWell.range"
+    , "description": "Gets or sets whether the user is allowed to select a range of dates rather than one.\n             The default is false."
+    , "kind": "member"
+    , "url": "DateWell.html#range"
+  }
+  , {
+      "title": "DateWell.value"
+    , "description": "Gets or sets the selected date as a standard javascript Date object.\n             The default is now."
+    , "kind": "member"
+    , "url": "DateWell.html#value"
+  }
+  , {
+      "title": "DateWell.DateWell"
+    , "description": "Creates a new DateWell control."
+    , "kind": "constructor"
+    , "url": "DateWell.html#DateWell"
+  }
+  , {
+      "title": "Dialog"
+    , "description": "The dialog allows you to ask a question to the user or prompt them \n             with a choice prior to the application continuing. Note you can listen\n             for whether the user makes a choice through the inherited 'click' event,\n             a parameter is passed into the callback with the value of 'main' or 'aux'\n             to indicate the pressed button on the dialog."
+    , "kind": "class"
+    , "url": "Dialog.html"
+  }
+  , {
+      "title": "Dialog.auxbutton"
+    , "description": "Gets or sets the text label of the auxillary button."
+    , "kind": "member"
+    , "url": "Dialog.html#auxbutton"
+  }
+  , {
+      "title": "Dialog.icon"
+    , "description": "Gets or sets the image associated with the dialog, by default this will\n             use the icon from {@link Application#icon}. An image can be any url, including\n             the app:// schema, or a named system icon resource."
+    , "kind": "member"
+    , "url": "Dialog.html#icon"
+  }
+  , {
+      "title": "Dialog.mainbutton"
+    , "description": "Gets or sets the text label of the main button."
+    , "kind": "member"
+    , "url": "Dialog.html#mainbutton"
+  }
+  , {
+      "title": "Dialog.message"
+    , "description": "Gets or sets the text shown as a message or question to the user."
+    , "kind": "member"
+    , "url": "Dialog.html#message"
+  }
+  , {
+      "title": "Dialog.suppression"
+    , "description": "Gets or sets the text label of the suppress option.\n             This is useful if you'd like to add an option on the dialog to\n             not show this dialog again.  Setting this to anything other than\n             null uses the value as the title and makes the check box visible."
+    , "kind": "member"
+    , "url": "Dialog.html#suppression"
+  }
+  , {
+      "title": "Dialog.suppressionChecked"
+    , "description": "Gets or sets whether the suppression box is checked."
+    , "kind": "member"
+    , "url": "Dialog.html#suppressionChecked"
+  }
+  , {
+      "title": "Dialog.title"
+    , "description": "Gets or sets the caption or title of the dialog modal window."
+    , "kind": "member"
+    , "url": "Dialog.html#title"
+  }
+  , {
+      "title": "Dialog.open"
+    , "description": "Opens the dialog and presents it to the user.  An optional window can be passed\n             into the function to specify which window the dialog may be protecting.  This is\n             useful as it allows you to prevent any window interaction from happening unitl the\n             user responds to the dialog.  In OSX this is displayed as a sheet over the window,\n             on Windows the modal pop-up prevents mouse or keyboard interactions while it's open.\n             If no window is provided the dialog is opened on top of all or any open windows and\n             does not prevent users from interacting with any window of the application."
+    , "kind": "method"
+    , "url": "Dialog.html#open"
+  }
+  , {
+      "title": "Dialog.Dialog"
+    , "description": "Creates a new Dialog window hidden by default."
+    , "kind": "constructor"
+    , "url": "Dialog.html#Dialog"
+  }
+  , {
+      "title": "Dialog.event:click"
+    , "description": "Fires when the user clicks either the auxillary button or main button\n             'aux' is passed in to the callback when the auxillary button is pressed.\n              'main' is passed in to the callback when the main button is pressed."
+    , "kind": "event"
+    , "url": "Dialog.html#click"
+  }
+  , {
+      "title": "DropDown"
+    , "description": "Creates a pop-up button that shows a set of menu options when pressed."
+    , "kind": "class"
+    , "url": "DropDown.html"
+  }
+  , {
+      "title": "DropDown.options"
+    , "description": "Gets or sets the menu or options that the user can select from when\n             the button is pressed."
+    , "kind": "member"
+    , "url": "DropDown.html#options"
+  }
+  , {
+      "title": "DropDown.pullsdown"
+    , "description": "Gets or sets whether the menu should pull down below the button or \n             pop over the button.  The default is false."
+    , "kind": "member"
+    , "url": "DropDown.html#pullsdown"
+  }
+  , {
+      "title": "DropDown.value"
+    , "description": "Gets or sets the shown title label on the button."
+    , "kind": "member"
+    , "url": "DropDown.html#value"
+  }
+  , {
+      "title": "DropDown.DropDown"
+    , "description": "Creates a new DropDown control."
+    , "kind": "constructor"
+    , "url": "DropDown.html#DropDown"
+  }
+  , {
+      "title": "FileDialog"
+    , "description": "Creates a new file dialog where a user can select a file to open or save."
+    , "kind": "class"
+    , "url": "FileDialog.html"
+  }
+  , {
+      "title": "FileDialog.allowAnyFileType"
+    , "description": "Gets or sets whether the use can select any file type."
+    , "kind": "member"
+    , "url": "FileDialog.html#allowAnyFileType"
+  }
+  , {
+      "title": "FileDialog.allowDirectories"
+    , "description": "Gets or sets if the user is allowed to select a directory in addition to a file."
+    , "kind": "member"
+    , "url": "FileDialog.html#allowDirectories"
+  }
+  , {
+      "title": "FileDialog.allowFileTypes"
+    , "description": "Gets or sets an array containing the file types (by extension) that are allowed."
+    , "kind": "member"
+    , "url": "FileDialog.html#allowFileTypes"
+  }
+  , {
+      "title": "FileDialog.allowMultiple"
+    , "description": "Gets or sets whether selecting multiple files is allowed, if the file dialog is a \n             save dialog type this value is ignored."
+    , "kind": "member"
+    , "url": "FileDialog.html#allowMultiple"
+  }
+  , {
+      "title": "FileDialog.directory"
+    , "description": "Gets or sets the directory the file dialog is in."
+    , "kind": "member"
+    , "url": "FileDialog.html#directory"
+  }
+  , {
+      "title": "FileDialog.filename"
+    , "description": "Gets or sets the filename the file dialog has (specified by the user)."
+    , "kind": "member"
+    , "url": "FileDialog.html#filename"
+  }
+  , {
+      "title": "FileDialog.selection"
+    , "description": "Gets the selection specified by the user once the dialog has been closed. The result is a URL or file path."
+    , "kind": "member"
+    , "url": "FileDialog.html#selection"
+  }
+  , {
+      "title": "FileDialog.title"
+    , "description": "Gets or sets the title for the file dialog window."
+    , "kind": "member"
+    , "url": "FileDialog.html#title"
+  }
+  , {
+      "title": "FileDialog.type"
+    , "description": "Gets the type of the file dialog (open or save). This is read only."
+    , "kind": "member"
+    , "url": "FileDialog.html#type"
+  }
+  , {
+      "title": "FileDialog.addEventListener"
+    , "description": "Adds an event listener for various dialog level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "FileDialog.html#addEventListener"
+  }
+  , {
+      "title": "FileDialog.open"
+    , "description": "Opens the file dialog window, if a window object is passed in the file dialog is placed\n             on top of the passed in window preventing any user interaction with it. On OSX this causes\n             a \"sheet\" effect, on Windows the file dialog is a modal window aligned with the passed in window.\n             Note: Because of security and sandboxing on applications all event loops are paused until a \n             selection is made by the user"
+    , "kind": "method"
+    , "url": "FileDialog.html#open"
+  }
+  , {
+      "title": "FileDialog.removeEventListener"
+    , "description": "Removes an event listener for various dialog level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "FileDialog.html#removeEventListener"
+  }
+  , {
+      "title": "FileDialog.event:cancel"
+    , "description": "Fires when a user cancels the selection."
+    , "kind": "event"
+    , "url": "FileDialog.html#cancel"
+  }
+  , {
+      "title": "FileDialog.event:select"
+    , "description": "Fires when a user selects the a file or set of files."
+    , "kind": "event"
+    , "url": "FileDialog.html#select"
+  }
+  , {
+      "title": "FileInput"
+    , "description": "Creates a new file input control."
+    , "kind": "class"
+    , "url": "FileInput.html"
+  }
+  , {
+      "title": "FileInput.allowFileTypes"
+    , "description": "Gets or sets an array containing the file types (by extension) that are allowed."
+    , "kind": "member"
+    , "url": "FileInput.html#allowFileTypes"
+  }
+  , {
+      "title": "FileInput.location"
+    , "description": "Gets or sets the location or file name of the file selected in the control."
+    , "kind": "member"
+    , "url": "FileInput.html#location"
+  }
+  , {
+      "title": "FileInput.event:cancel"
+    , "description": "Fires when a user cancels the selection."
+    , "kind": "event"
+    , "url": "FileInput.html#cancel"
+  }
+  , {
+      "title": "FileInput.event:select"
+    , "description": "Fires when a user selects the a file or set of files."
+    , "kind": "event"
+    , "url": "FileInput.html#select"
+  }
+  , {
+      "title": "Font"
+    , "description": "The Font object represents a native font in javascript."
+    , "kind": "class"
+    , "url": "Font.html"
+  }
+  , {
+      "title": "Font.bold"
+    , "description": "Gets or sets whether the font is bolded. Note, for finer control over the font's boldness use the weight property."
+    , "kind": "member"
+    , "url": "Font.html#bold"
+  }
+  , {
+      "title": "Font.expanded"
+    , "description": "Gets or sets whether the font is expanded."
+    , "kind": "member"
+    , "url": "Font.html#expanded"
+  }
+  , {
+      "title": "Font.face"
+    , "description": "Gets or sets the face fo the font."
+    , "kind": "member"
+    , "url": "Font.html#face"
+  }
+  , {
+      "title": "Font.family"
+    , "description": "Gets or sets the font's family."
+    , "kind": "member"
+    , "url": "Font.html#family"
+  }
+  , {
+      "title": "Font.fontFamilies"
+    , "description": "Gets a list of all available font families installed on the system."
+    , "kind": "member"
+    , "url": "Font.html#fontFamilies"
+  }
+  , {
+      "title": "Font.fonts"
+    , "description": "Gets a list of all available fonts on the system.  This is a 'static' method, \n             and does not require creating a font (E.g., Font.fonts)."
+    , "kind": "member"
+    , "url": "Font.html#fonts"
+  }
+  , {
+      "title": "Font.italic"
+    , "description": "Gets or sets whether the font is italicized."
+    , "kind": "member"
+    , "url": "Font.html#italic"
+  }
+  , {
+      "title": "Font.monospaced"
+    , "description": "Gets whether the font is monospaced."
+    , "kind": "member"
+    , "url": "Font.html#monospaced"
+  }
+  , {
+      "title": "Font.size"
+    , "description": "Gets or sets the size of the font in logical pixels."
+    , "kind": "member"
+    , "url": "Font.html#size"
+  }
+  , {
+      "title": "Font.vertical"
+    , "description": "Gets whether the font is vertical or horizontal."
+    , "kind": "member"
+    , "url": "Font.html#vertical"
+  }
+  , {
+      "title": "Font.weight"
+    , "description": "Gets or sets the boldness of the font, this can be a range from 0 to 999."
+    , "kind": "member"
+    , "url": "Font.html#weight"
+  }
+  , {
+      "title": "Font.Font"
+    , "description": "Gets a system font and creates a font object for it."
+    , "kind": "constructor"
+    , "url": "Font.html#Font"
+  }
+  , {
+      "title": "FontPanel"
+    , "description": "Creates a new system Font Panel that the user can select a font with."
+    , "kind": "class"
+    , "url": "FontPanel.html"
+  }
+  , {
+      "title": "FontPanel.multiple"
+    , "description": "Gets or sets whether multiple fonts can be selected."
+    , "kind": "member"
+    , "url": "FontPanel.html#multiple"
+  }
+  , {
+      "title": "FontPanel.selected"
+    , "description": "Gets or sets the selected font."
+    , "kind": "member"
+    , "url": "FontPanel.html#selected"
+  }
+  , {
+      "title": "FontPanel.visible"
+    , "description": "Gets or sets whether the color panel is visible or hidden."
+    , "kind": "member"
+    , "url": "FontPanel.html#visible"
+  }
+  , {
+      "title": "FontPanel.addEventListener"
+    , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "FontPanel.html#addEventListener"
+  }
+  , {
+      "title": "FontPanel.removeEventListener"
+    , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "FontPanel.html#removeEventListener"
+  }
+  , {
+      "title": "FontPanel.FontPanel"
+    , "description": "Creates a new font panel window that is initially hidden."
+    , "kind": "constructor"
+    , "url": "FontPanel.html#FontPanel"
+  }
+  , {
+      "title": "FontPanel.event:fontchange"
+    , "description": "Fires when the user selects a new font from the font panel."
+    , "kind": "event"
+    , "url": "FontPanel.html#fontchange"
+  }
+  , {
+      "title": "ImageWell"
+    , "description": "The image well class creates a way to display photos, icons or other imagery."
+    , "kind": "class"
+    , "url": "ImageWell.html"
+  }
+  , {
+      "title": "ImageWell.image"
+    , "description": "Gets or sets the image to use, this can be any URL including the app:// schema,\n             or a named system image."
+    , "kind": "member"
+    , "url": "ImageWell.html#image"
+  }
+  , {
+      "title": "ImageWell.scale"
+    , "description": "Gets or sets the scaling of the image, this can be \"constrain\", \"fit\", \"contain\" or \"none\""
+    , "kind": "member"
+    , "url": "ImageWell.html#scale"
+  }
+  , {
+      "title": "ImageWell.ImageWell"
+    , "description": "Creates a new imagewell object."
+    , "kind": "constructor"
+    , "url": "ImageWell.html#ImageWell"
+  }
+  , {
+      "title": "Menu"
+    , "description": "The menu class allows you to create system menus and can be used with a variety of other controls.\n             To use the menu as the system menu, see Window.menu."
+    , "kind": "class"
+    , "url": "Menu.html"
+  }
+  , {
+      "title": "Menu.appendChild"
+    , "description": "Appends a menu item to this menu."
+    , "kind": "method"
+    , "url": "Menu.html#appendChild"
+  }
+  , {
+      "title": "Menu.removeChild"
+    , "description": "Removes a menu item that is on this menu."
+    , "kind": "method"
+    , "url": "Menu.html#removeChild"
+  }
+  , {
+      "title": "Menu.Menu"
+    , "description": "Creates a new menu object."
+    , "kind": "constructor"
+    , "url": "Menu.html#Menu"
+  }
+  , {
+      "title": "MenuItem"
+    , "description": "A menu item object is an individual item within a menu. It allows you to stylize and\n             control the click behavior of the menu item.  In addition its capabilities give access\n             to providing application wide \"hot keys\" such as copy, and paste. MenuItem objects can\n             only be appended to a Menu object."
+    , "kind": "class"
+    , "url": "MenuItem.html"
+  }
+  , {
+      "title": "MenuItem.checked"
+    , "description": "Gets or sets whether this menu item is \"activated\" or \"highlighted\" or\n             \"checked\".  This is expressed differently depending on the native OS, on\n             most operating systems it shows a checkbox next to the menu item, on some\n             operating systems it affects the background color and highlight. By default\n             this is false."
+    , "kind": "member"
+    , "url": "MenuItem.html#checked"
+  }
+  , {
+      "title": "MenuItem.custom"
+    , "description": "Gets or sets a custom control you'd like to place in the menu item.\n             This is useful if you need to render more than just an icon or text in the\n             menu item.  It provides a way for users to enhance menu functionality. Any\n             Control can be added and will have its width and height constrained to the\n             system defined area, the layout will also be dictated by the operating system."
+    , "kind": "member"
+    , "url": "MenuItem.html#custom"
+  }
+  , {
+      "title": "MenuItem.enabled"
+    , "description": "Gets or sets whether the menu item is enabled or greyed out (disabled)\n             Note that the item is still visible but does not respond to clicks and\n             is visually denoted as inactive to the user.  This is useful when you want\n             to express that the choice or selection in the menu item is not available\n             at the moment."
+    , "kind": "member"
+    , "url": "MenuItem.html#enabled"
+  }
+  , {
+      "title": "MenuItem.image"
+    , "description": "Gets or sets the image that will be used for the menu item.\n             This is placed as an icon next to menu items label. This can\n             be any URL, including the app:// schema for referencing packaged\n             resources, or it can be a named system icon resource."
+    , "kind": "member"
+    , "url": "MenuItem.html#image"
+  }
+  , {
+      "title": "MenuItem.key"
+    , "description": "Gets or sets what key (in combination with modifiers), when pressed,\n             activates this menu.  This is useful when you want to provide a\n             keyboard shortcut to a menu item so the user doesn't need to navigate\n             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for\n             a key).  Each menu item must have a unique key and modifier combination\n             (if one in set).  This is optional."
+    , "kind": "member"
+    , "url": "MenuItem.html#key"
+  }
+  , {
+      "title": "MenuItem.modifiers"
+    , "description": "Gets or sets what modifiers (in combination with key), when pressed,\n             activates this menu.  This is useful when you want to provide a\n             keyboard shortcut to a menu item so the user doesn't need to navigate\n             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for\n             a key and 'cmd' for a modifier).  Each menu item must have a unique key \n             and modifier combination (if one in set).  This is optional."
+    , "kind": "member"
+    , "url": "MenuItem.html#modifiers"
+  }
+  , {
+      "title": "MenuItem.submenu"
+    , "description": "Gets or sets the submenu associated with this menu item.  If the\n             menu item has sub items or a sub-menu of its own it can be set here.\n             This by default is not set and null."
+    , "kind": "member"
+    , "url": "MenuItem.html#submenu"
+  }
+  , {
+      "title": "MenuItem.title"
+    , "description": "Gets or sets the text label used for this menu item."
+    , "kind": "member"
+    , "url": "MenuItem.html#title"
+  }
+  , {
+      "title": "MenuItem.tooltip"
+    , "description": "Gets or sets the tooltip that is shown to the user if they\n             hover over the menu item for more than a few seconds. This can be thought\n             of as a description of what the menu item does. It shows as a fading in\n             off-mouse window that lets the user know more about what the menu item\n             does."
+    , "kind": "member"
+    , "url": "MenuItem.html#tooltip"
+  }
+  , {
+      "title": "MenuItem.visible"
+    , "description": "Gets or sets whether the menu item is shown or hidden. The default is true."
+    , "kind": "member"
+    , "url": "MenuItem.html#visible"
+  }
+  , {
+      "title": "MenuItem.addEventListener"
+    , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "MenuItem.html#addEventListener"
+  }
+  , {
+      "title": "MenuItem.removeEventListener"
+    , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "MenuItem.html#removeEventListener"
+  }
+  , {
+      "title": "MenuItem.MenuItem"
+    , "description": "Creates a new menuitem object."
+    , "kind": "constructor"
+    , "url": "MenuItem.html#MenuItem"
+  }
+  , {
+      "title": "MenuItem.event:click"
+    , "description": "Fires when the user clicks on the menu item or activates it with the keyboard shortcuts/arrows."
+    , "kind": "event"
+    , "url": "MenuItem.html#click"
+  }
+  , {
+      "title": "MenuItemSeparator"
+    , "description": "Creates a seperator that can be added to a Menu object to create a divider\n\t\t\t  appearance between two other menu items."
+    , "kind": "class"
+    , "url": "MenuItemSeparator.html"
+  }
+  , {
+      "title": "Notification"
+    , "description": "Creates a new notification.  Notifications are small two-three line notifications\n             about an event that may have happened.  The user is given a short period to respond\n             to the notification before it disappears.  The notification may have a specific call\n             to action. This is useful to let the user know about new developments, for example\n             in a mail application this may show a new message that arrived, the text could have\n             the subject line, the specific CTA may be \"Trash\" or \"Delete\" while clicking anywhere\n             in the notification would open the email."
+    , "kind": "class"
+    , "url": "Notification.html"
+  }
+  , {
+      "title": "Notification.buttonLabel"
+    , "description": "Gets or sets the text label for the call-to-action button. This is optional, and if left blank removes\n             the button from the notification."
+    , "kind": "member"
+    , "url": "Notification.html#buttonLabel"
+  }
+  , {
+      "title": "Notification.image"
+    , "description": "Sets the image of the notification that will appear to the user."
+    , "kind": "member"
+    , "url": "Notification.html#image"
+  }
+  , {
+      "title": "Notification.sound"
+    , "description": "Gets or sets whether the system should play a default attention system sound when the notification happens.\n             The default for this is false. Note that sound may not play depending on the user preferences set on the\n             operating system."
+    , "kind": "member"
+    , "url": "Notification.html#sound"
+  }
+  , {
+      "title": "Notification.subtitle"
+    , "description": "Gets or sets the sub-title for the notification.  This should be a very short message, less than 10 words."
+    , "kind": "member"
+    , "url": "Notification.html#subtitle"
+  }
+  , {
+      "title": "Notification.text"
+    , "description": "Gets or sets the text in the notification, this can hold, on average, up to 25 words."
+    , "kind": "member"
+    , "url": "Notification.html#text"
+  }
+  , {
+      "title": "Notification.title"
+    , "description": "Gets or sets the title for the notification.  This should be a very short message, less than 10 words."
+    , "kind": "member"
+    , "url": "Notification.html#title"
+  }
+  , {
+      "title": "Notification.dispatch"
+    , "description": "Dispatches the notification and shows it.  Once dispatched there is no way to \n             cancel to notification from showing. This method returns false if the notification\n             failed to show (see requestPermission)."
+    , "kind": "method"
+    , "url": "Notification.html#dispatch"
+  }
+  , {
+      "title": "Notification.requestPermission"
+    , "description": "This method requests permission to use notifications from the underlying operating system. At the moment this always returns true unless there\n             is an explicit ban on the application pushing notifications (perhaps it was done too often or the user has explicitly set them not to show in\n             the system preferences).  This method is static and does not require creating a notification object.  It also is not required to be used prior\n             to creating a notification."
+    , "kind": "method"
+    , "url": "Notification.html#requestPermission"
+  }
+  , {
+      "title": "Notification.Notification"
+    , "description": "Creates a new notification that is initially hidden and not shown."
+    , "kind": "constructor"
+    , "url": "Notification.html#Notification"
+  }
+  , {
+      "title": "Notification.event:click"
+    , "description": "Fires when a user presses a button on the notification, the first parameter passed in\n             to the callback on the event indicates the area that was clicked.  The value is either\n             'contents', 'button' or 'unknown'."
+    , "kind": "event"
+    , "url": "Notification.html#click"
+  }
+  , {
+      "title": "Panel"
+    , "description": "A Panel is similar to a window although it should be viewed as either a utility or tool window.\n             It differs from a regular Window in that: It uses a smaller title bar, and does not have minimize\n             or maximize capabilities.  It uses slightly different styles than a normal window. It disappears\n             automatically if the application looses focus and reappears when it regains it. Panels are useful as \n             \"Tool\" windows.  For example, in Photoshop the floating set of buttons to select the current action \n             (select, bucket, fill, etc) would be a panel.\n             Panels inherit all of the capabilities with the exception of window state capabilities (maximize, minimize\n             and fullscreen)."
+    , "kind": "class"
+    , "url": "Panel.html"
+  }
+  , {
+      "title": "Panel.floating"
+    , "description": "Gets or sets if the panel is currently floating or docked."
+    , "kind": "member"
+    , "url": "Panel.html#floating"
+  }
+  , {
+      "title": "Panel.style"
+    , "description": "Gets or sets the style of the panel.  This can be \"window\" for an apperance as similar to a normal\n             window as possible, \"inspector\" for a \"Heads Up Display\" style window or \"utility\" for a style that\n             resembles a native utility window (or panel).  The default is \"window\"."
+    , "kind": "member"
+    , "url": "Panel.html#style"
+  }
+  , {
+      "title": "Panel.Panel"
+    , "description": "Creates a new panel that is initially hidden."
+    , "kind": "constructor"
+    , "url": "Panel.html#Panel"
+  }
+  , {
+      "title": "PopOver"
+    , "description": "Creates a pop-over that can extend outside of a window bounds as a floating\n             panel above the control.  The pop over is useful for providing ancillary information\n             or to collect non-required information.  It can also be used as a tool tip for users\n             as to how to use a program."
+    , "kind": "class"
+    , "url": "PopOver.html"
+  }
+  , {
+      "title": "PopOver.height"
+    , "description": "Gets or sets the height of the pop over."
+    , "kind": "member"
+    , "url": "PopOver.html#height"
+  }
+  , {
+      "title": "PopOver.width"
+    , "description": "Gets or sets the width of the pop over."
+    , "kind": "member"
+    , "url": "PopOver.html#width"
+  }
+  , {
+      "title": "PopOver.close"
+    , "description": "Closes the pop over."
+    , "kind": "method"
+    , "url": "PopOver.html#close"
+  }
+  , {
+      "title": "PopOver.open"
+    , "description": "The open method opens the pop over over the control or container specified, with the position\n             provided as a string \"left\", \"right\", \"top\" or \"bottom\"."
+    , "kind": "method"
+    , "url": "PopOver.html#open"
+  }
+  , {
+      "title": "PopOver.PopOver"
+    , "description": "Creates a new PopOver control."
+    , "kind": "constructor"
+    , "url": "PopOver.html#PopOver"
+  }
+  , {
+      "title": "ProgressBar"
+    , "description": "The progress bar utilizes the native progress bar widget to represent how far a set of \n             interactions are."
+    , "kind": "class"
+    , "url": "ProgressBar.html"
+  }
+  , {
+      "title": "ProgressBar.border"
+    , "description": "Gets or sets whether the progress bar has a border. The default is true."
+    , "kind": "member"
+    , "url": "ProgressBar.html#border"
+  }
+  , {
+      "title": "ProgressBar.indeterminate"
+    , "description": "Gets or sets whether the progress bar is rendered as indeterminate or determinate. If set to true\n             the progress bar renders as an animation of progress happening with no indicator as to its finished\n             time. If set to false (the default) the value is used to calculate how far the progerss is."
+    , "kind": "member"
+    , "url": "ProgressBar.html#indeterminate"
+  }
+  , {
+      "title": "ProgressBar.size"
+    , "description": "Gets or sets the size of the progress bar in OS recommended values.  This can be\n             set to either \"small\", \"large\", or \"normal\"."
+    , "kind": "member"
+    , "url": "ProgressBar.html#size"
+  }
+  , {
+      "title": "ProgressBar.value"
+    , "description": "Gets or sets the progress, can be a value between 0 and 1 (e.g., 0.5 represents 50% full)"
+    , "kind": "member"
+    , "url": "ProgressBar.html#value"
+  }
+  , {
+      "title": "ProgressBar.ProgressBar"
+    , "description": "Creates a new progress bar control."
+    , "kind": "constructor"
+    , "url": "ProgressBar.html#ProgressBar"
+  }
+  , {
+      "title": "Screens"
+    , "description": "The Screens class can be used to access information about the attached displays on the device.\n             Methods on this class are all static and a new Screens object does not need to be created."
+    , "kind": "class"
+    , "url": "Screens.html"
+  }
+  , {
+      "title": "Screens.active"
+    , "description": "Gets a reference to the active screen, this returns an object with the following attributes:\n             'bitsPerPixel', the amount of depth or bits per pixel the screen can render. 'scaleFactor' - the\n             the number representing how physical pixels are converted to logical pixels, or the sharpness of the screen. \n             'bounds' - an object with the properties 'width', 'height', 'x', and 'y' logical pixel values of the active screen. \n             'visibleBounds' - an object with the properties 'width', 'height', 'x', and 'y' logical pixel values of the \n                             active screens workarea or visible area."
+    , "kind": "member"
+    , "url": "Screens.html#active"
+  }
+  , {
+      "title": "Screens.all"
+    , "description": "Gets an array to all screens attached to the device, the array contains a set of objects with the following attributes:\n             bitsPerPixel, the amount of depth or bits per pixel the screen can render. scaleFactor - the\n             the number representing how physical pixels are converted to logical pixels, or the sharpness of the screen. \n             bounds - an object with the properties 'width', 'height', 'x', and 'y' logical pixel values of the active screen. \n             visibleBounds - an object with the properties 'width', 'height', 'x', and 'y' logical pixel values of the \n                             active screens workarea or visible area."
+    , "kind": "member"
+    , "url": "Screens.html#all"
+  }
+  , {
+      "title": "Scroll"
+    , "description": "Creates a Container that allows its child controls to overflow out of its height\n             and width where the user can scroll left, right, up or down to specific controls."
+    , "kind": "class"
+    , "url": "Scroll.html"
+  }
+  , {
+      "title": "Scroll.backgroundColor"
+    , "description": "Gets or sets the background color of the container. See the Color class for more information."
+    , "kind": "member"
+    , "url": "Scroll.html#backgroundColor"
+  }
+  , {
+      "title": "Scroll.border"
+    , "description": "Gets or sets the border type for the scroll window. This can be one of the following values\n             \"none\", \"line\", \"normal\" or \"concave\".  The default is \"normal\"."
+    , "kind": "member"
+    , "url": "Scroll.html#border"
+  }
+  , {
+      "title": "Scroll.horizontal"
+    , "description": "Gets or sets whether the scroll has a horizontal scrollbar (and can scroll horizontally).\n             The default is true."
+    , "kind": "member"
+    , "url": "Scroll.html#horizontal"
+  }
+  , {
+      "title": "Scroll.speed"
+    , "description": "Gets or sets the speed of the scrolling by unit of lines."
+    , "kind": "member"
+    , "url": "Scroll.html#speed"
+  }
+  , {
+      "title": "Scroll.vertical"
+    , "description": "Gets or sets whether the scroll has a vertical scrollbar (and can scroll vertically).\n             The default is true. Note a scrollbar may not appear if the content does not push outside\n             the bounds of the scroll view."
+    , "kind": "member"
+    , "url": "Scroll.html#vertical"
+  }
+  , {
+      "title": "Scroll.setChild"
+    , "description": "Sets the child control that will be scrollable, if multiple children are needed create\n             a generic Box or Container control to append multiple children."
+    , "kind": "method"
+    , "url": "Scroll.html#setChild"
+  }
+  , {
+      "title": "Scroll.Scroll"
+    , "description": "Creates a new scroll container."
+    , "kind": "constructor"
+    , "url": "Scroll.html#Scroll"
+  }
+  , {
+      "title": "SecureTextInput"
+    , "description": "Creates a secure text label or text input area for the user to\n             provide a free-form value from the keyboard. This inherits all of the TextInput capabilities."
+    , "kind": "class"
+    , "url": "SecureTextInput.html"
+  }
+  , {
+      "title": "SecureTextInput.SecureTextInput"
+    , "description": "Creates a new SecureTextInput control."
+    , "kind": "constructor"
+    , "url": "SecureTextInput.html#SecureTextInput"
+  }
+  , {
+      "title": "SelectInput"
+    , "description": "The Select Input creates a combo box where a user can input text similar to TextInput\n             but can be \"pulled down\" to see a list of options as well. This class inherits TextInput\n             classes functionality, see TextInput for more information."
+    , "kind": "class"
+    , "url": "SelectInput.html"
+  }
+  , {
+      "title": "SelectInput.length"
+    , "description": "Gets the amount of options currently on the select input."
+    , "kind": "member"
+    , "url": "SelectInput.html#length"
+  }
+  , {
+      "title": "SelectInput.selectedIndex"
+    , "description": "Gets or sets the selected item from the options available."
+    , "kind": "member"
+    , "url": "SelectInput.html#selectedIndex"
+  }
+  , {
+      "title": "SelectInput.addItem"
+    , "description": "Adds an item to the select input as an option, this is added to the end of the options list."
+    , "kind": "method"
+    , "url": "SelectInput.html#addItem"
+  }
+  , {
+      "title": "SelectInput.addItemAtIndex"
+    , "description": "Adds an item to the select input as an option, the item is inserted at the index."
+    , "kind": "method"
+    , "url": "SelectInput.html#addItemAtIndex"
+  }
+  , {
+      "title": "SelectInput.item"
+    , "description": "Returns the text title for the item at the specified index."
+    , "kind": "method"
+    , "url": "SelectInput.html#item"
+  }
+  , {
+      "title": "SelectInput.removeItem"
+    , "description": "Removes the option where the text title matches the passed in value."
+    , "kind": "method"
+    , "url": "SelectInput.html#removeItem"
+  }
+  , {
+      "title": "SelectInput.removeItemAtIndex"
+    , "description": "Removes the item at the specified index."
+    , "kind": "method"
+    , "url": "SelectInput.html#removeItemAtIndex"
+  }
+  , {
+      "title": "SelectInput.SelectInput"
+    , "description": "Creates a new SelectInput control."
+    , "kind": "constructor"
+    , "url": "SelectInput.html#SelectInput"
+  }
+  , {
+      "title": "Slider"
+    , "description": "The slider control can be used to give the user an optional range to select.\n             This has the visual appearance of a \"scrubber\". Changes to the value can be\n             tracked with the 'click' event."
+    , "kind": "class"
+    , "url": "Slider.html"
+  }
+  , {
+      "title": "Slider.value"
+    , "description": "Gets or sets the value of the slider. The value is in a range from 0 to 1."
+    , "kind": "member"
+    , "url": "Slider.html#value"
+  }
+  , {
+      "title": "Slider.Slider"
+    , "description": "Creates a new slider control."
+    , "kind": "constructor"
+    , "url": "Slider.html#Slider"
+  }
+  , {
+      "title": "Split"
+    , "description": "The Split class can be used to store multiple views horizontally or vertically with a seperator\n             that can be moved between the two to resize one view or another.  This class is useful for having\n             a \"tools\" view on one side and a \"content\" view on the other allowing the user the option to collapse\n             or resize one view as needed. IMPORTANT: The Split view will not respond mouse down or mouse up events."
+    , "kind": "class"
+    , "url": "Split.html"
+  }
+  , {
+      "title": "Split.orientation"
+    , "description": "Gets or sets the orientation of all the seperators in the view, the values can be\n             either \"vertical\" or \"horizontal\".  The default is \"horizontal\"."
+    , "kind": "member"
+    , "url": "Split.html#orientation"
+  }
+  , {
+      "title": "Split.style"
+    , "description": "Gets or sets the style or size of the seperators, the values can be \"thick\", \"thin\"\n             or \"pane\". The actual size is determined by the native widget styles and recommended\n             operating system standards. The default is \"thin\"."
+    , "kind": "member"
+    , "url": "Split.html#style"
+  }
+  , {
+      "title": "Split.appendChild"
+    , "description": "appendChild adds a new control to the split control with a seperator between the previous and appended control."
+    , "kind": "method"
+    , "url": "Split.html#appendChild"
+  }
+  , {
+      "title": "Split.removeChild"
+    , "description": "Removes a control from the split control."
+    , "kind": "method"
+    , "url": "Split.html#removeChild"
+  }
+  , {
+      "title": "Split.setPosition"
+    , "description": "Sets the position (a value of 0 to 1) of a seperator identified by the index."
+    , "kind": "method"
+    , "url": "Split.html#setPosition"
+  }
+  , {
+      "title": "Split.Split"
+    , "description": "Creates a new split view"
+    , "kind": "constructor"
+    , "url": "Split.html#Split"
+  }
+  , {
+      "title": "StatusBar"
+    , "description": "The status bar acts as a consistant element in the UI that can be accessed even if all other windows\n             are closed.  It can also have status indicators as icons or text to represent the state.  On OSX this\n             creates a new icon or text label in the Status Bar area.  In Windows this creates a new task tray icon."
+    , "kind": "class"
+    , "url": "StatusBar.html"
+  }
+  , {
+      "title": "StatusBar.enabled"
+    , "description": "Gets or sets whether the status bar displays as \"active\" or \"disabled\". The\n             disabled state grays out the icon and title, in addition it does not respond\n             to mouse or keyboard actions."
+    , "kind": "member"
+    , "url": "StatusBar.html#enabled"
+  }
+  , {
+      "title": "StatusBar.image"
+    , "description": "Gets or sets the image used in the status bar.  The image is automatically\n             resized to fit the OS requirements.  An image can be a url including the app:// schema,\n             or can be named system icon."
+    , "kind": "member"
+    , "url": "StatusBar.html#image"
+  }
+  , {
+      "title": "StatusBar.menu"
+    , "description": "Gets or sets the menu to display when the user clicks on the status bar. \n             NOTE: When a menu is set the click event is ignored and the menu is opened."
+    , "kind": "member"
+    , "url": "StatusBar.html#menu"
+  }
+  , {
+      "title": "StatusBar.title"
+    , "description": "Gets or sets the title of the status bar. Most status bar's do not have \n             titles and only icons. The title should be limited to no more than 3 words\n             as the space available is limited."
+    , "kind": "member"
+    , "url": "StatusBar.html#title"
+  }
+  , {
+      "title": "StatusBar.tooltip"
+    , "description": "Gets or sets the text displayed when the user keeps the mouse cursor over the\n             icon without taking any action. This can be thought of as a description as to\n             what the status bar does."
+    , "kind": "member"
+    , "url": "StatusBar.html#tooltip"
+  }
+  , {
+      "title": "StatusBar.addEventListener"
+    , "description": "Adds an event listener for events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "StatusBar.html#addEventListener"
+  }
+  , {
+      "title": "StatusBar.close"
+    , "description": "Closes the status bar and removes it from operating system UI."
+    , "kind": "method"
+    , "url": "StatusBar.html#close"
+  }
+  , {
+      "title": "StatusBar.removeEventListener"
+    , "description": "Removes an event listener for events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "StatusBar.html#removeEventListener"
+  }
+  , {
+      "title": "StatusBar.StatusBar"
+    , "description": "Creates a new status bar."
+    , "kind": "constructor"
+    , "url": "StatusBar.html#StatusBar"
+  }
+  , {
+      "title": "StatusBar.event:click"
+    , "description": "Fires when the user clicks on the statusbar icon, this will not fire if a menu\n             is placed on the status bar or if a custom view is set. To overcome this see the\n             'opened' and 'closed' event on the Menu object (if a menu is set), if a custom view\n             is set add the click handler to that view."
+    , "kind": "event"
+    , "url": "StatusBar.html#click"
+  }
+  , {
+      "title": "StatusBar.event:closed"
+    , "description": "This event fires when the menu has been closed. Due to the nature of\n             menu's this event may fire after or before click, blur or focus events on the object\n             that caused the menu to close fires.  Do not rely on the event order."
+    , "kind": "event"
+    , "url": "StatusBar.html#closed"
+  }
+  , {
+      "title": "StatusBar.event:opened"
+    , "description": "This event fires when the menu has been opened. Due to the nature of\n             menu's this event may fire after or before click events on the object\n             that caused the menu to open fires.  Do not rely on the event order."
+    , "kind": "event"
+    , "url": "StatusBar.html#opened"
+  }
+  , {
+      "title": "System"
+    , "description": "The system class contains methods for getting OS standard file system icons,\n       preferences, settings and information."
+    , "kind": "class"
+    , "url": "System.html"
+  }
+  , {
+      "title": "System.home"
+    , "description": "Gets the users home directory, returns it as a string."
+    , "kind": "member"
+    , "url": "System.html#home"
+  }
+  , {
+      "title": "System.mousePosition"
+    , "description": "Contains an object with the 'x' and 'y' properties with the current position of\n             the mouse cursor in context to the active screen."
+    , "kind": "member"
+    , "url": "System.html#mousePosition"
+  }
+  , {
+      "title": "System.beep"
+    , "description": "Plays the default alert noise for the OS. This may produce visual effects if the user\n             has accessibility features enabled."
+    , "kind": "method"
+    , "url": "System.html#beep"
+  }
+  , {
+      "title": "System.clickAt"
+    , "description": "Left clicks at the specified X, Y coordinates. This causes a\n             real left click mouse event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#clickAt"
+  }
+  , {
+      "title": "System.clickAtControl"
+    , "description": "Left clicks at the center of the specified Tint Control. This causes a\n             real left click event within the operating system and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#clickAtControl"
+  }
+  , {
+      "title": "System.clipboardClear"
+    , "description": "Clears the clipboards data."
+    , "kind": "method"
+    , "url": "System.html#clipboardClear"
+  }
+  , {
+      "title": "System.clipboardContainsType"
+    , "description": "Returns true or false if the type specified is on the clipboard."
+    , "kind": "method"
+    , "url": "System.html#clipboardContainsType"
+  }
+  , {
+      "title": "System.clipboardGet"
+    , "description": "Gets the clipboard data, for text data a string is returned, for binary data a Buffer object is.\n             In addition, this may return native objects as fully formed javascript objects depending on the type."
+    , "kind": "method"
+    , "url": "System.html#clipboardGet"
+  }
+  , {
+      "title": "System.clipboardSet"
+    , "description": "Sets the clipboards data and adds the specified type to it. The type is case sensitive."
+    , "kind": "method"
+    , "url": "System.html#clipboardSet"
+  }
+  , {
+      "title": "System.getIconForFile"
+    , "description": "Returns an image (data uri base 64 encoded) for the icon used by the system shell."
+    , "kind": "method"
+    , "url": "System.html#getIconForFile"
+  }
+  , {
+      "title": "System.mouseDownAt"
+    , "description": "Sends a left 'mouse down' at the specified X, Y coordinates. This causes a\n             real left click mouse down event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#mouseDownAt"
+  }
+  , {
+      "title": "System.mouseUpAt"
+    , "description": "Sends a left 'mouse up' at the specified X, Y coordinates. This causes a\n             real left click mouse up event within the operating system\n             at the specified coordinates and is not simulated.  This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#mouseUpAt"
+  }
+  , {
+      "title": "System.openFile"
+    , "description": "Opens the file in the default application thats set to handle it."
+    , "kind": "method"
+    , "url": "System.html#openFile"
+  }
+  , {
+      "title": "System.openURL"
+    , "description": "Opens the url in the default web browser installed on the OS."
+    , "kind": "method"
+    , "url": "System.html#openURL"
+  }
+  , {
+      "title": "System.rightClickAt"
+    , "description": "Right clicks at the specified control. This causes a\n             real right-click mouse event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#rightClickAt"
+  }
+  , {
+      "title": "System.rightClickAtControl"
+    , "description": "The right click at control method can be used for testing.  This causes a\n             real right-click event within the operating system and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#rightClickAtControl"
+  }
+  , {
+      "title": "System.scrollAt"
+    , "description": "Sends a scroll event through the operating system at the specified X, Y\n             coordinates, note this is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#scrollAt"
+  }
+  , {
+      "title": "System.scrollAtControl"
+    , "description": "Scrolls a control vertically up or down based on the value of upOrDown. This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#scrollAtControl"
+  }
+  , {
+      "title": "System.sendKey"
+    , "description": "Sends a key down and key up event through the OS, note the currently focused application, window and\n             control will receive this event (and may not be the running application).  This is mainly used for\n             testing and should be avoided in production applications."
+    , "kind": "method"
+    , "url": "System.html#sendKey"
+  }
+  , {
+      "title": "System.showFile"
+    , "description": "Shows the location of a file or directory in the system's standard shell, explorer or finder."
+    , "kind": "method"
+    , "url": "System.html#showFile"
+  }
+  , {
+      "title": "System.takeSnapshotOfActiveScreen"
+    , "description": "Takes a screenshot of the current active screen and returns it as a\n             string that is a base64 encoded PNG image."
+    , "kind": "method"
+    , "url": "System.html#takeSnapshotOfActiveScreen"
+  }
+  , {
+      "title": "System.takeSnapshotOfControl"
+    , "description": "Takes a snapshot of a Tint Control and returns back a base 64 encoded string that\n             represents a PNG image."
+    , "kind": "method"
+    , "url": "System.html#takeSnapshotOfControl"
+  }
+  , {
+      "title": "System.takeSnapshotOfCurrentWindow"
+    , "description": "Takes a screenshot of the current focused window in the running application."
+    , "kind": "method"
+    , "url": "System.html#takeSnapshotOfCurrentWindow"
+  }
+  , {
+      "title": "System.takeSnapshotOfTopWindow"
+    , "description": "Takes a screenshot of the current top (but not necessarily focused) window in the running application."
+    , "kind": "method"
+    , "url": "System.html#takeSnapshotOfTopWindow"
+  }
+  , {
+      "title": "System.takeSnapshotOfWindow"
+    , "description": "Takes a screenshot of the window passed in and returns a base 64 encoded string\n             that represents a PNG image."
+    , "kind": "method"
+    , "url": "System.html#takeSnapshotOfWindow"
+  }
+  , {
+      "title": "System.trashFile"
+    , "description": "Moves the file or directory to the recycling bin or trash on the OS."
+    , "kind": "method"
+    , "url": "System.html#trashFile"
+  }
+  , {
+      "title": "Table"
+    , "description": "Creates a table view to place UI elements into a column and row grid system.\n             It also provides the ability to highlight rows, columns and allow users to\n             move items up or down. NOTE: Tables should almost always be wrapped within\n             a Scroll container otherwise the layout may not render properly."
+    , "kind": "class"
+    , "url": "Table.html"
+  }
+  , {
+      "title": "Table.alternatingColors"
+    , "description": "Gets or sets whether a table will have alternating colors or not.\n             The alternating colors default to system values."
+    , "kind": "member"
+    , "url": "Table.html#alternatingColors"
+  }
+  , {
+      "title": "Table.columnsCanBeResized"
+    , "description": "Gets or sets whether the columns can be resized by the user."
+    , "kind": "member"
+    , "url": "Table.html#columnsCanBeResized"
+  }
+  , {
+      "title": "Table.emptySelection"
+    , "description": "Gets or sets whether no items are allowed to be selected, \n             the default value is true. Note that if set to false, and\n             no item is selected use selectedRows to specify a default\n             selection.  This only prevents the user for deselecting an item\n             it does not prevent no items from being selected."
+    , "kind": "member"
+    , "url": "Table.html#emptySelection"
+  }
+  , {
+      "title": "Table.multipleSelection"
+    , "description": "Gets or sets whether multiple items can be selected, the default value is \n             true."
+    , "kind": "member"
+    , "url": "Table.html#multipleSelection"
+  }
+  , {
+      "title": "Table.numberOfColumns"
+    , "description": "Gets the number of columns in the table."
+    , "kind": "member"
+    , "url": "Table.html#numberOfColumns"
+  }
+  , {
+      "title": "Table.numberOfRows"
+    , "description": "Gets the number of rows in the table."
+    , "kind": "member"
+    , "url": "Table.html#numberOfRows"
+  }
+  , {
+      "title": "Table.rowHeight"
+    , "description": "Gets or sets the height of the rows by pixel value.  Note\n             that setting this will override the value of rowHeightStyle. IMPORTANT:\n             This value should be set before adding rows and columns to a table, otherwise\n             (for performance considerations) the table will not be redrawn until an\n             item on the table changes."
+    , "kind": "member"
+    , "url": "Table.html#rowHeight"
+  }
+  , {
+      "title": "Table.rowHeightStyle"
+    , "description": "Gets or sets the height of the row based on user preferences and\n             system recommendations, this can be either \"default\", \"small\", \n             \"medium\" or \"large\". Note that this will override the value of\n             rowHeight."
+    , "kind": "member"
+    , "url": "Table.html#rowHeightStyle"
+  }
+  , {
+      "title": "Table.selectedRows"
+    , "description": "Gets or sets an array of the rows that are selected. The array \n             contains the indexes of all the rows selected."
+    , "kind": "member"
+    , "url": "Table.html#selectedRows"
+  }
+  , {
+      "title": "Table.showHeaders"
+    , "description": "Sets whether the headers for the table are displayed."
+    , "kind": "member"
+    , "url": "Table.html#showHeaders"
+  }
+  , {
+      "title": "Table.spaceX"
+    , "description": "Gets or sets the horizontal intercell spacing between cells in logical pixels.\n             The default value depends on the native OS defaults."
+    , "kind": "member"
+    , "url": "Table.html#spaceX"
+  }
+  , {
+      "title": "Table.spaceY"
+    , "description": "Gets or sets the vertical intercell spacing between cells in logical pixels.\n             The default value depends on the native OS defaults."
+    , "kind": "member"
+    , "url": "Table.html#spaceY"
+  }
+  , {
+      "title": "Table.addColumn"
+    , "description": "Adds a new column to the table, the columns name is used in the header's label, and \n             uniquely identifies the column in the table (regardless if its moved by a user)."
+    , "kind": "method"
+    , "url": "Table.html#addColumn"
+  }
+  , {
+      "title": "Table.addRow"
+    , "description": "Appends a new row to the end of the table, if a index is passed in the row is added\n             at that location."
+    , "kind": "method"
+    , "url": "Table.html#addRow"
+  }
+  , {
+      "title": "Table.moveColumn"
+    , "description": "Moves the column specified by fromIndex to the location specified by toIndex."
+    , "kind": "method"
+    , "url": "Table.html#moveColumn"
+  }
+  , {
+      "title": "Table.moveRow"
+    , "description": "Moves the row specified by fromIndex to the location specified by toIndex."
+    , "kind": "method"
+    , "url": "Table.html#moveRow"
+  }
+  , {
+      "title": "Table.removeColumn"
+    , "description": "Removes the column specified by the name passed in (or the headers label)."
+    , "kind": "method"
+    , "url": "Table.html#removeColumn"
+  }
+  , {
+      "title": "Table.removeRow"
+    , "description": "Removes the last row in the table, if an index is passed in the specified row\n             is removed."
+    , "kind": "method"
+    , "url": "Table.html#removeRow"
+  }
+  , {
+      "title": "Table.setColumnWidth"
+    , "description": "Resizes a column's width to the specified width passed in."
+    , "kind": "method"
+    , "url": "Table.html#setColumnWidth"
+  }
+  , {
+      "title": "Table.setValueAt"
+    , "description": "Set the value of the specified cell at the column indicated by columnName, \n             and the row indicated by rowIndex.  The value can be either a user interface control\n             string.  IMPORTANT: It is best practice for performance to reuse table cells\n             for large data sets."
+    , "kind": "method"
+    , "url": "Table.html#setValueAt"
+  }
+  , {
+      "title": "Table.setValueAt"
+    , "description": "Set the value of the specified cell at the column indicated by columnName, \n             and the row indicated by rowIndex.  The value can be either a user interface control\n             string. IMPORTANT: It is best practice for performance to reuse table cells\n             for large data sets."
+    , "kind": "method"
+    , "url": "Table.html#setValueAt"
+  }
+  , {
+      "title": "Table.Table"
+    , "description": "Creates a new table."
+    , "kind": "constructor"
+    , "url": "Table.html#Table"
+  }
+  , {
+      "title": "Table.event:column-clicked"
+    , "description": "Fires when the user clicks a column (e.g., after any processing has occured)."
+    , "kind": "event"
+    , "url": "Table.html#column-clicked"
+  }
+  , {
+      "title": "Table.event:column-mousedown"
+    , "description": "Fires when the user begins to click a column but prior to any processing."
+    , "kind": "event"
+    , "url": "Table.html#column-mousedown"
+  }
+  , {
+      "title": "Table.event:row-added"
+    , "description": "Fires when a new row is added to the table by the user or programmatically."
+    , "kind": "event"
+    , "url": "Table.html#row-added"
+  }
+  , {
+      "title": "Table.event:row-removed"
+    , "description": "Fires when a row is removed form the table by the user or programmatically."
+    , "kind": "event"
+    , "url": "Table.html#row-removed"
+  }
+  , {
+      "title": "Table.event:select"
+    , "description": "Fires when the selected rows change by the user or programmatically. This fires \n             prior to the selection actually changing."
+    , "kind": "event"
+    , "url": "Table.html#select"
+  }
+  , {
+      "title": "Table.event:selected"
+    , "description": "Fires when the selected rows change by the user or programmatically. This fires\n             after the selection has changed."
+    , "kind": "event"
+    , "url": "Table.html#selected"
+  }
+  , {
+      "title": "TextInput"
+    , "description": "Creates a text label or text input area for the user to\n             provide a free-form value from the keyboard."
+    , "kind": "class"
+    , "url": "TextInput.html"
+  }
+  , {
+      "title": "TextInput.alignment"
+    , "description": "Gets or sets the alignment of the label or text input. The values\n             that are allowed are left, right or center."
+    , "kind": "member"
+    , "url": "TextInput.html#alignment"
+  }
+  , {
+      "title": "TextInput.enabled"
+    , "description": "Gets or sets whether the control is editable.  This causes the\n             control to gray out and visual indicate its unable to take input\n             or is disabled."
+    , "kind": "member"
+    , "url": "TextInput.html#enabled"
+  }
+  , {
+      "title": "TextInput.font"
+    , "description": "Gets or sets the font (family, size, weight, etc) of the text on the input or label."
+    , "kind": "member"
+    , "url": "TextInput.html#font"
+  }
+  , {
+      "title": "TextInput.linewrap"
+    , "description": "Gets or sets whether the ENTER key creates a new line or\n             when text reaches the end of the control it wraps to a new line.\n             The default is false."
+    , "kind": "member"
+    , "url": "TextInput.html#linewrap"
+  }
+  , {
+      "title": "TextInput.placeholder"
+    , "description": "Gets or sets the text that is displayed in the text input or\n             label prior to being modified by the user or programmatically.\n             This is useful if you're collecting a field and want to use the\n             area in the text input as an indicator of what value should be\n             provided rather than create a seperate label. The default is an\n             empty string."
+    , "kind": "member"
+    , "url": "TextInput.html#placeholder"
+  }
+  , {
+      "title": "TextInput.readonly"
+    , "description": "Gets or sets whether the control is read only or not.\n             If true, the control is disabled as a label. If false,\n             its disabled as a text input. The default is false."
+    , "kind": "member"
+    , "url": "TextInput.html#readonly"
+  }
+  , {
+      "title": "TextInput.scrollable"
+    , "description": "Gets or sets whether the text input has a visible scroll bar.  \n             If linewrap is set to false, the control does not display a \n             scrollbar by default.  The default is false."
+    , "kind": "member"
+    , "url": "TextInput.html#scrollable"
+  }
+  , {
+      "title": "TextInput.textcolor"
+    , "description": "Gets or sets the color of the text on the input or label."
+    , "kind": "member"
+    , "url": "TextInput.html#textcolor"
+  }
+  , {
+      "title": "TextInput.value"
+    , "description": "Gets or sets the text as the value of the input or label."
+    , "kind": "member"
+    , "url": "TextInput.html#value"
+  }
+  , {
+      "title": "TextInput.visible"
+    , "description": "Gets or sets whether the control is visible on screen.\n             The default is true."
+    , "kind": "member"
+    , "url": "TextInput.html#visible"
+  }
+  , {
+      "title": "TextInput.TextInput"
+    , "description": "Creates a new TextInput control."
+    , "kind": "constructor"
+    , "url": "TextInput.html#TextInput"
+  }
+  , {
+      "title": "TextInput.event:input"
+    , "description": "Fires when the text has changed and new text is available.\n             This is after the keydown event. This is useful if you'd\n             not like to listen to keyup or keydown as those events may\n             fire even if the value did not change (e.g., if the user\n             changes the cursor selection with the arrow keys.)"
+    , "kind": "event"
+    , "url": "TextInput.html#input"
+  }
+  , {
+      "title": "TextInput.event:inputend"
+    , "description": "Fires when the user has finished inputting text.  This is\n             determined by when the user presses return when linewrap = false\n             (e.g., the text input only takes a single line of text), or\n             when the control looses focus or another event prevents input.\n             This event is useful to listen to if you need to take an action\n             AFTER a user has fully inputted all the text, for example the URL\n             input field on a browser, only until the user is fully done typing\n             should we try and load the URL."
+    , "kind": "event"
+    , "url": "TextInput.html#inputend"
+  }
+  , {
+      "title": "TextInput.event:inputstart"
+    , "description": "Fires when the user begins inputting text prior to keyup, \n             keydown or input. This event is useful if an animation\n             or other event should fire when the user first types, but\n             not on every key afterwards.  For example, you might listen\n             to this event to show some sort of in-context dialog or\n             menu while the user is typing (like an auto-fill menu)."
+    , "kind": "event"
+    , "url": "TextInput.html#inputstart"
+  }
+  , {
+      "title": "Toolbar"
+    , "description": "The toolbar is a strip applied to the top of a window allowing elements to be\n             added and customized per the user preferences. Note that items in the toolbar \n             are not guaranteed to show depending on how the user decides to remove/add items.\n             A toolbar can be assigned to a window using Window.toolbar. Note, the toolbar\n             supports adding two special \"identifier\" components with \"appendChild\". The first\n             is \"space\" which provides a consistant OS defined space between two items \n             in the toolbar, and the second \"flex-space\" which defines a flexible (expands and\n             collapses as needed) space."
+    , "kind": "class"
+    , "url": "Toolbar.html"
+  }
+  , {
+      "title": "Toolbar.size"
+    , "description": "Gets or sets the size of the toolbar based on OS recommended values. \n             The values for this can be \"regular\", \"small\" or \"default\"."
+    , "kind": "member"
+    , "url": "Toolbar.html#size"
+  }
+  , {
+      "title": "Toolbar.state"
+    , "description": "Gets or sets the style of the toolbar, the values can be \"iconandlabel\", \"icon\"\n             \"default\" or \"label\"."
+    , "kind": "member"
+    , "url": "Toolbar.html#state"
+  }
+  , {
+      "title": "Toolbar.Toolbar"
+    , "description": "Creates a new toolbar."
+    , "kind": "constructor"
+    , "url": "Toolbar.html#Toolbar"
+  }
+  , {
+      "title": "ToolbarItem"
+    , "description": "The toolbar item is similar to a button control in its functionality but has an adaptive layout\n             suited for toolbar controls which may dictate the layout of its child elements.  It's recommended\n             using a toolbar item for toolbar buttons rather than a button class."
+    , "kind": "class"
+    , "url": "ToolbarItem.html"
+  }
+  , {
+      "title": "ToolbarItem.enabled"
+    , "description": "Gets or sets whether the toolbar item is enabled or not. Note if set to false, the\n             toolbar item may still be shown but dimmed to represent a disabled state."
+    , "kind": "member"
+    , "url": "ToolbarItem.html#enabled"
+  }
+  , {
+      "title": "ToolbarItem.image"
+    , "description": "Gets or sets the image to use on the toolbar item."
+    , "kind": "member"
+    , "url": "ToolbarItem.html#image"
+  }
+  , {
+      "title": "ToolbarItem.title"
+    , "description": "Gets or sets the text label on the toolbar item."
+    , "kind": "member"
+    , "url": "ToolbarItem.html#title"
+  }
+  , {
+      "title": "ToolbarItem.tooltip"
+    , "description": "Gets or sets the tool tip on the toolbar item."
+    , "kind": "member"
+    , "url": "ToolbarItem.html#tooltip"
+  }
+  , {
+      "title": "ToolbarItem.addEventListener"
+    , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
+    , "kind": "method"
+    , "url": "ToolbarItem.html#addEventListener"
+  }
+  , {
+      "title": "ToolbarItem.removeEventListener"
+    , "description": "Removes an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
+    , "kind": "method"
+    , "url": "ToolbarItem.html#removeEventListener"
+  }
+  , {
+      "title": "ToolbarItem.ToolbarItem"
+    , "description": "Creates a new toolbar item."
+    , "kind": "constructor"
+    , "url": "ToolbarItem.html#ToolbarItem"
+  }
+  , {
+      "title": "WebView"
+    , "description": "The WebView allows HTML content to be embedded in an application as a normal control. It uses WebKit on OSX\n             and the latest version of IE installed when on Windows (forcing IE9 or above)."
+    , "kind": "class"
+    , "url": "WebView.html"
+  }
+  , {
+      "title": "WebView.loading"
+    , "description": "Gets or sets whether the page is loading. If set to true (when false) it reloads the current page, when\n             set to false (when true) it stops loading the current page."
+    , "kind": "member"
+    , "url": "WebView.html#loading"
+  }
+  , {
+      "title": "WebView.location"
+    , "description": "Gets or sets the URL location of the HTML document rendered in the WebView."
+    , "kind": "member"
+    , "url": "WebView.html#location"
+  }
+  , {
+      "title": "WebView.progress"
+    , "description": "Gets the progress of loading all resources (if the page is currently loading).  Note this will return\n             -1 when the progress is indeterminate (e.g., the page is not loading or the progress could not be determined).\n             The number returned is between 0 and 1, e.g., 0.5 represents 50% loaded."
+    , "kind": "member"
+    , "url": "WebView.html#progress"
+  }
+  , {
+      "title": "WebView.title"
+    , "description": "Gets the title of the HTML document loaded in the webview.  If nothing is loaded or is in the process of loading\n             this will throw an error.  LIsten to the 'title' event to know when the title of the HTML docuemnt is available."
+    , "kind": "member"
+    , "url": "WebView.html#title"
+  }
+  , {
+      "title": "WebView.useragent"
+    , "description": "Gets or sets the user agent string used."
+    , "kind": "member"
+    , "url": "WebView.html#useragent"
+  }
+  , {
+      "title": "WebView.back"
+    , "description": "Moves to the previously rendered page.  If no previously rendered page is available this takes no action."
+    , "kind": "method"
+    , "url": "WebView.html#back"
+  }
+  , {
+      "title": "WebView.boundsOfElement"
+    , "description": "Returns an object with a x, y, width and height relative to the web view for any css query selector\n             passed in for the first argument, the second argument is the callback to receive the result (as its first argument).\n             This is mainly useful as a means for unit testing web pages and checking for elements positions."
+    , "kind": "method"
+    , "url": "WebView.html#boundsOfElement"
+  }
+  , {
+      "title": "WebView.execute"
+    , "description": "This will execute the passed in javascript in the window context of the top frame of the currently loaded page.  The result is\n             passed back when the callback is ran."
+    , "kind": "method"
+    , "url": "WebView.html#execute"
+  }
+  , {
+      "title": "WebView.forward"
+    , "description": "Moves to the history forward to the next rendered page.  If no \"next\" rendered page is available this takes no action."
+    , "kind": "method"
+    , "url": "WebView.html#forward"
+  }
+  , {
+      "title": "WebView.postMessage"
+    , "description": "Posts an HTML \"Message\" event to the top frame (and window) of the HTML page. The HTML page can listen to window message events\n             to receive these messages.  Strings are only allowed to be passed, complex objects may be serialized via JSON to transfer them back and forth.\n             See the event 'message' to listen for messages sent from the HTML page back to Tint."
+    , "kind": "method"
+    , "url": "WebView.html#postMessage"
+  }
+  , {
+      "title": "WebView.reload"
+    , "description": "Reloads the current page."
+    , "kind": "method"
+    , "url": "WebView.html#reload"
+  }
+  , {
+      "title": "WebView.stop"
+    , "description": "Stops loading the current page, if nothing is currently loading this takes no action."
+    , "kind": "method"
+    , "url": "WebView.html#stop"
+  }
+  , {
+      "title": "WebView.WebView"
+    , "description": "Creates a new webview control."
+    , "kind": "constructor"
+    , "url": "WebView.html#WebView"
+  }
+  , {
+      "title": "WebView.event:console"
+    , "description": "Fires when a new console messages appears, the first argument is the type of console\n             message (info, log, warn, error) as a string, the second parameter is an array of all the arguments\n             the console object was ran with. This only fires for console.warn(), console.log(), console.error() and\n             console.info(), it does not fire for console.assert, console.dir, or console.group."
+    , "kind": "event"
+    , "url": "WebView.html#console"
+  }
+  , {
+      "title": "WebView.event:error"
+    , "description": "Fires when an unrecoverable error occurs, such as being unable to retrieve the requested page for the top frame,\n             or when a security error has occured.  The callback function is passed the translated description of \n             the error message that occured."
+    , "kind": "event"
+    , "url": "WebView.html#error"
+  }
+  , {
+      "title": "WebView.event:load"
+    , "description": "Fires when a new request for a HTML document at the top frame has loaded and the document object\n             model is ready."
+    , "kind": "event"
+    , "url": "WebView.html#load"
+  }
+  , {
+      "title": "WebView.event:loading"
+    , "description": "Fires when a new request for a HTML document at the top frame is committed, this means the\n             new URL has passed security requirement checks, but has yet to begin making a network request\n             or render any parts of the page."
+    , "kind": "event"
+    , "url": "WebView.html#loading"
+  }
+  , {
+      "title": "WebView.event:location-change"
+    , "description": "Fires when a change in location occurs (E.g., a new URL has been requested). This differs from a \n             load (or loading) event in-that it does not fire if the current page is reloaded and the URL or\n             location has not changed.  The event handler is passed two arguments, the first is the old URL,\n             and the second is the new URL."
+    , "kind": "event"
+    , "url": "WebView.html#location-change"
+  }
+  , {
+      "title": "WebView.event:message"
+    , "description": "Fires when the top frame HTML document has executed window.postMessageToHost().  The message is a string\n             passed into the callback provided as the first argument."
+    , "kind": "event"
+    , "url": "WebView.html#message"
+  }
+  , {
+      "title": "WebView.event:new-window"
+    , "description": "When a new window is requested, this event is fired. The event handler \n             is passed a new WebView that can be used for a new window (or alternatively)\n             a new tab. It is the responsibility of the event handler to attach the\n             web view to a window, tab (or other GUI item). If the event handler chooses\n             not to open the web site in a new window, the webview can simply be discarded."
+    , "kind": "event"
+    , "url": "WebView.html#new-window"
+  }
+  , {
+      "title": "WebView.event:policy"
+    , "description": "Fires the callback for the event to ask if the page about to be loaded should be blocked.  \n             The URL for the target resource or navigation is passed in to the event callback.  If false (and only strictly false) \n             is returned by the event handler the request is blocked.  If any other value is returned (including undefined or null)\n             the resource is allowed to load and continue.  This event is useful if you want to screen URL's being loaded and\n             deny navigation and resource requests based on the URL (e.g., such as a net nanny or for security reasons)."
+    , "kind": "event"
+    , "url": "WebView.html#policy"
+  }
+  , {
+      "title": "WebView.event:redirect"
+    , "description": "Fires when a redirect from a server request occurs."
+    , "kind": "event"
+    , "url": "WebView.html#redirect"
+  }
+  , {
+      "title": "WebView.event:request"
+    , "description": "Fires when a new request for a HTML document at the top frame has occured, but before loaded or load has occured."
+    , "kind": "event"
+    , "url": "WebView.html#request"
+  }
+  , {
+      "title": "WebView.event:unload"
+    , "description": "Fires when a page in the top frame is unloaded."
+    , "kind": "event"
+    , "url": "WebView.html#unload"
+  }
+  , {
+      "title": "Window"
+    , "description": "Creates a new Window for controls to be placed on. The window is\n             a regular window (vs a panel or tool window or modal dialog)."
+    , "kind": "class"
+    , "url": "Window.html"
+  }
+  , {
+      "title": "Window.alwaysOnTop"
+    , "description": "Gets or sets whether the Window when not focused remains on top of\n             any other window.  This overrides the window managers z-index, so that\n             if a window looses its focus it will still be visible and on top of other\n             windows.  This is useful if you need a reference window or tool window\n             that if not focused still stays on top of other windows. By default this is\n             false. Note that two windows that are both set to alwaysOnTop will be swap\n             ordering if the windows loose and gain focus."
+    , "kind": "member"
+    , "url": "Window.html#alwaysOnTop"
+  }
+  , {
+      "title": "Window.appearance"
+    , "description": "The appearance value changes the coloration, blur or other effects used by the native operating\n             system.  Currently this can be \"normal\", \"dark\" or \"light\".  Note this has no effect on functionality\n             and is not supported on some operating systems."
+    , "kind": "member"
+    , "url": "Window.html#appearance"
+  }
+  , {
+      "title": "Window.backgroundColor"
+    , "description": "Gets or sets the background color of the window. Note that this only changes\n             the background color of the content area for Windows, on OSX this changes the\n             full window color (except when textured = false). The color can be a named, rgba\n             hexadecimal value or a CSS color value."
+    , "kind": "member"
+    , "url": "Window.html#backgroundColor"
+  }
+  , {
+      "title": "Window.canBeFullscreen"
+    , "description": "Gets or sets whether the window can be set to \"fullscreen\".  The behavior of some\n             operating systems is to default to fullscreen when maximized.  This determines whether\n             the Window will go into fullscreen on maximize or if it can when the OS requests so.\n             The default value is false."
+    , "kind": "member"
+    , "url": "Window.html#canBeFullscreen"
+  }
+  , {
+      "title": "Window.closeButton"
+    , "description": "Gets or sets whether the close button is shown.  If the frame is set to\n             false on the window (e.g., do not show any window controls) then this \n             is also false. The default value for this is true, if set to false the close\n             button is not shown (although the window can be closed through the destroy\n             function)."
+    , "kind": "member"
+    , "url": "Window.html#closeButton"
+  }
+  , {
+      "title": "Window.frame"
+    , "description": "Gets or sets whether the window has a native frame, e.g., resize handles, minimize\n             and maximize buttons and a titlebar.  If set to false, only the content area or\n             'client area' is rendered. This is useful for splash screens and other informative\n             windows. By default this is true."
+    , "kind": "member"
+    , "url": "Window.html#frame"
+  }
+  , {
+      "title": "Window.height"
+    , "description": "Gets or sets the height of the window. The default value is 500."
+    , "kind": "member"
+    , "url": "Window.html#height"
+  }
+  , {
+      "title": "Window.maximizeButton"
+    , "description": "Gets or sets whether the maximize button is shown.  If the frame is set to\n             false on the window (e.g., do not show any window controls) this\n             is also false. The default value for this is true, if set to false the maximize\n             button is not shown (although the window can still be programmatically set to\n             maximized through the state property)."
+    , "kind": "member"
+    , "url": "Window.html#maximizeButton"
+  }
+  , {
+      "title": "Window.maximumHeight"
+    , "description": "Sets the maximum height of the window in pixels."
+    , "kind": "member"
+    , "url": "Window.html#maximumHeight"
+  }
+  , {
+      "title": "Window.maximumWidth"
+    , "description": "Sets the maximum width of the window in pixels."
+    , "kind": "member"
+    , "url": "Window.html#maximumWidth"
+  }
+  , {
+      "title": "Window.menu"
+    , "description": "Gets or sets the menu associated with this Window.  On OSX the same menu is\n             used for all windows and is not rendered as part of the window.  On Windows\n             the menu is rendered at the top of the window as part of its frame."
+    , "kind": "member"
+    , "url": "Window.html#menu"
+  }
+  , {
+      "title": "Window.minimizeButton"
+    , "description": "Gets or sets whether the minimize button is shown.  If the frame is set to\n             false on the window (e.g., do not show any window controls) then this \n             is also false. The default value for this is true, if set to false the minimize\n             button is not shown (although the window can still be programmatically set to\n             maximized through the state property)."
+    , "kind": "member"
+    , "url": "Window.html#minimizeButton"
+  }
+  , {
+      "title": "Window.minimumHeight"
+    , "description": "Sets the minimum height of the window in pixels."
+    , "kind": "member"
+    , "url": "Window.html#minimumHeight"
+  }
+  , {
+      "title": "Window.minimumWidth"
+    , "description": "Sets the minimum width of the window in pixels."
+    , "kind": "member"
+    , "url": "Window.html#minimumWidth"
+  }
+  , {
+      "title": "Window.resizable"
+    , "description": "Gets or sets whether the window is resizable by the user.  If set to false the native\n             UI Widget for resizing is also not shown. Note that you can still change the window\n             size programmatically through the width and height attributes."
+    , "kind": "member"
+    , "url": "Window.html#resizable"
+  }
+  , {
+      "title": "Window.state"
+    , "description": "Gets or sets the state of the window.  The options are \"maximized\", \"minimized\",\n             \"fullscreen\" or \"normal\". Note: If the window's property 'canbeFullScreen' is not set to true\n             setting \"fullscreen\" will have no effect."
+    , "kind": "member"
+    , "url": "Window.html#state"
+  }
+  , {
+      "title": "Window.textured"
+    , "description": "Gets or sets whether the window's style is textured.  By default this is true on\n             OSX and false on Microsoft Windows.\n             Textured windows use the native OS' texture to render the background, on OSX\n             this is the metal or brushed look, on some Windows platforms this is a glass\n             look on the frame elements. Setting this to false disables these."
+    , "kind": "member"
+    , "url": "Window.html#textured"
+  }
+  , {
+      "title": "Window.title"
+    , "description": "Gets or sets the title of the window. This is the text displayed in the capiton.\n             The default of this is an empty string, if the property of the window's frame is\n             set to false (not the default value) then the title does not render."
+    , "kind": "member"
+    , "url": "Window.html#title"
+  }
+  , {
+      "title": "Window.toolbar"
+    , "description": "Gets or sets the toolbar associated with the Window. The toolbar provides\n             a consistant panel of controls regardless of how the content or child elements\n             behave. Both OSX and Windows render these at the top (underneath the Menu) as\n             part of the client area."
+    , "kind": "member"
+    , "url": "Window.html#toolbar"
+  }
+  , {
+      "title": "Window.visible"
+    , "description": "Gets or sets whether the window is visible or hidden. Hidden windows\n             are not minimized, but removed from the screen regardless if their\n             minimized, maximized or fullscreen.  By default the windows visibility\n             is set to false so windows can have specific styling set prior to being\n             shown."
+    , "kind": "member"
+    , "url": "Window.html#visible"
+  }
+  , {
+      "title": "Window.width"
+    , "description": "Gets or sets the width of the window. The default is 500."
+    , "kind": "member"
+    , "url": "Window.html#width"
+  }
+  , {
+      "title": "Window.x"
+    , "description": "Gets or sets the value of the horizontal position (from the left of the screen)\n             where the window is at."
+    , "kind": "member"
+    , "url": "Window.html#x"
+  }
+  , {
+      "title": "Window.y"
+    , "description": "Gets or sets the position from the top of the screen where the window is at.\n             This does not account for the work area. Setting this to a value that impeeds\n             on system areas (such as the menu bar on OSX or the task bar on Windows) resets\n             the value to as close as possible coordinate value."
+    , "kind": "member"
+    , "url": "Window.html#y"
+  }
+  , {
+      "title": "Window.bringToFront"
+    , "description": "Causes the window to be placed in front of other windows, even if it is not\n             currently focused. Note that this does not pull the window above windows that\n             are set to be always on top (see alwaysOnTop)."
+    , "kind": "method"
+    , "url": "Window.html#bringToFront"
+  }
+  , {
+      "title": "Window.destroy"
+    , "description": "Destroys the window along with its resources.  This method will remove the\n             window entirely and its memory."
+    , "kind": "method"
+    , "url": "Window.html#destroy"
+  }
+  , {
+      "title": "Window.Window"
+    , "description": "Creates a new window that is initially hidden."
+    , "kind": "constructor"
+    , "url": "Window.html#Window"
+  }
+  , {
+      "title": "Window.event:blur"
+    , "description": "Fires when the window looses focus from the mouse or keyboard."
+    , "kind": "event"
+    , "url": "Window.html#blur"
+  }
+  , {
+      "title": "Window.event:close"
+    , "description": "Fires when the window is destroyed and resources are released, this is \n             fired just before the window is closed."
+    , "kind": "event"
+    , "url": "Window.html#close"
+  }
+  , {
+      "title": "Window.event:closed"
+    , "description": "Fires after the window has been destroyed and all resources have been\n             released.  Do not refer to the window during this event."
+    , "kind": "event"
+    , "url": "Window.html#closed"
+  }
+  , {
+      "title": "Window.event:enter-fullscreen"
+    , "description": "Fires when the window is entering into full screen mode."
+    , "kind": "event"
+    , "url": "Window.html#enter-fullscreen"
+  }
+  , {
+      "title": "Window.event:focus"
+    , "description": "Fires when the window gains focus from the mouse or keyboard."
+    , "kind": "event"
+    , "url": "Window.html#focus"
+  }
+  , {
+      "title": "Window.event:leave-fullscreen"
+    , "description": "Fires when the window is exiting into full screen mode."
+    , "kind": "event"
+    , "url": "Window.html#leave-fullscreen"
+  }
+  , {
+      "title": "Window.event:maximize"
+    , "description": "Fires when the state of the window becomes maximized, or if the window\n             is \"zoomed\" (e.g., made to its largest window size available) on operating\n             systems without the concept of maximize.  Note this does NOT mean fullscreen\n             and does not fire during fullscreen transitions."
+    , "kind": "event"
+    , "url": "Window.html#maximize"
+  }
+  , {
+      "title": "Window.event:minimize"
+    , "description": "Fires when the state of the window becomes minimized."
+    , "kind": "event"
+    , "url": "Window.html#minimize"
+  }
+  , {
+      "title": "Window.event:move"
+    , "description": "Fires when the window is moved by the user through the title bar."
+    , "kind": "event"
+    , "url": "Window.html#move"
+  }
+  , {
+      "title": "Window.event:resize"
+    , "description": "Fires when the window is resized by the user."
+    , "kind": "event"
+    , "url": "Window.html#resize"
+  }
+  , {
+      "title": "Window.event:restore"
+    , "description": "Fires when the state of the window goes from being minimized into a new state."
+    , "kind": "event"
+    , "url": "Window.html#restore"
+  }
+]

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tint :: Window</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/tint.css" rel="stylesheet" type="text/css" media="all"></link>
+  <link href="style/syntaxhighlight.css" rel="stylesheet" type="text/css" media="all"></link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="vendor/highlightjs/highlight.pack.js"></script>
+  <script src="scripts/tint.js"></script>
+</head>
+<body>
+  <header class="ui menu">
+    <a id="logo" href="/index.html">Tint</a>
+    <div class="ui item">
+      <a href="/docs/tutorial-gettingstarted.html">Getting Started</a>
+    </div>
+    <div class="ui dropdown item">
+      Reference
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="Application.html"> Application </a>
+        
+        <a class="item" href="Box.html"> Box </a>
+        
+        <a class="item" href="Button.html"> Button </a>
+        
+        <a class="item" href="ButtonGroup.html"> ButtonGroup </a>
+        
+        <a class="item" href="Color.html"> Color </a>
+        
+        <a class="item" href="ColorPanel.html"> ColorPanel </a>
+        
+        <a class="item" href="ColorWell.html"> ColorWell </a>
+        
+        <a class="item" href="Container.html"> Container </a>
+        
+        <a class="item" href="Control.html"> Control </a>
+        
+        <a class="item" href="DateWell.html"> DateWell </a>
+        
+        <a class="item" href="Dialog.html"> Dialog </a>
+        
+        <a class="item" href="DropDown.html"> DropDown </a>
+        
+        <a class="item" href="FileDialog.html"> FileDialog </a>
+        
+        <a class="item" href="FileInput.html"> FileInput </a>
+        
+        <a class="item" href="Font.html"> Font </a>
+        
+        <a class="item" href="FontPanel.html"> FontPanel </a>
+        
+        <a class="item" href="ImageWell.html"> ImageWell </a>
+        
+        <a class="item" href="Menu.html"> Menu </a>
+        
+        <a class="item" href="MenuItem.html"> MenuItem </a>
+        
+        <a class="item" href="MenuItemSeparator.html"> MenuItemSeparator </a>
+        
+        <a class="item" href="Notification.html"> Notification </a>
+        
+        <a class="item" href="Panel.html"> Panel </a>
+        
+        <a class="item" href="PopOver.html"> PopOver </a>
+        
+        <a class="item" href="ProgressBar.html"> ProgressBar </a>
+        
+        <a class="item" href="Screens.html"> Screens </a>
+        
+        <a class="item" href="Scroll.html"> Scroll </a>
+        
+        <a class="item" href="SecureTextInput.html"> SecureTextInput </a>
+        
+        <a class="item" href="SelectInput.html"> SelectInput </a>
+        
+        <a class="item" href="Slider.html"> Slider </a>
+        
+        <a class="item" href="Split.html"> Split </a>
+        
+        <a class="item" href="StatusBar.html"> StatusBar </a>
+        
+        <a class="item" href="System.html"> System </a>
+        
+        <a class="item" href="Table.html"> Table </a>
+        
+        <a class="item" href="TextInput.html"> TextInput </a>
+        
+        <a class="item" href="Toolbar.html"> Toolbar </a>
+        
+        <a class="item" href="ToolbarItem.html"> ToolbarItem </a>
+        
+        <a class="item" href="WebView.html"> WebView </a>
+        
+        <a class="item" href="Window.html"> Window </a>
+        
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Topics
+      <i class="dropdown icon"></i>
+      <div class="menu" style="width:250px;max-height:400px;overflow-y:scroll;margin-top:2px;">
+        
+        <a class="item" href="tutorial-appschema.html"> Application Schema </a>
+        
+        <a class="item" href="tutorial-debuggingtint.html"> Debugging Tint </a>
+        
+        <a class="item" href="tutorial-gettingstarted.html"> Getting Started </a>
+        
+        <a class="item" href="tutorial-jsdifferences.html"> How does Tint work? </a>
+        
+        <a class="item" href="tutorial-layout.html"> Layout and Positioning Controls </a>
+        
+        <a class="item" href="tutorial-native.html"> Using Native Classes in Tint </a>
+        
+        <a class="item" href="tutorial-nodecompatibility.html"> Node Compatibility </a>
+        
+        <a class="item" href="tutorial-packaging.html"> Packaging Applications </a>
+        
+        <a class="item" href="tutorial-sysimages.html"> Using System Images </a>
+        
+        <a class="item" href="tutorial-windows.html"> Window Styles and Behaviors </a>
+        
+      </div>
+    </div>
+    <div class="ui item category search right">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </header>
+  <div class="ui grid">
+    <article class="sixteen wide column">
+
+      <section class="overview">
+        <h1>Window</h1>
+          <div class="ui message overview">
+          <h3>Overview</h3>
+          <p>Creates a new Window for controls to be placed on. The window is
+             a regular window (vs a panel or tool window or modal dialog).</p>
+        </div>
+        <div class="ui grid family">
+          <div class="four wide column ancestors">
+            <h4>Ancestors</h4>
+            <ol class="ui list">
+              
+              <li><a href="Control.html">Control</a></li>
+              
+              <li><a href="Container.html">Container</a></li>
+              
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column descendants">
+            <h4>Descendants</h4>
+            <ol class="ui list">
+              
+              <li><a href="Panel.html">Panel</a></li>
+              
+            </ol>
+          </div>
+          <div class="two wide column">&nbsp;</div>
+          <div class="four wide column see-also">
+            <h4>See Also</h4>
+            <ol class="ui list">
+              
+              <li><a href="Panel.html">Panel</a></li>
+              
+              <li><a href="Dialog.html">Dialog</a></li>
+              
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <section class="constructs">
+        <h2>Constructors</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="Window">
+            <i class="dropdown icon"></i> 
+            <span class="fake-type">new</span> 
+            Window 
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Creates a new window that is initially hidden.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">new Window()</code></pre>
+            </div>
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="members">
+        <h2>Members</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="alwaysOnTop"> <i class="dropdown icon"></i> alwaysOnTop </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the Window when not focused remains on top of
+             any other window.  This overrides the window managers z-index, so that
+             if a window looses its focus it will still be visible and on top of other
+             windows.  This is useful if you need a reference window or tool window
+             that if not focused still stays on top of other windows. By default this is
+             false. Note that two windows that are both set to alwaysOnTop will be swap
+             ordering if the windows loose and gain focus.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.alwaysOnTop</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window(); // Create a new window.
+win.visible = true; // make sure the window is shown.
+win.alwaysOnTop = true; // the window will now remain on top of all others.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="appearance"> <i class="dropdown icon"></i> appearance </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>The appearance value changes the coloration, blur or other effects used by the native operating
+             system.  Currently this can be "normal", "dark" or "light".  Note this has no effect on functionality
+             and is not supported on some operating systems.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">window.appearance</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="backgroundColor"> <i class="dropdown icon"></i> backgroundColor </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the background color of the window. Note that this only changes
+             the background color of the content area for Windows, on OSX this changes the
+             full window color (except when textured = false). The color can be a named, rgba
+             hexadecimal value or a CSS color value.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><a href="Color.html">Color</a></span></span>
+              <span class="fake-name">window.backgroundColor</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // Show the window.
+ win.backgroundColor = 'red'; // make the background red.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="canBeFullscreen"> <i class="dropdown icon"></i> canBeFullscreen </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the window can be set to "fullscreen".  The behavior of some
+             operating systems is to default to fullscreen when maximized.  This determines whether
+             the Window will go into fullscreen on maximize or if it can when the OS requests so.
+             The default value is false.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.canBeFullscreen</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // make sure the window is shown.
+ win.canBeFullscreen = false; // do not allow the window to go fullscreen.
+                              // on some operating systems, this will disable or remove
+                              // the fullscreen button.
+ win.state = "fullscreen";    // try and take the window fullscreen. this will not work.
+ win.canBeFullscreen = true;  // allow the window to be fullscreen, renable any buttons.
+ win.state = "fullscreen";    // the window will now be fullscreen.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="closeButton"> <i class="dropdown icon"></i> closeButton </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the close button is shown.  If the frame is set to
+             false on the window (e.g., do not show any window controls) then this 
+             is also false. The default value for this is true, if set to false the close
+             button is not shown (although the window can be closed through the destroy
+             function).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.closeButton</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // Show the window.
+ win.closeButton = false; // The window will not have a close button, or on some OS'
+                          // the close button is grayed out or disabled.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="frame"> <i class="dropdown icon"></i> frame </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the window has a native frame, e.g., resize handles, minimize
+             and maximize buttons and a titlebar.  If set to false, only the content area or
+             'client area' is rendered. This is useful for splash screens and other informative
+             windows. By default this is true.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.frame</span>
+              <span class="fake-note">(default true)</span>
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="height"> <i class="dropdown icon"></i> height </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the height of the window. The default value is 500.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.height</span>
+              <span class="fake-note">(default 500)</span>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.height = 900; // change the height of the window from 500 (default) to 900.
+                   // this happens before the window is shown so there isnt a
+                   // noticable flicker when the application loads.
+ win.visible = true; // Show the window.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="maximizeButton"> <i class="dropdown icon"></i> maximizeButton </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the maximize button is shown.  If the frame is set to
+             false on the window (e.g., do not show any window controls) this
+             is also false. The default value for this is true, if set to false the maximize
+             button is not shown (although the window can still be programmatically set to
+             maximized through the state property).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.maximizeButton</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // Show the window.
+ win.maximizeButton = false; // The window will not have a maximize button, or on some OS'
+                             // the maximize button is grayed out or disabled.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="maximumHeight"> <i class="dropdown icon"></i> maximumHeight </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sets the maximum height of the window in pixels.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.maximumHeight</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="maximumWidth"> <i class="dropdown icon"></i> maximumWidth </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sets the maximum width of the window in pixels.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.maximumWidth</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="menu"> <i class="dropdown icon"></i> menu </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the menu associated with this Window.  On OSX the same menu is
+             used for all windows and is not rendered as part of the window.  On Windows
+             the menu is rendered at the top of the window as part of its frame.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><a href="Menu.html">Menu</a></span></span>
+              <span class="fake-name">window.menu</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="minimizeButton"> <i class="dropdown icon"></i> minimizeButton </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the minimize button is shown.  If the frame is set to
+             false on the window (e.g., do not show any window controls) then this 
+             is also false. The default value for this is true, if set to false the minimize
+             button is not shown (although the window can still be programmatically set to
+             maximized through the state property).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.minimizeButton</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // Show the window.
+ win.minimizeButton = false; // The window will not have a minimize button, or on some OS'
+                             // the minimize button is grayed out or disabled.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="minimumHeight"> <i class="dropdown icon"></i> minimumHeight </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sets the minimum height of the window in pixels.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.minimumHeight</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="minimumWidth"> <i class="dropdown icon"></i> minimumWidth </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Sets the minimum width of the window in pixels.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.minimumWidth</span>
+              
+            </div>
+            
+            
+            
+          </div>
+        
+          <div class="title" id="resizable"> <i class="dropdown icon"></i> resizable </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the window is resizable by the user.  If set to false the native
+             UI Widget for resizing is also not shown. Note that you can still change the window
+             size programmatically through the width and height attributes.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.resizable</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window(); // Create a new window.
+win.visible = true; // make sure the window is shown.
+win.resizable = false; // the window will not be able to be resized by the user,
+                       // but can still be resized programmatically with the 
+                       // width/height properties.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="state"> <i class="dropdown icon"></i> state </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the state of the window.  The options are "maximized", "minimized",
+             "fullscreen" or "normal". Note: If the window's property 'canbeFullScreen' is not set to true
+             setting "fullscreen" will have no effect.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">window.state</span>
+              <span class="fake-note">(default "normal")</span>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true;
+ // maximizes the new window, previous state is "normal"
+ win.state = "maximized";
+ // minimizes the window, previous state was "maximized"
+ win.state = "minimized";
+ // brings the window back to its normal, unmaximized state on screen.
+ win.state = "normal"
+ win.canBeFullscreen = true;  // allow the window to be fullscreen, 
+                              //   this enables any native buttons.
+ win.state = "fullscreen";    // the window will now be fullscreen.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="textured"> <i class="dropdown icon"></i> textured </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the window's style is textured.  By default this is true on
+             OSX and false on Microsoft Windows.
+             Textured windows use the native OS' texture to render the background, on OSX
+             this is the metal or brushed look, on some Windows platforms this is a glass
+             look on the frame elements. Setting this to false disables these.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.textured</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // make sure the window is shown.
+ win.textured = false;
+ win.title = "Non-textured window.";
+ win.x = 50;
+
+ var win2 = new Window();
+ win2.visible = true; // make sure the window is shown.
+ win2.textured = true;
+ win2.title = "Textured window.";
+ win2.x = 600;</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="title"> <i class="dropdown icon"></i> title </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the title of the window. This is the text displayed in the capiton.
+             The default of this is an empty string, if the property of the window's frame is
+             set to false (not the default value) then the title does not render.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">string</span></span>
+              <span class="fake-name">window.title</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true;
+ // Set the title bar caption to "hello"
+ win.title = "hello";</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="toolbar"> <i class="dropdown icon"></i> toolbar </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the toolbar associated with the Window. The toolbar provides
+             a consistant panel of controls regardless of how the content or child elements
+             behave. Both OSX and Windows render these at the top (underneath the Menu) as
+             part of the client area.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type"><a href="Toolbar.html">Toolbar</a></span></span>
+              <span class="fake-name">window.toolbar</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window();
+win.visible = true;
+var urlLocation = new TextInput();
+var toolbar = new Toolbar();
+var backButton = new Button();
+var forwardButton = new Button();
+
+backButton.image = 'back'; // named system icon
+forwardButton.image = 'forward'; // named system icon
+
+// Use 'space' for a OS-determined variable length space between items.
+toolbar.appendChild([backButton, forwardButton, 'space', urlLocation, 'space']);
+win.toolbar = toolbar;
+
+urlLocation.alignment = 'center';
+urlLocation.linewrap = false;
+urlLocation.scrollable = true;
+urlLocation.value = 'A text input field';</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="visible"> <i class="dropdown icon"></i> visible </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets whether the window is visible or hidden. Hidden windows
+             are not minimized, but removed from the screen regardless if their
+             minimized, maximized or fullscreen.  By default the windows visibility
+             is set to false so windows can have specific styling set prior to being
+             shown.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">boolean</span></span>
+              <span class="fake-name">window.visible</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // Show the window.
+ win.vsibile = false; // Hide the window.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="width"> <i class="dropdown icon"></i> width </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the width of the window. The default is 500.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.width</span>
+              <span class="fake-note">(default 500)</span>
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.width = 900;  // change the width of the window from 500 (default) to 900.
+                   // this happens before the window is shown so there isnt a
+                   // noticable flicker when the application loads.
+ win.visible = true; // Show the window.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="x"> <i class="dropdown icon"></i> x </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the value of the horizontal position (from the left of the screen)
+             where the window is at.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.x</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true;       // Show the window.
+
+ // Move the window from 0, to 400 pixels (left to right) over 
+ // 400*16 milliseconds (or roughly 4 seconds);
+
+ var xLoc = 0;             // Set initial left position to 0.
+ setInterval(function() {  // execute this function every X milliseconds (see time below).
+   win.x = xLoc;           // Move the window to whatever xLoc has stored.
+   xLoc = xLoc + 1;        // The next call will move the window by one pixel to the right.
+   if(xLoc > 400)          // If the x location is greater than 400, exit the program.
+     process.exit();
+ }, 16);                   // execute this every 16 milliseconds.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+          <div class="title" id="y"> <i class="dropdown icon"></i> y </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Gets or sets the position from the top of the screen where the window is at.
+             This does not account for the work area. Setting this to a value that impeeds
+             on system areas (such as the menu bar on OSX or the task bar on Windows) resets
+             the value to as close as possible coordinate value.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <span class="fake-type">number</span></span>
+              <span class="fake-name">window.y</span>
+              
+            </div>
+            
+            
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+ var win = new Window();
+ win.visible = true; // show the window
+ win.y = 0; // move the window to the top area of the screen.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+            
+            
+            
+            
+            
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="methods">
+        <h2>Methods</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="bringToFront"> 
+            <i class="dropdown icon"></i> bringToFront()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Causes the window to be placed in front of other windows, even if it is not
+             currently focused. Note that this does not pull the window above windows that
+             are set to be always on top (see alwaysOnTop).</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.bringToFront()</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window(); // Create a new window.
+win.visible = true; // make sure the window is shown.
+var win2 = new Window(); // Create a second new window.
+win2.visible = true; // make sure the window is shown.
+win2.x = win2.x - 30; // move left thirty pixels.
+win2.y = win2.y - 30; // move up thirty pixels.
+win.bringToFront(); // the window is pulled in front of all others 
+                    // (with the exception if a windows that are "alwaysOnTop")</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+          <div class="title" id="destroy"> 
+            <i class="dropdown icon"></i> destroy()
+          </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Destroys the window along with its resources.  This method will remove the
+             window entirely and its memory.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.destroy()</code></pre>
+            </div>
+            
+              
+            <div class="ui message example">
+              <h3>Example</h3>
+              <pre><code class="javascript">require('Common');
+var win = new Window(); // Create a new window.
+win.visible = true; // make sure the window is shown.
+win.destroy(); // the window is no longer visible, AND the memory is released.</code></pre>
+              
+              
+<div class="screenshots">
+
+</div>
+            </div>
+              
+            
+            
+            
+            
+            
+
+            
+
+          
+
+          </div>
+        
+        </div>
+      </section>
+      
+
+
+      
+      <section class="events">
+        <h2>Events</h2>
+        <div class="ui styled accordion">
+        
+          <div class="title" id="blur"> <i class="dropdown icon"></i> blur </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window looses focus from the mouse or keyboard.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('blur', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="close"> <i class="dropdown icon"></i> close </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window is destroyed and resources are released, this is 
+             fired just before the window is closed.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('close', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="closed"> <i class="dropdown icon"></i> closed </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires after the window has been destroyed and all resources have been
+             released.  Do not refer to the window during this event.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('closed', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="enter-fullscreen"> <i class="dropdown icon"></i> enter-fullscreen </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window is entering into full screen mode.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('enter-fullscreen', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="focus"> <i class="dropdown icon"></i> focus </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window gains focus from the mouse or keyboard.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('focus', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="leave-fullscreen"> <i class="dropdown icon"></i> leave-fullscreen </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window is exiting into full screen mode.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('leave-fullscreen', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="maximize"> <i class="dropdown icon"></i> maximize </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the state of the window becomes maximized, or if the window
+             is "zoomed" (e.g., made to its largest window size available) on operating
+             systems without the concept of maximize.  Note this does NOT mean fullscreen
+             and does not fire during fullscreen transitions.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('maximize', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="minimize"> <i class="dropdown icon"></i> minimize </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the state of the window becomes minimized.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('minimize', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="move"> <i class="dropdown icon"></i> move </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window is moved by the user through the title bar.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('move', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="resize"> <i class="dropdown icon"></i> resize </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the window is resized by the user.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('resize', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+          <div class="title" id="restore"> <i class="dropdown icon"></i> restore </div>
+          <div class="content">
+            <div class="accordion-box"></div>
+            <h5>Description</h5>
+            <p>Fires when the state of the window goes from being minimized into a new state.</p>
+            <div class="ui message note">
+              <h3>Definition</h3>
+              <pre><code class="javascript">window.addEventListener('restore', function() { ... });</code></pre>
+            </div>
+            
+
+            
+          </div>
+        
+        </div>
+      </section>
+      
+
+    </article>
+  </div>
+  <footer>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42582973-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
