@@ -5086,11 +5086,11 @@
             "comment": "/**\n     * @member allowAnyFileType\n     * @type {boolean}\n     * @memberof FileDialog\n     * @description Gets or sets whether the use can select any file type.\n     */"
           , "meta": {
               "range": [
-                4004
-              , 4173
+                4145
+              , 4314
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 112
+            , "lineno": 115
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5106,7 +5106,7 @@
           , "description": "Gets or sets whether the use can select any file type."
           , "scope": "static"
           , "longname": "FileDialog.allowAnyFileType"
-          , "___id": "T000002R000601"
+          , "___id": "T000002R000602"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".allowAnyFileType"
@@ -5119,11 +5119,11 @@
             "comment": "/**\n     * @member allowDirectories\n     * @type {boolean}\n     * @memberof FileDialog\n     * @description Gets or sets if the user is allowed to select a directory in addition to a file.\n     */"
           , "meta": {
               "range": [
-                6165
-              , 6360
+                6306
+              , 6501
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 172
+            , "lineno": 175
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5139,7 +5139,7 @@
           , "description": "Gets or sets if the user is allowed to select a directory in addition to a file."
           , "scope": "static"
           , "longname": "FileDialog.allowDirectories"
-          , "___id": "T000002R000613"
+          , "___id": "T000002R000614"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".allowDirectories"
@@ -5152,11 +5152,11 @@
             "comment": "/**\n     * @member allowFileTypes\n     * @type {array}\n     * @memberof FileDialog\n     * @description Gets or sets an array containing the file types (by extension) that are allowed.\n     */"
           , "meta": {
               "range": [
-                4570
-              , 4761
+                4711
+              , 4902
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 126
+            , "lineno": 129
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5172,7 +5172,7 @@
           , "description": "Gets or sets an array containing the file types (by extension) that are allowed."
           , "scope": "static"
           , "longname": "FileDialog.allowFileTypes"
-          , "___id": "T000002R000604"
+          , "___id": "T000002R000605"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".allowFileTypes"
@@ -5185,11 +5185,11 @@
             "comment": "/**\n     * @member allowMultiple\n     * @type {boolean}\n     * @memberof FileDialog\n     * @description Gets or sets whether selecting multiple files is allowed, if the file dialog is a \n     *              save dialog type this value is ignored.\n     */"
           , "meta": {
               "range": [
-                5417
-              , 5671
+                5558
+              , 5812
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 148
+            , "lineno": 151
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5205,7 +5205,7 @@
           , "description": "Gets or sets whether selecting multiple files is allowed, if the file dialog is a \n             save dialog type this value is ignored."
           , "scope": "static"
           , "longname": "FileDialog.allowMultiple"
-          , "___id": "T000002R000610"
+          , "___id": "T000002R000611"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".allowMultiple"
@@ -5284,11 +5284,11 @@
             "comment": "/**\n     * @member selection\n     * @type {string}\n     * @memberof FileDialog\n     * @description Gets the selection specified by the user once the dialog has been closed. The result is a URL or file path.\n     */"
           , "meta": {
               "range": [
-                6739
-              , 6953
+                6880
+              , 7094
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 193
+            , "lineno": 196
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5304,7 +5304,7 @@
           , "description": "Gets the selection specified by the user once the dialog has been closed. The result is a URL or file path."
           , "scope": "static"
           , "longname": "FileDialog.selection"
-          , "___id": "T000002R000616"
+          , "___id": "T000002R000617"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".selection"
@@ -5433,11 +5433,11 @@
             "comment": "/**\n     * @method open\n     * @param {Window} window The window to associate with this file dialog.\n     * @memberof FileDialog\n     * @description Opens the file dialog window, if a window object is passed in the file dialog is placed\n     *              on top of the passed in window preventing any user interaction with it. On OSX this causes\n     *              a \"sheet\" effect, on Windows the file dialog is a modal window aligned with the passed in window.\n     *              Note: Because of security and sandboxing on applications all event loops are paused until a \n     *              selection is made by the user\n     */"
           , "meta": {
               "range": [
-                7701
-              , 8337
+                7842
+              , 8478
             ]
             , "filename": "FileDialog_mac.js"
-            , "lineno": 222
+            , "lineno": 225
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/FileDialog"
             , "code": {}
             , "shortpath": "FileDialog/FileDialog_mac.js"
@@ -5459,7 +5459,7 @@
           , "description": "Opens the file dialog window, if a window object is passed in the file dialog is placed\n             on top of the passed in window preventing any user interaction with it. On OSX this causes\n             a \"sheet\" effect, on Windows the file dialog is a modal window aligned with the passed in window.\n             Note: Because of security and sandboxing on applications all event loops are paused until a \n             selection is made by the user"
           , "scope": "static"
           , "longname": "FileDialog.open"
-          , "___id": "T000002R000623"
+          , "___id": "T000002R000624"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".open"
@@ -5636,7 +5636,7 @@
           , "description": "Gets or sets an array containing the file types (by extension) that are allowed."
           , "scope": "static"
           , "longname": "FileInput.allowFileTypes"
-          , "___id": "T000002R000653"
+          , "___id": "T000002R000654"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".allowFileTypes"
@@ -5669,7 +5669,7 @@
           , "description": "Gets or sets the location or file name of the file selected in the control."
           , "scope": "static"
           , "longname": "FileInput.location"
-          , "___id": "T000002R000657"
+          , "___id": "T000002R000658"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".location"
@@ -5700,7 +5700,7 @@
           , "description": "Fires when a user cancels the selection."
           , "scope": "static"
           , "longname": "FileInput.event:cancel"
-          , "___id": "T000002R000639"
+          , "___id": "T000002R000640"
           , "___s": true
           , "attribs": ""
           , "id": ".event:cancel"
@@ -5727,7 +5727,7 @@
           , "description": "Fires when a user selects the a file or set of files."
           , "scope": "static"
           , "longname": "FileInput.event:select"
-          , "___id": "T000002R000634"
+          , "___id": "T000002R000635"
           , "___s": true
           , "attribs": ""
           , "id": ".event:select"
@@ -5793,7 +5793,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "Font.bold"
-          , "___id": "T000002R000727"
+          , "___id": "T000002R000728"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".bold"
@@ -5827,7 +5827,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "Font.expanded"
-          , "___id": "T000002R000730"
+          , "___id": "T000002R000731"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".expanded"
@@ -5860,7 +5860,7 @@
           , "description": "Gets or sets the face fo the font."
           , "scope": "static"
           , "longname": "Font.face"
-          , "___id": "T000002R000707"
+          , "___id": "T000002R000708"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".face"
@@ -5894,7 +5894,7 @@
           , "defaultvalue": "12"
           , "scope": "static"
           , "longname": "Font.family"
-          , "___id": "T000002R000715"
+          , "___id": "T000002R000716"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".family"
@@ -5927,7 +5927,7 @@
           , "description": "Gets a list of all available font families installed on the system."
           , "scope": "static"
           , "longname": "Font.fontFamilies"
-          , "___id": "T000002R000747"
+          , "___id": "T000002R000748"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".fontFamilies"
@@ -5960,7 +5960,7 @@
           , "description": "Gets a list of all available fonts on the system.  This is a 'static' method, \n             and does not require creating a font (E.g., Font.fonts)."
           , "scope": "static"
           , "longname": "Font.fonts"
-          , "___id": "T000002R000745"
+          , "___id": "T000002R000746"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".fonts"
@@ -5994,7 +5994,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "Font.italic"
-          , "___id": "T000002R000724"
+          , "___id": "T000002R000725"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".italic"
@@ -6027,7 +6027,7 @@
           , "description": "Gets whether the font is monospaced."
           , "scope": "static"
           , "longname": "Font.monospaced"
-          , "___id": "T000002R000733"
+          , "___id": "T000002R000734"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".monospaced"
@@ -6061,7 +6061,7 @@
           , "defaultvalue": "12"
           , "scope": "static"
           , "longname": "Font.size"
-          , "___id": "T000002R000711"
+          , "___id": "T000002R000712"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".size"
@@ -6094,7 +6094,7 @@
           , "description": "Gets whether the font is vertical or horizontal."
           , "scope": "static"
           , "longname": "Font.vertical"
-          , "___id": "T000002R000735"
+          , "___id": "T000002R000736"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".vertical"
@@ -6128,7 +6128,7 @@
           , "defaultvalue": "400"
           , "scope": "static"
           , "longname": "Font.weight"
-          , "___id": "T000002R000737"
+          , "___id": "T000002R000738"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".weight"
@@ -6152,7 +6152,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Fonts"
             , "code": {
-                "id": "astnode100010586"
+                "id": "astnode100010595"
               , "name": "Font"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6204,7 +6204,7 @@
           , "longname": "Font.Font"
           , "kind": "constructs"
           , "scope": "static"
-          , "___id": "T000002R000702"
+          , "___id": "T000002R000703"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Font"
@@ -6268,7 +6268,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "FontPanel.multiple"
-          , "___id": "T000002R000690"
+          , "___id": "T000002R000691"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".multiple"
@@ -6301,7 +6301,7 @@
           , "description": "Gets or sets the selected font."
           , "scope": "static"
           , "longname": "FontPanel.selected"
-          , "___id": "T000002R000685"
+          , "___id": "T000002R000686"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".selected"
@@ -6334,7 +6334,7 @@
           , "description": "Gets or sets whether the color panel is visible or hidden."
           , "scope": "static"
           , "longname": "FontPanel.visible"
-          , "___id": "T000002R000696"
+          , "___id": "T000002R000697"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".visible"
@@ -6384,7 +6384,7 @@
           , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
           , "scope": "static"
           , "longname": "FontPanel.addEventListener"
-          , "___id": "T000002R000694"
+          , "___id": "T000002R000695"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addEventListener"
@@ -6432,7 +6432,7 @@
           , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
           , "scope": "static"
           , "longname": "FontPanel.removeEventListener"
-          , "___id": "T000002R000695"
+          , "___id": "T000002R000696"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeEventListener"
@@ -6462,7 +6462,7 @@
           , "description": "Fires when the user selects a new font from the font panel."
           , "scope": "static"
           , "longname": "FontPanel.event:fontchange"
-          , "___id": "T000002R000689"
+          , "___id": "T000002R000690"
           , "___s": true
           , "attribs": ""
           , "id": ".event:fontchange"
@@ -6483,7 +6483,7 @@
             , "lineno": 16
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Fonts"
             , "code": {
-                "id": "astnode100010248"
+                "id": "astnode100010257"
               , "name": "FontPanel"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6518,7 +6518,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R000672"
+          , "___id": "T000002R000673"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".FontPanel"
@@ -6587,7 +6587,7 @@
           , "description": "Gets or sets the image to use, this can be any URL including the app:// schema,\n             or a named system image."
           , "scope": "static"
           , "longname": "ImageWell.image"
-          , "___id": "T000002R000767"
+          , "___id": "T000002R000768"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".image"
@@ -6621,7 +6621,7 @@
           , "defaultvalue": "\"constrain\""
           , "scope": "static"
           , "longname": "ImageWell.scale"
-          , "___id": "T000002R000774"
+          , "___id": "T000002R000775"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".scale"
@@ -6645,7 +6645,7 @@
             , "lineno": 15
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Image"
             , "code": {
-                "id": "astnode100011251"
+                "id": "astnode100011260"
               , "name": "ImageWell"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6678,7 +6678,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R000758"
+          , "___id": "T000002R000759"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".ImageWell"
@@ -6761,7 +6761,7 @@
           ]
           , "scope": "static"
           , "longname": "Menu.appendChild"
-          , "___id": "T000002R000881"
+          , "___id": "T000002R000882"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".appendChild"
@@ -6800,7 +6800,7 @@
           ]
           , "scope": "static"
           , "longname": "Menu.removeChild"
-          , "___id": "T000002R000883"
+          , "___id": "T000002R000884"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeChild"
@@ -6823,7 +6823,7 @@
             , "lineno": 138
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Menu"
             , "code": {
-                "id": "astnode100012659"
+                "id": "astnode100012668"
               , "name": "Menu"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -6874,7 +6874,7 @@
           , "longname": "Menu.Menu"
           , "kind": "constructs"
           , "scope": "static"
-          , "___id": "T000002R000873"
+          , "___id": "T000002R000874"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Menu"
@@ -6941,7 +6941,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "MenuItem.checked"
-          , "___id": "T000002R000820"
+          , "___id": "T000002R000821"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".checked"
@@ -6974,7 +6974,7 @@
           , "description": "Gets or sets a custom control you'd like to place in the menu item.\n             This is useful if you need to render more than just an icon or text in the\n             menu item.  It provides a way for users to enhance menu functionality. Any\n             Control can be added and will have its width and height constrained to the\n             system defined area, the layout will also be dictated by the operating system."
           , "scope": "static"
           , "longname": "MenuItem.custom"
-          , "___id": "T000002R000854"
+          , "___id": "T000002R000855"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".custom"
@@ -7007,7 +7007,7 @@
           , "description": "Gets or sets whether the menu item is enabled or greyed out (disabled)\n             Note that the item is still visible but does not respond to clicks and\n             is visually denoted as inactive to the user.  This is useful when you want\n             to express that the choice or selection in the menu item is not available\n             at the moment."
           , "scope": "static"
           , "longname": "MenuItem.enabled"
-          , "___id": "T000002R000827"
+          , "___id": "T000002R000828"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".enabled"
@@ -7040,7 +7040,7 @@
           , "description": "Gets or sets the image that will be used for the menu item.\n             This is placed as an icon next to menu items label. This can\n             be any URL, including the app:// schema for referencing packaged\n             resources, or it can be a named system icon resource."
           , "scope": "static"
           , "longname": "MenuItem.image"
-          , "___id": "T000002R000811"
+          , "___id": "T000002R000812"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".image"
@@ -7073,7 +7073,7 @@
           , "description": "Gets or sets what key (in combination with modifiers), when pressed,\n             activates this menu.  This is useful when you want to provide a\n             keyboard shortcut to a menu item so the user doesn't need to navigate\n             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for\n             a key).  Each menu item must have a unique key and modifier combination\n             (if one in set).  This is optional."
           , "scope": "static"
           , "longname": "MenuItem.key"
-          , "___id": "T000002R000833"
+          , "___id": "T000002R000834"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".key"
@@ -7106,7 +7106,7 @@
           , "description": "Gets or sets what modifiers (in combination with key), when pressed,\n             activates this menu.  This is useful when you want to provide a\n             keyboard shortcut to a menu item so the user doesn't need to navigate\n             or use their mouse (for instance, copy, or cmd/cntl+c would have 'c' for\n             a key and 'cmd' for a modifier).  Each menu item must have a unique key \n             and modifier combination (if one in set).  This is optional."
           , "scope": "static"
           , "longname": "MenuItem.modifiers"
-          , "___id": "T000002R000836"
+          , "___id": "T000002R000837"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".modifiers"
@@ -7140,7 +7140,7 @@
           , "defaultvalue": "null"
           , "scope": "static"
           , "longname": "MenuItem.submenu"
-          , "___id": "T000002R000816"
+          , "___id": "T000002R000817"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".submenu"
@@ -7173,7 +7173,7 @@
           , "description": "Gets or sets the text label used for this menu item."
           , "scope": "static"
           , "longname": "MenuItem.title"
-          , "___id": "T000002R000824"
+          , "___id": "T000002R000825"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -7206,7 +7206,7 @@
           , "description": "Gets or sets the tooltip that is shown to the user if they\n             hover over the menu item for more than a few seconds. This can be thought\n             of as a description of what the menu item does. It shows as a fading in\n             off-mouse window that lets the user know more about what the menu item\n             does."
           , "scope": "static"
           , "longname": "MenuItem.tooltip"
-          , "___id": "T000002R000851"
+          , "___id": "T000002R000852"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".tooltip"
@@ -7240,7 +7240,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "MenuItem.visible"
-          , "___id": "T000002R000830"
+          , "___id": "T000002R000831"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".visible"
@@ -7290,7 +7290,7 @@
           , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
           , "scope": "static"
           , "longname": "MenuItem.addEventListener"
-          , "___id": "T000002R000809"
+          , "___id": "T000002R000810"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addEventListener"
@@ -7338,7 +7338,7 @@
           , "description": "Removes an event listener for various application level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
           , "scope": "static"
           , "longname": "MenuItem.removeEventListener"
-          , "___id": "T000002R000810"
+          , "___id": "T000002R000811"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeEventListener"
@@ -7368,7 +7368,7 @@
           , "description": "Fires when the user clicks on the menu item or activates it with the keyboard shortcuts/arrows."
           , "scope": "static"
           , "longname": "MenuItem.event:click"
-          , "___id": "T000002R000803"
+          , "___id": "T000002R000804"
           , "___s": true
           , "attribs": ""
           , "id": ".event:click"
@@ -7389,7 +7389,7 @@
             , "lineno": 25
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Menu"
             , "code": {
-                "id": "astnode100011688"
+                "id": "astnode100011697"
               , "name": "MenuItem"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -7454,7 +7454,7 @@
           , "longname": "MenuItem.MenuItem"
           , "kind": "constructs"
           , "scope": "static"
-          , "___id": "T000002R000790"
+          , "___id": "T000002R000791"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".MenuItem"
@@ -7553,7 +7553,7 @@
           , "description": "Gets or sets the text label for the call-to-action button. This is optional, and if left blank removes\n             the button from the notification."
           , "scope": "static"
           , "longname": "Notification.buttonLabel"
-          , "___id": "T000002R000941"
+          , "___id": "T000002R000942"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".buttonLabel"
@@ -7586,7 +7586,7 @@
           , "description": "Sets the image of the notification that will appear to the user."
           , "scope": "static"
           , "longname": "Notification.image"
-          , "___id": "T000002R000945"
+          , "___id": "T000002R000946"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".image"
@@ -7619,7 +7619,7 @@
           , "description": "Gets or sets whether the system should play a default attention system sound when the notification happens.\n             The default for this is false. Note that sound may not play depending on the user preferences set on the\n             operating system."
           , "scope": "static"
           , "longname": "Notification.sound"
-          , "___id": "T000002R000937"
+          , "___id": "T000002R000938"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".sound"
@@ -7652,7 +7652,7 @@
           , "description": "Gets or sets the sub-title for the notification.  This should be a very short message, less than 10 words."
           , "scope": "static"
           , "longname": "Notification.subtitle"
-          , "___id": "T000002R000929"
+          , "___id": "T000002R000930"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".subtitle"
@@ -7685,7 +7685,7 @@
           , "description": "Gets or sets the text in the notification, this can hold, on average, up to 25 words."
           , "scope": "static"
           , "longname": "Notification.text"
-          , "___id": "T000002R000933"
+          , "___id": "T000002R000934"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".text"
@@ -7718,7 +7718,7 @@
           , "description": "Gets or sets the title for the notification.  This should be a very short message, less than 10 words."
           , "scope": "static"
           , "longname": "Notification.title"
-          , "___id": "T000002R000925"
+          , "___id": "T000002R000926"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -7757,7 +7757,7 @@
           , "description": "Dispatches the notification and shows it.  Once dispatched there is no way to \n             cancel to notification from showing. This method returns false if the notification\n             failed to show (see requestPermission)."
           , "scope": "static"
           , "longname": "Notification.dispatch"
-          , "___id": "T000002R000949"
+          , "___id": "T000002R000950"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".dispatch"
@@ -7796,7 +7796,7 @@
           , "description": "This method requests permission to use notifications from the underlying operating system. At the moment this always returns true unless there\n             is an explicit ban on the application pushing notifications (perhaps it was done too often or the user has explicitly set them not to show in\n             the system preferences).  This method is static and does not require creating a notification object.  It also is not required to be used prior\n             to creating a notification."
           , "scope": "static"
           , "longname": "Notification.requestPermission"
-          , "___id": "T000002R000953"
+          , "___id": "T000002R000954"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".requestPermission"
@@ -7826,7 +7826,7 @@
           , "description": "Fires when a user presses a button on the notification, the first parameter passed in\n             to the callback on the event indicates the area that was clicked.  The value is either\n             'contents', 'button' or 'unknown'."
           , "scope": "static"
           , "longname": "Notification.event:click"
-          , "___id": "T000002R000922"
+          , "___id": "T000002R000923"
           , "___s": true
           , "attribs": ""
           , "id": ".event:click"
@@ -7847,7 +7847,7 @@
             , "lineno": 19
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Notification"
             , "code": {
-                "id": "astnode100013436"
+                "id": "astnode100013445"
               , "name": "Notification"
               , "type": "FunctionDeclaration"
               , "paramnames": []
@@ -7882,7 +7882,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R000913"
+          , "___id": "T000002R000914"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Notification"
@@ -7952,7 +7952,7 @@
           , "defaultvalue": "\"window\""
           , "scope": "static"
           , "longname": "Panel.floating"
-          , "___id": "T000002R000976"
+          , "___id": "T000002R000977"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".floating"
@@ -7986,7 +7986,7 @@
           , "defaultvalue": "\"window\""
           , "scope": "static"
           , "longname": "Panel.style"
-          , "___id": "T000002R000974"
+          , "___id": "T000002R000975"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".style"
@@ -8010,7 +8010,7 @@
             , "lineno": 29
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Panel"
             , "code": {
-                "id": "astnode100014048"
+                "id": "astnode100014057"
               , "name": "Panel"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8044,7 +8044,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R000963"
+          , "___id": "T000002R000964"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Panel"
@@ -8117,7 +8117,7 @@
           , "description": "Gets or sets the height of the pop over."
           , "scope": "static"
           , "longname": "PopOver.height"
-          , "___id": "T000002R001002"
+          , "___id": "T000002R001003"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".height"
@@ -8150,7 +8150,7 @@
           , "description": "Gets or sets the width of the pop over."
           , "scope": "static"
           , "longname": "PopOver.width"
-          , "___id": "T000002R000995"
+          , "___id": "T000002R000996"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".width"
@@ -8180,7 +8180,7 @@
           , "description": "Closes the pop over."
           , "scope": "static"
           , "longname": "PopOver.close"
-          , "___id": "T000002R001014"
+          , "___id": "T000002R001015"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".close"
@@ -8228,7 +8228,7 @@
           , "description": "The open method opens the pop over over the control or container specified, with the position\n             provided as a string \"left\", \"right\", \"top\" or \"bottom\"."
           , "scope": "static"
           , "longname": "PopOver.open"
-          , "___id": "T000002R001009"
+          , "___id": "T000002R001010"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".open"
@@ -8251,7 +8251,7 @@
             , "lineno": 23
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/PopOver"
             , "code": {
-                "id": "astnode100014323"
+                "id": "astnode100014332"
               , "name": "PopOver"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8287,7 +8287,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R000983"
+          , "___id": "T000002R000984"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".PopOver"
@@ -8360,7 +8360,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "ProgressBar.border"
-          , "___id": "T000002R001029"
+          , "___id": "T000002R001030"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".border"
@@ -8394,7 +8394,7 @@
           , "defaultvalue": "false"
           , "scope": "static"
           , "longname": "ProgressBar.indeterminate"
-          , "___id": "T000002R001035"
+          , "___id": "T000002R001036"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".indeterminate"
@@ -8428,7 +8428,7 @@
           , "defaultvalue": "\"small\""
           , "scope": "static"
           , "longname": "ProgressBar.size"
-          , "___id": "T000002R001038"
+          , "___id": "T000002R001039"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".size"
@@ -8462,7 +8462,7 @@
           , "defaultvalue": "0"
           , "scope": "static"
           , "longname": "ProgressBar.value"
-          , "___id": "T000002R001032"
+          , "___id": "T000002R001033"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".value"
@@ -8486,7 +8486,7 @@
             , "lineno": 20
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/ProgressBar"
             , "code": {
-                "id": "astnode100014932"
+                "id": "astnode100014941"
               , "name": "ProgressBar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8517,7 +8517,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001022"
+          , "___id": "T000002R001023"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".ProgressBar"
@@ -8589,7 +8589,7 @@
           ]
           , "scope": "static"
           , "longname": "Screens.active"
-          , "___id": "T000002R001065"
+          , "___id": "T000002R001066"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".active"
@@ -8628,7 +8628,7 @@
           ]
           , "scope": "static"
           , "longname": "Screens.all"
-          , "___id": "T000002R001067"
+          , "___id": "T000002R001068"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".all"
@@ -8703,7 +8703,7 @@
           ]
           , "scope": "static"
           , "longname": "Scroll.backgroundColor"
-          , "___id": "T000002R001102"
+          , "___id": "T000002R001103"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".backgroundColor"
@@ -8737,7 +8737,7 @@
           , "defaultvalue": "\"normal\""
           , "scope": "static"
           , "longname": "Scroll.border"
-          , "___id": "T000002R001094"
+          , "___id": "T000002R001095"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".border"
@@ -8771,7 +8771,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "Scroll.horizontal"
-          , "___id": "T000002R001100"
+          , "___id": "T000002R001101"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".horizontal"
@@ -8805,7 +8805,7 @@
           , "defaultvalue": "1"
           , "scope": "static"
           , "longname": "Scroll.speed"
-          , "___id": "T000002R001101"
+          , "___id": "T000002R001102"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".speed"
@@ -8839,7 +8839,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "Scroll.vertical"
-          , "___id": "T000002R001099"
+          , "___id": "T000002R001100"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".vertical"
@@ -8880,7 +8880,7 @@
           , "description": "Sets the child control that will be scrollable, if multiple children are needed create\n             a generic Box or Container control to append multiple children."
           , "scope": "static"
           , "longname": "Scroll.setChild"
-          , "___id": "T000002R001091"
+          , "___id": "T000002R001092"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".setChild"
@@ -8903,7 +8903,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Scroll"
             , "code": {
-                "id": "astnode100015549"
+                "id": "astnode100015558"
               , "name": "Scroll"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -8937,7 +8937,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001081"
+          , "___id": "T000002R001082"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Scroll"
@@ -8999,7 +8999,7 @@
             , "lineno": 21
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/SecureTextInput"
             , "code": {
-                "id": "astnode100016309"
+                "id": "astnode100016318"
               , "name": "SecureTextInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9029,7 +9029,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001136"
+          , "___id": "T000002R001137"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".SecureTextInput"
@@ -9105,7 +9105,7 @@
           , "description": "Gets the amount of options currently on the select input."
           , "scope": "static"
           , "longname": "SelectInput.length"
-          , "___id": "T000002R001161"
+          , "___id": "T000002R001162"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".length"
@@ -9138,7 +9138,7 @@
           , "description": "Gets or sets the selected item from the options available."
           , "scope": "static"
           , "longname": "SelectInput.selectedIndex"
-          , "___id": "T000002R001158"
+          , "___id": "T000002R001159"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".selectedIndex"
@@ -9179,7 +9179,7 @@
           , "description": "Adds an item to the select input as an option, this is added to the end of the options list."
           , "scope": "static"
           , "longname": "SelectInput.addItem"
-          , "___id": "T000002R001163"
+          , "___id": "T000002R001164"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addItem"
@@ -9227,7 +9227,7 @@
           , "description": "Adds an item to the select input as an option, the item is inserted at the index."
           , "scope": "static"
           , "longname": "SelectInput.addItemAtIndex"
-          , "___id": "T000002R001165"
+          , "___id": "T000002R001166"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addItemAtIndex"
@@ -9275,7 +9275,7 @@
           , "description": "Returns the text title for the item at the specified index."
           , "scope": "static"
           , "longname": "SelectInput.item"
-          , "___id": "T000002R001171"
+          , "___id": "T000002R001172"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".item"
@@ -9314,7 +9314,7 @@
           , "description": "Removes the option where the text title matches the passed in value."
           , "scope": "static"
           , "longname": "SelectInput.removeItem"
-          , "___id": "T000002R001169"
+          , "___id": "T000002R001170"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeItem"
@@ -9353,7 +9353,7 @@
           , "description": "Removes the item at the specified index."
           , "scope": "static"
           , "longname": "SelectInput.removeItemAtIndex"
-          , "___id": "T000002R001167"
+          , "___id": "T000002R001168"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeItemAtIndex"
@@ -9376,7 +9376,7 @@
             , "lineno": 22
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/SelectInput"
             , "code": {
-                "id": "astnode100016436"
+                "id": "astnode100016445"
               , "name": "SelectInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9408,7 +9408,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001148"
+          , "___id": "T000002R001149"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".SelectInput"
@@ -9482,7 +9482,7 @@
           , "defaultvalue": "0"
           , "scope": "static"
           , "longname": "Slider.value"
-          , "___id": "T000002R001185"
+          , "___id": "T000002R001186"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".value"
@@ -9506,7 +9506,7 @@
             , "lineno": 18
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Slider"
             , "code": {
-                "id": "astnode100016787"
+                "id": "astnode100016796"
               , "name": "Slider"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9536,7 +9536,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001179"
+          , "___id": "T000002R001180"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Slider"
@@ -9608,7 +9608,7 @@
           , "defaultvalue": "\"horizontal\""
           , "scope": "static"
           , "longname": "Split.orientation"
-          , "___id": "T000002R001219"
+          , "___id": "T000002R001220"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".orientation"
@@ -9642,7 +9642,7 @@
           , "defaultvalue": "\"thin\""
           , "scope": "static"
           , "longname": "Split.style"
-          , "___id": "T000002R001222"
+          , "___id": "T000002R001223"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".style"
@@ -9683,7 +9683,7 @@
           , "description": "appendChild adds a new control to the split control with a seperator between the previous and appended control."
           , "scope": "static"
           , "longname": "Split.appendChild"
-          , "___id": "T000002R001209"
+          , "___id": "T000002R001210"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".appendChild"
@@ -9722,7 +9722,7 @@
           , "description": "Removes a control from the split control."
           , "scope": "static"
           , "longname": "Split.removeChild"
-          , "___id": "T000002R001211"
+          , "___id": "T000002R001212"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeChild"
@@ -9770,7 +9770,7 @@
           , "description": "Sets the position (a value of 0 to 1) of a seperator identified by the index."
           , "scope": "static"
           , "longname": "Split.setPosition"
-          , "___id": "T000002R001213"
+          , "___id": "T000002R001214"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".setPosition"
@@ -9793,7 +9793,7 @@
             , "lineno": 23
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Split"
             , "code": {
-                "id": "astnode100016981"
+                "id": "astnode100016990"
               , "name": "Split"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -9830,7 +9830,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001196"
+          , "___id": "T000002R001197"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Split"
@@ -9896,7 +9896,7 @@
           , "description": "Gets or sets whether the status bar displays as \"active\" or \"disabled\". The\n             disabled state grays out the icon and title, in addition it does not respond\n             to mouse or keyboard actions."
           , "scope": "static"
           , "longname": "StatusBar.enabled"
-          , "___id": "T000002R001270"
+          , "___id": "T000002R001271"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".enabled"
@@ -9929,7 +9929,7 @@
           , "description": "Gets or sets the image used in the status bar.  The image is automatically\n             resized to fit the OS requirements.  An image can be a url including the app:// schema,\n             or can be named system icon."
           , "scope": "static"
           , "longname": "StatusBar.image"
-          , "___id": "T000002R001253"
+          , "___id": "T000002R001254"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".image"
@@ -9962,7 +9962,7 @@
           , "description": "Gets or sets the menu to display when the user clicks on the status bar. \n             NOTE: When a menu is set the click event is ignored and the menu is opened."
           , "scope": "static"
           , "longname": "StatusBar.menu"
-          , "___id": "T000002R001261"
+          , "___id": "T000002R001262"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".menu"
@@ -9995,7 +9995,7 @@
           , "description": "Gets or sets the title of the status bar. Most status bar's do not have \n             titles and only icons. The title should be limited to no more than 3 words\n             as the space available is limited."
           , "scope": "static"
           , "longname": "StatusBar.title"
-          , "___id": "T000002R001267"
+          , "___id": "T000002R001268"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -10028,7 +10028,7 @@
           , "description": "Gets or sets the text displayed when the user keeps the mouse cursor over the\n             icon without taking any action. This can be thought of as a description as to\n             what the status bar does."
           , "scope": "static"
           , "longname": "StatusBar.tooltip"
-          , "___id": "T000002R001273"
+          , "___id": "T000002R001274"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".tooltip"
@@ -10078,7 +10078,7 @@
           , "description": "Adds an event listener for events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
           , "scope": "static"
           , "longname": "StatusBar.addEventListener"
-          , "___id": "T000002R001246"
+          , "___id": "T000002R001247"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addEventListener"
@@ -10106,7 +10106,7 @@
           , "description": "Closes the status bar and removes it from operating system UI."
           , "scope": "static"
           , "longname": "StatusBar.close"
-          , "___id": "T000002R001248"
+          , "___id": "T000002R001249"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".close"
@@ -10154,7 +10154,7 @@
           , "description": "Removes an event listener for events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
           , "scope": "static"
           , "longname": "StatusBar.removeEventListener"
-          , "___id": "T000002R001247"
+          , "___id": "T000002R001248"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeEventListener"
@@ -10184,7 +10184,7 @@
           , "description": "Fires when the user clicks on the statusbar icon, this will not fire if a menu\n             is placed on the status bar or if a custom view is set. To overcome this see the\n             'opened' and 'closed' event on the Menu object (if a menu is set), if a custom view\n             is set add the click handler to that view."
           , "scope": "static"
           , "longname": "StatusBar.event:click"
-          , "___id": "T000002R001241"
+          , "___id": "T000002R001242"
           , "___s": true
           , "attribs": ""
           , "id": ".event:click"
@@ -10211,7 +10211,7 @@
           , "description": "This event fires when the menu has been closed. Due to the nature of\n             menu's this event may fire after or before click, blur or focus events on the object\n             that caused the menu to close fires.  Do not rely on the event order."
           , "scope": "static"
           , "longname": "StatusBar.event:closed"
-          , "___id": "T000002R000871"
+          , "___id": "T000002R000872"
           , "___s": true
           , "attribs": ""
           , "id": ".event:closed"
@@ -10238,7 +10238,7 @@
           , "description": "This event fires when the menu has been opened. Due to the nature of\n             menu's this event may fire after or before click events on the object\n             that caused the menu to open fires.  Do not rely on the event order."
           , "scope": "static"
           , "longname": "StatusBar.event:opened"
-          , "___id": "T000002R000861"
+          , "___id": "T000002R000862"
           , "___s": true
           , "attribs": ""
           , "id": ".event:opened"
@@ -10259,7 +10259,7 @@
             , "lineno": 29
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/StatusBar"
             , "code": {
-                "id": "astnode100017627"
+                "id": "astnode100017636"
               , "name": "StatusBar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -10297,7 +10297,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001232"
+          , "___id": "T000002R001233"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".StatusBar"
@@ -10355,7 +10355,7 @@
           , "description": "Gets the users home directory, returns it as a string."
           , "scope": "static"
           , "longname": "System.home"
-          , "___id": "T000002R001290"
+          , "___id": "T000002R001291"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".home"
@@ -10383,7 +10383,7 @@
           , "description": "Contains an object with the 'x' and 'y' properties with the current position of\n             the mouse cursor in context to the active screen."
           , "scope": "static"
           , "longname": "System.mousePosition"
-          , "___id": "T000002R001340"
+          , "___id": "T000002R001341"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".mousePosition"
@@ -10413,7 +10413,7 @@
           , "description": "Plays the default alert noise for the OS. This may produce visual effects if the user\n             has accessibility features enabled."
           , "scope": "static"
           , "longname": "System.beep"
-          , "___id": "T000002R001308"
+          , "___id": "T000002R001309"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".beep"
@@ -10461,7 +10461,7 @@
           , "description": "Left clicks at the specified X, Y coordinates. This causes a\n             real left click mouse event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.clickAt"
-          , "___id": "T000002R001365"
+          , "___id": "T000002R001366"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clickAt"
@@ -10500,7 +10500,7 @@
           , "description": "Left clicks at the center of the specified Tint Control. This causes a\n             real left click event within the operating system and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.clickAtControl"
-          , "___id": "T000002R001368"
+          , "___id": "T000002R001369"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clickAtControl"
@@ -10538,7 +10538,7 @@
           , "description": "Clears the clipboards data."
           , "scope": "static"
           , "longname": "System.clipboardClear"
-          , "___id": "T000002R001325"
+          , "___id": "T000002R001326"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clipboardClear"
@@ -10587,7 +10587,7 @@
           ]
           , "scope": "static"
           , "longname": "System.clipboardContainsType"
-          , "___id": "T000002R001327"
+          , "___id": "T000002R001328"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clipboardContainsType"
@@ -10636,7 +10636,7 @@
           ]
           , "scope": "static"
           , "longname": "System.clipboardGet"
-          , "___id": "T000002R001330"
+          , "___id": "T000002R001331"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clipboardGet"
@@ -10694,7 +10694,7 @@
           ]
           , "scope": "static"
           , "longname": "System.clipboardSet"
-          , "___id": "T000002R001334"
+          , "___id": "T000002R001335"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".clipboardSet"
@@ -10733,7 +10733,7 @@
           , "description": "Returns an image (data uri base 64 encoded) for the icon used by the system shell."
           , "scope": "static"
           , "longname": "System.getIconForFile"
-          , "___id": "T000002R001292"
+          , "___id": "T000002R001293"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".getIconForFile"
@@ -10781,7 +10781,7 @@
           , "description": "Sends a left 'mouse down' at the specified X, Y coordinates. This causes a\n             real left click mouse down event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.mouseDownAt"
-          , "___id": "T000002R001346"
+          , "___id": "T000002R001347"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".mouseDownAt"
@@ -10829,7 +10829,7 @@
           , "description": "Sends a left 'mouse up' at the specified X, Y coordinates. This causes a\n             real left click mouse up event within the operating system\n             at the specified coordinates and is not simulated.  This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.mouseUpAt"
-          , "___id": "T000002R001349"
+          , "___id": "T000002R001350"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".mouseUpAt"
@@ -10868,7 +10868,7 @@
           , "description": "Opens the file in the default application thats set to handle it."
           , "scope": "static"
           , "longname": "System.openFile"
-          , "___id": "T000002R001298"
+          , "___id": "T000002R001299"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".openFile"
@@ -10907,7 +10907,7 @@
           , "description": "Opens the url in the default web browser installed on the OS."
           , "scope": "static"
           , "longname": "System.openURL"
-          , "___id": "T000002R001301"
+          , "___id": "T000002R001302"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".openURL"
@@ -10955,7 +10955,7 @@
           , "description": "Right clicks at the specified control. This causes a\n             real right-click mouse event within the operating system\n             at the specified coordinates and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.rightClickAt"
-          , "___id": "T000002R001373"
+          , "___id": "T000002R001374"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".rightClickAt"
@@ -10994,7 +10994,7 @@
           , "description": "The right click at control method can be used for testing.  This causes a\n             real right-click event within the operating system and is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.rightClickAtControl"
-          , "___id": "T000002R001376"
+          , "___id": "T000002R001377"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".rightClickAtControl"
@@ -11051,7 +11051,7 @@
           , "description": "Sends a scroll event through the operating system at the specified X, Y\n             coordinates, note this is not simulated. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.scrollAt"
-          , "___id": "T000002R001355"
+          , "___id": "T000002R001356"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".scrollAt"
@@ -11099,7 +11099,7 @@
           , "description": "Scrolls a control vertically up or down based on the value of upOrDown. This is mainly used for\n             testing and should be avoided in production applications."
           , "scope": "static"
           , "longname": "System.scrollAtControl"
-          , "___id": "T000002R001358"
+          , "___id": "T000002R001359"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".scrollAtControl"
@@ -11139,7 +11139,7 @@
           , "alias": "keyAtControl"
           , "scope": "static"
           , "longname": "System.sendKey"
-          , "___id": "T000002R001352"
+          , "___id": "T000002R001353"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".sendKey"
@@ -11178,7 +11178,7 @@
           , "description": "Shows the location of a file or directory in the system's standard shell, explorer or finder."
           , "scope": "static"
           , "longname": "System.showFile"
-          , "___id": "T000002R001295"
+          , "___id": "T000002R001296"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".showFile"
@@ -11216,7 +11216,7 @@
           , "description": "Takes a screenshot of the current active screen and returns it as a\n             string that is a base64 encoded PNG image."
           , "scope": "static"
           , "longname": "System.takeSnapshotOfActiveScreen"
-          , "___id": "T000002R001381"
+          , "___id": "T000002R001382"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".takeSnapshotOfActiveScreen"
@@ -11265,7 +11265,7 @@
           , "description": "Takes a snapshot of a Tint Control and returns back a base 64 encoded string that\n             represents a PNG image."
           , "scope": "static"
           , "longname": "System.takeSnapshotOfControl"
-          , "___id": "T000002R001394"
+          , "___id": "T000002R001395"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".takeSnapshotOfControl"
@@ -11303,7 +11303,7 @@
           , "description": "Takes a screenshot of the current focused window in the running application."
           , "scope": "static"
           , "longname": "System.takeSnapshotOfCurrentWindow"
-          , "___id": "T000002R001387"
+          , "___id": "T000002R001388"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".takeSnapshotOfCurrentWindow"
@@ -11341,7 +11341,7 @@
           , "description": "Takes a screenshot of the current top (but not necessarily focused) window in the running application."
           , "scope": "static"
           , "longname": "System.takeSnapshotOfTopWindow"
-          , "___id": "T000002R001384"
+          , "___id": "T000002R001385"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".takeSnapshotOfTopWindow"
@@ -11390,7 +11390,7 @@
           , "description": "Takes a screenshot of the window passed in and returns a base 64 encoded string\n             that represents a PNG image."
           , "scope": "static"
           , "longname": "System.takeSnapshotOfWindow"
-          , "___id": "T000002R001391"
+          , "___id": "T000002R001392"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".takeSnapshotOfWindow"
@@ -11429,7 +11429,7 @@
           , "description": "Moves the file or directory to the recycling bin or trash on the OS."
           , "scope": "static"
           , "longname": "System.trashFile"
-          , "___id": "T000002R001303"
+          , "___id": "T000002R001304"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".trashFile"
@@ -11500,7 +11500,7 @@
           , "description": "Gets or sets whether a table will have alternating colors or not.\n             The alternating colors default to system values."
           , "scope": "static"
           , "longname": "Table.alternatingColors"
-          , "___id": "T000002R001500"
+          , "___id": "T000002R001501"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".alternatingColors"
@@ -11534,7 +11534,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "Table.columnsCanBeResized"
-          , "___id": "T000002R001467"
+          , "___id": "T000002R001468"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".columnsCanBeResized"
@@ -11567,7 +11567,7 @@
           , "description": "Gets or sets whether no items are allowed to be selected, \n             the default value is true. Note that if set to false, and\n             no item is selected use selectedRows to specify a default\n             selection.  This only prevents the user for deselecting an item\n             it does not prevent no items from being selected."
           , "scope": "static"
           , "longname": "Table.emptySelection"
-          , "___id": "T000002R001471"
+          , "___id": "T000002R001472"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".emptySelection"
@@ -11600,7 +11600,7 @@
           , "description": "Gets or sets whether multiple items can be selected, the default value is \n             true."
           , "scope": "static"
           , "longname": "Table.multipleSelection"
-          , "___id": "T000002R001469"
+          , "___id": "T000002R001470"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".multipleSelection"
@@ -11633,7 +11633,7 @@
           , "description": "Gets the number of columns in the table."
           , "scope": "static"
           , "longname": "Table.numberOfColumns"
-          , "___id": "T000002R001486"
+          , "___id": "T000002R001487"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".numberOfColumns"
@@ -11666,7 +11666,7 @@
           , "description": "Gets the number of rows in the table."
           , "scope": "static"
           , "longname": "Table.numberOfRows"
-          , "___id": "T000002R001487"
+          , "___id": "T000002R001488"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".numberOfRows"
@@ -11705,7 +11705,7 @@
           ]
           , "scope": "static"
           , "longname": "Table.rowHeight"
-          , "___id": "T000002R001483"
+          , "___id": "T000002R001484"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".rowHeight"
@@ -11738,7 +11738,7 @@
           , "description": "Gets or sets the height of the row based on user preferences and\n             system recommendations, this can be either \"default\", \"small\", \n             \"medium\" or \"large\". Note that this will override the value of\n             rowHeight."
           , "scope": "static"
           , "longname": "Table.rowHeightStyle"
-          , "___id": "T000002R001461"
+          , "___id": "T000002R001462"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".rowHeightStyle"
@@ -11771,7 +11771,7 @@
           , "description": "Gets or sets an array of the rows that are selected. The array \n             contains the indexes of all the rows selected."
           , "scope": "static"
           , "longname": "Table.selectedRows"
-          , "___id": "T000002R001488"
+          , "___id": "T000002R001489"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".selectedRows"
@@ -11804,7 +11804,7 @@
           , "description": "Sets whether the headers for the table are displayed."
           , "scope": "static"
           , "longname": "Table.showHeaders"
-          , "___id": "T000002R001495"
+          , "___id": "T000002R001496"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".showHeaders"
@@ -11837,7 +11837,7 @@
           , "description": "Gets or sets the horizontal intercell spacing between cells in logical pixels.\n             The default value depends on the native OS defaults."
           , "scope": "static"
           , "longname": "Table.spaceX"
-          , "___id": "T000002R001477"
+          , "___id": "T000002R001478"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".spaceX"
@@ -11870,7 +11870,7 @@
           , "description": "Gets or sets the vertical intercell spacing between cells in logical pixels.\n             The default value depends on the native OS defaults."
           , "scope": "static"
           , "longname": "Table.spaceY"
-          , "___id": "T000002R001480"
+          , "___id": "T000002R001481"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".spaceY"
@@ -11911,7 +11911,7 @@
           , "description": "Adds a new column to the table, the columns name is used in the header's label, and \n             uniquely identifies the column in the table (regardless if its moved by a user)."
           , "scope": "static"
           , "longname": "Table.addColumn"
-          , "___id": "T000002R001429"
+          , "___id": "T000002R001430"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addColumn"
@@ -11956,7 +11956,7 @@
           ]
           , "scope": "static"
           , "longname": "Table.addRow"
-          , "___id": "T000002R001439"
+          , "___id": "T000002R001440"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addRow"
@@ -12004,7 +12004,7 @@
           , "description": "Moves the column specified by fromIndex to the location specified by toIndex."
           , "scope": "static"
           , "longname": "Table.moveColumn"
-          , "___id": "T000002R001445"
+          , "___id": "T000002R001446"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".moveColumn"
@@ -12052,7 +12052,7 @@
           , "description": "Moves the row specified by fromIndex to the location specified by toIndex."
           , "scope": "static"
           , "longname": "Table.moveRow"
-          , "___id": "T000002R001447"
+          , "___id": "T000002R001448"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".moveRow"
@@ -12091,7 +12091,7 @@
           , "description": "Removes the column specified by the name passed in (or the headers label)."
           , "scope": "static"
           , "longname": "Table.removeColumn"
-          , "___id": "T000002R001434"
+          , "___id": "T000002R001435"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeColumn"
@@ -12136,7 +12136,7 @@
           ]
           , "scope": "static"
           , "longname": "Table.removeRow"
-          , "___id": "T000002R001442"
+          , "___id": "T000002R001443"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeRow"
@@ -12184,7 +12184,7 @@
           , "description": "Resizes a column's width to the specified width passed in."
           , "scope": "static"
           , "longname": "Table.setColumnWidth"
-          , "___id": "T000002R001449"
+          , "___id": "T000002R001450"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".setColumnWidth"
@@ -12247,7 +12247,7 @@
           ]
           , "scope": "static"
           , "longname": "Table.setValueAt"
-          , "___id": "T000002R001453"
+          , "___id": "T000002R001454"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".setValueAt"
@@ -12310,7 +12310,7 @@
           ]
           , "scope": "static"
           , "longname": "Table.setValueAt"
-          , "___id": "T000002R001454"
+          , "___id": "T000002R001455"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".setValueAt"
@@ -12351,7 +12351,7 @@
           , "description": "Fires when the user clicks a column (e.g., after any processing has occured)."
           , "scope": "static"
           , "longname": "Table.event:column-clicked"
-          , "___id": "T000002R001418"
+          , "___id": "T000002R001419"
           , "___s": true
           , "attribs": ""
           , "id": ".event:column-clicked"
@@ -12389,7 +12389,7 @@
           , "description": "Fires when the user begins to click a column but prior to any processing."
           , "scope": "static"
           , "longname": "Table.event:column-mousedown"
-          , "___id": "T000002R001428"
+          , "___id": "T000002R001429"
           , "___s": true
           , "attribs": ""
           , "id": ".event:column-mousedown"
@@ -12416,7 +12416,7 @@
           , "description": "Fires when a new row is added to the table by the user or programmatically."
           , "scope": "static"
           , "longname": "Table.event:row-added"
-          , "___id": "T000002R001414"
+          , "___id": "T000002R001415"
           , "___s": true
           , "attribs": ""
           , "id": ".event:row-added"
@@ -12443,7 +12443,7 @@
           , "description": "Fires when a row is removed form the table by the user or programmatically."
           , "scope": "static"
           , "longname": "Table.event:row-removed"
-          , "___id": "T000002R001415"
+          , "___id": "T000002R001416"
           , "___s": true
           , "attribs": ""
           , "id": ".event:row-removed"
@@ -12470,7 +12470,7 @@
           , "description": "Fires when the selected rows change by the user or programmatically. This fires \n             prior to the selection actually changing."
           , "scope": "static"
           , "longname": "Table.event:select"
-          , "___id": "T000002R001416"
+          , "___id": "T000002R001417"
           , "___s": true
           , "attribs": ""
           , "id": ".event:select"
@@ -12497,7 +12497,7 @@
           , "description": "Fires when the selected rows change by the user or programmatically. This fires\n             after the selection has changed."
           , "scope": "static"
           , "longname": "Table.event:selected"
-          , "___id": "T000002R001417"
+          , "___id": "T000002R001418"
           , "___s": true
           , "attribs": ""
           , "id": ".event:selected"
@@ -12518,7 +12518,7 @@
             , "lineno": 39
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Table"
             , "code": {
-                "id": "astnode100020126"
+                "id": "astnode100020135"
               , "name": "Table"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -12563,7 +12563,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001406"
+          , "___id": "T000002R001407"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Table"
@@ -12635,7 +12635,7 @@
           , "description": "Gets or sets the alignment of the label or text input. The values\n             that are allowed are left, right or center."
           , "scope": "static"
           , "longname": "TextInput.alignment"
-          , "___id": "T000002R001532"
+          , "___id": "T000002R001533"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".alignment"
@@ -12668,7 +12668,7 @@
           , "description": "Gets or sets whether the control is editable.  This causes the\n             control to gray out and visual indicate its unable to take input\n             or is disabled."
           , "scope": "static"
           , "longname": "TextInput.enabled"
-          , "___id": "T000002R001522"
+          , "___id": "T000002R001523"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".enabled"
@@ -12701,7 +12701,7 @@
           , "description": "Gets or sets the font (family, size, weight, etc) of the text on the input or label."
           , "scope": "static"
           , "longname": "TextInput.font"
-          , "___id": "T000002R001524"
+          , "___id": "T000002R001525"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".font"
@@ -12734,7 +12734,7 @@
           , "description": "Gets or sets whether the ENTER key creates a new line or\n             when text reaches the end of the control it wraps to a new line.\n             The default is false."
           , "scope": "static"
           , "longname": "TextInput.linewrap"
-          , "___id": "T000002R001538"
+          , "___id": "T000002R001539"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".linewrap"
@@ -12767,7 +12767,7 @@
           , "description": "Gets or sets the text that is displayed in the text input or\n             label prior to being modified by the user or programmatically.\n             This is useful if you're collecting a field and want to use the\n             area in the text input as an indicator of what value should be\n             provided rather than create a seperate label. The default is an\n             empty string."
           , "scope": "static"
           , "longname": "TextInput.placeholder"
-          , "___id": "T000002R001529"
+          , "___id": "T000002R001530"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".placeholder"
@@ -12800,7 +12800,7 @@
           , "description": "Gets or sets whether the control is read only or not.\n             If true, the control is disabled as a label. If false,\n             its disabled as a text input. The default is false."
           , "scope": "static"
           , "longname": "TextInput.readonly"
-          , "___id": "T000002R001525"
+          , "___id": "T000002R001526"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".readonly"
@@ -12833,7 +12833,7 @@
           , "description": "Gets or sets whether the text input has a visible scroll bar.  \n             If linewrap is set to false, the control does not display a \n             scrollbar by default.  The default is false."
           , "scope": "static"
           , "longname": "TextInput.scrollable"
-          , "___id": "T000002R001541"
+          , "___id": "T000002R001542"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".scrollable"
@@ -12866,7 +12866,7 @@
           , "description": "Gets or sets the color of the text on the input or label."
           , "scope": "static"
           , "longname": "TextInput.textcolor"
-          , "___id": "T000002R001523"
+          , "___id": "T000002R001524"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".textcolor"
@@ -12899,7 +12899,7 @@
           , "description": "Gets or sets the text as the value of the input or label."
           , "scope": "static"
           , "longname": "TextInput.value"
-          , "___id": "T000002R001521"
+          , "___id": "T000002R001522"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".value"
@@ -12932,7 +12932,7 @@
           , "description": "Gets or sets whether the control is visible on screen.\n             The default is true."
           , "scope": "static"
           , "longname": "TextInput.visible"
-          , "___id": "T000002R001535"
+          , "___id": "T000002R001536"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".visible"
@@ -12963,7 +12963,7 @@
           , "description": "Fires when the text has changed and new text is available.\n             This is after the keydown event. This is useful if you'd\n             not like to listen to keyup or keydown as those events may\n             fire even if the value did not change (e.g., if the user\n             changes the cursor selection with the arrow keys.)"
           , "scope": "static"
           , "longname": "TextInput.event:input"
-          , "___id": "T000002R001514"
+          , "___id": "T000002R001515"
           , "___s": true
           , "attribs": ""
           , "id": ".event:input"
@@ -12990,7 +12990,7 @@
           , "description": "Fires when the user has finished inputting text.  This is\n             determined by when the user presses return when linewrap = false\n             (e.g., the text input only takes a single line of text), or\n             when the control looses focus or another event prevents input.\n             This event is useful to listen to if you need to take an action\n             AFTER a user has fully inputted all the text, for example the URL\n             input field on a browser, only until the user is fully done typing\n             should we try and load the URL."
           , "scope": "static"
           , "longname": "TextInput.event:inputend"
-          , "___id": "T000002R001520"
+          , "___id": "T000002R001521"
           , "___s": true
           , "attribs": ""
           , "id": ".event:inputend"
@@ -13017,7 +13017,7 @@
           , "description": "Fires when the user begins inputting text prior to keyup, \n             keydown or input. This event is useful if an animation\n             or other event should fire when the user first types, but\n             not on every key afterwards.  For example, you might listen\n             to this event to show some sort of in-context dialog or\n             menu while the user is typing (like an auto-fill menu)."
           , "scope": "static"
           , "longname": "TextInput.event:inputstart"
-          , "___id": "T000002R001515"
+          , "___id": "T000002R001516"
           , "___s": true
           , "attribs": ""
           , "id": ".event:inputstart"
@@ -13038,7 +13038,7 @@
             , "lineno": 18
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/TextInput"
             , "code": {
-                "id": "astnode100021554"
+                "id": "astnode100021563"
               , "name": "TextInput"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13072,7 +13072,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001508"
+          , "___id": "T000002R001509"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".TextInput"
@@ -13150,7 +13150,7 @@
           , "description": "Gets or sets the size of the toolbar based on OS recommended values. \n             The values for this can be \"regular\", \"small\" or \"default\"."
           , "scope": "static"
           , "longname": "Toolbar.size"
-          , "___id": "T000002R001612"
+          , "___id": "T000002R001613"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".size"
@@ -13183,7 +13183,7 @@
           , "description": "Gets or sets the style of the toolbar, the values can be \"iconandlabel\", \"icon\"\n             \"default\" or \"label\"."
           , "scope": "static"
           , "longname": "Toolbar.state"
-          , "___id": "T000002R001607"
+          , "___id": "T000002R001608"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".state"
@@ -13207,7 +13207,7 @@
             , "lineno": 84
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Toolbar"
             , "code": {
-                "id": "astnode100022603"
+                "id": "astnode100022612"
               , "name": "Toolbar"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13251,7 +13251,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001580"
+          , "___id": "T000002R001581"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Toolbar"
@@ -13320,7 +13320,7 @@
           , "description": "Gets or sets whether the toolbar item is enabled or not. Note if set to false, the\n             toolbar item may still be shown but dimmed to represent a disabled state."
           , "scope": "static"
           , "longname": "ToolbarItem.enabled"
-          , "___id": "T000002R001558"
+          , "___id": "T000002R001559"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".enabled"
@@ -13353,7 +13353,7 @@
           , "description": "Gets or sets the image to use on the toolbar item."
           , "scope": "static"
           , "longname": "ToolbarItem.image"
-          , "___id": "T000002R001557"
+          , "___id": "T000002R001558"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".image"
@@ -13386,7 +13386,7 @@
           , "description": "Gets or sets the text label on the toolbar item."
           , "scope": "static"
           , "longname": "ToolbarItem.title"
-          , "___id": "T000002R001555"
+          , "___id": "T000002R001556"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -13419,7 +13419,7 @@
           , "description": "Gets or sets the tool tip on the toolbar item."
           , "scope": "static"
           , "longname": "ToolbarItem.tooltip"
-          , "___id": "T000002R001556"
+          , "___id": "T000002R001557"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".tooltip"
@@ -13469,7 +13469,7 @@
           , "description": "Adds an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             to call when the event happens (e.g., a callback)."
           , "scope": "static"
           , "longname": "ToolbarItem.addEventListener"
-          , "___id": "T000002R001559"
+          , "___id": "T000002R001560"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".addEventListener"
@@ -13517,7 +13517,7 @@
           , "description": "Removes an event listener for various control level events. The first\n             parameter is the name of the event, the second parameter is the function\n             that was originally given as the callback for addEventListener."
           , "scope": "static"
           , "longname": "ToolbarItem.removeEventListener"
-          , "___id": "T000002R001560"
+          , "___id": "T000002R001561"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".removeEventListener"
@@ -13540,7 +13540,7 @@
             , "lineno": 16
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Toolbar"
             , "code": {
-                "id": "astnode100022131"
+                "id": "astnode100022140"
               , "name": "ToolbarItem"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -13572,7 +13572,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001547"
+          , "___id": "T000002R001548"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".ToolbarItem"
@@ -13641,7 +13641,7 @@
           , "description": "Gets or sets whether the page is loading. If set to true (when false) it reloads the current page, when\n             set to false (when true) it stops loading the current page."
           , "scope": "static"
           , "longname": "WebView.loading"
-          , "___id": "T000002R001911"
+          , "___id": "T000002R001912"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".loading"
@@ -13688,7 +13688,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.location"
-          , "___id": "T000002R001903"
+          , "___id": "T000002R001904"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".location"
@@ -13734,7 +13734,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.progress"
-          , "___id": "T000002R001902"
+          , "___id": "T000002R001903"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".progress"
@@ -13780,7 +13780,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.title"
-          , "___id": "T000002R001912"
+          , "___id": "T000002R001913"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -13826,7 +13826,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.useragent"
-          , "___id": "T000002R001907"
+          , "___id": "T000002R001908"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".useragent"
@@ -13864,7 +13864,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.back"
-          , "___id": "T000002R001879"
+          , "___id": "T000002R001880"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".back"
@@ -13925,7 +13925,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.boundsOfElement"
-          , "___id": "T000002R001888"
+          , "___id": "T000002R001889"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".boundsOfElement"
@@ -13973,7 +13973,7 @@
           , "description": "This will execute the passed in javascript in the window context of the top frame of the currently loaded page.  The result is\n             passed back when the callback is ran."
           , "scope": "static"
           , "longname": "WebView.execute"
-          , "___id": "T000002R001895"
+          , "___id": "T000002R001896"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".execute"
@@ -14014,7 +14014,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.forward"
-          , "___id": "T000002R001881"
+          , "___id": "T000002R001882"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".forward"
@@ -14053,7 +14053,7 @@
           , "description": "Posts an HTML \"Message\" event to the top frame (and window) of the HTML page. The HTML page can listen to window message events\n             to receive these messages.  Strings are only allowed to be passed, complex objects may be serialized via JSON to transfer them back and forth.\n             See the event 'message' to listen for messages sent from the HTML page back to Tint."
           , "scope": "static"
           , "longname": "WebView.postMessage"
-          , "___id": "T000002R001890"
+          , "___id": "T000002R001891"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".postMessage"
@@ -14094,7 +14094,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.reload"
-          , "___id": "T000002R001883"
+          , "___id": "T000002R001884"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".reload"
@@ -14135,7 +14135,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.stop"
-          , "___id": "T000002R001885"
+          , "___id": "T000002R001886"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".stop"
@@ -14178,7 +14178,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.event:console"
-          , "___id": "T000002R001865"
+          , "___id": "T000002R001866"
           , "___s": true
           , "attribs": ""
           , "id": ".event:console"
@@ -14205,7 +14205,7 @@
           , "description": "Fires when an unrecoverable error occurs, such as being unable to retrieve the requested page for the top frame,\n             or when a security error has occured.  The callback function is passed the translated description of \n             the error message that occured."
           , "scope": "static"
           , "longname": "WebView.event:error"
-          , "___id": "T000002R001850"
+          , "___id": "T000002R001851"
           , "___s": true
           , "attribs": ""
           , "id": ".event:error"
@@ -14232,7 +14232,7 @@
           , "description": "Fires when a new request for a HTML document at the top frame has loaded and the document object\n             model is ready."
           , "scope": "static"
           , "longname": "WebView.event:load"
-          , "___id": "T000002R001852"
+          , "___id": "T000002R001853"
           , "___s": true
           , "attribs": ""
           , "id": ".event:load"
@@ -14259,7 +14259,7 @@
           , "description": "Fires when a new request for a HTML document at the top frame is committed, this means the\n             new URL has passed security requirement checks, but has yet to begin making a network request\n             or render any parts of the page."
           , "scope": "static"
           , "longname": "WebView.event:loading"
-          , "___id": "T000002R001849"
+          , "___id": "T000002R001850"
           , "___s": true
           , "attribs": ""
           , "id": ".event:loading"
@@ -14286,7 +14286,7 @@
           , "description": "Fires when a change in location occurs (E.g., a new URL has been requested). This differs from a \n             load (or loading) event in-that it does not fire if the current page is reloaded and the URL or\n             location has not changed.  The event handler is passed two arguments, the first is the old URL,\n             and the second is the new URL."
           , "scope": "static"
           , "longname": "WebView.event:location-change"
-          , "___id": "T000002R001851"
+          , "___id": "T000002R001852"
           , "___s": true
           , "attribs": ""
           , "id": ".event:location-change"
@@ -14313,7 +14313,7 @@
           , "description": "Fires when the top frame HTML document has executed window.postMessageToHost().  The message is a string\n             passed into the callback provided as the first argument."
           , "scope": "static"
           , "longname": "WebView.event:message"
-          , "___id": "T000002R001820"
+          , "___id": "T000002R001821"
           , "___s": true
           , "attribs": ""
           , "id": ".event:message"
@@ -14359,7 +14359,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.event:new-window"
-          , "___id": "T000002R001864"
+          , "___id": "T000002R001865"
           , "___s": true
           , "attribs": ""
           , "id": ".event:new-window"
@@ -14399,7 +14399,7 @@
           ]
           , "scope": "static"
           , "longname": "WebView.event:policy"
-          , "___id": "T000002R001855"
+          , "___id": "T000002R001856"
           , "___s": true
           , "attribs": ""
           , "id": ".event:policy"
@@ -14426,7 +14426,7 @@
           , "description": "Fires when a redirect from a server request occurs."
           , "scope": "static"
           , "longname": "WebView.event:redirect"
-          , "___id": "T000002R001853"
+          , "___id": "T000002R001854"
           , "___s": true
           , "attribs": ""
           , "id": ".event:redirect"
@@ -14453,7 +14453,7 @@
           , "description": "Fires when a new request for a HTML document at the top frame has occured, but before loaded or load has occured."
           , "scope": "static"
           , "longname": "WebView.event:request"
-          , "___id": "T000002R001854"
+          , "___id": "T000002R001855"
           , "___s": true
           , "attribs": ""
           , "id": ".event:request"
@@ -14480,7 +14480,7 @@
           , "description": "Fires when a page in the top frame is unloaded."
           , "scope": "static"
           , "longname": "WebView.event:unload"
-          , "___id": "T000002R001878"
+          , "___id": "T000002R001879"
           , "___s": true
           , "attribs": ""
           , "id": ".event:unload"
@@ -14501,7 +14501,7 @@
             , "lineno": 178
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/WebView"
             , "code": {
-                "id": "astnode100025901"
+                "id": "astnode100025910"
               , "name": "WebView"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -14558,7 +14558,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001838"
+          , "___id": "T000002R001839"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".WebView"
@@ -14647,7 +14647,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.alwaysOnTop"
-          , "___id": "T000002R002011"
+          , "___id": "T000002R002012"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".alwaysOnTop"
@@ -14680,7 +14680,7 @@
           , "description": "The appearance value changes the coloration, blur or other effects used by the native operating\n             system.  Currently this can be \"normal\", \"dark\" or \"light\".  Note this has no effect on functionality\n             and is not supported on some operating systems."
           , "scope": "static"
           , "longname": "Window.appearance"
-          , "___id": "T000002R001997"
+          , "___id": "T000002R001998"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".appearance"
@@ -14730,7 +14730,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.backgroundColor"
-          , "___id": "T000002R002008"
+          , "___id": "T000002R002009"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".backgroundColor"
@@ -14776,7 +14776,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.canBeFullscreen"
-          , "___id": "T000002R001971"
+          , "___id": "T000002R001972"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".canBeFullscreen"
@@ -14823,7 +14823,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.closeButton"
-          , "___id": "T000002R002006"
+          , "___id": "T000002R002007"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".closeButton"
@@ -14857,7 +14857,7 @@
           , "defaultvalue": "true"
           , "scope": "static"
           , "longname": "Window.frame"
-          , "___id": "T000002R001959"
+          , "___id": "T000002R001960"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".frame"
@@ -14905,7 +14905,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.height"
-          , "___id": "T000002R001993"
+          , "___id": "T000002R001994"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".height"
@@ -14952,7 +14952,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.maximizeButton"
-          , "___id": "T000002R002004"
+          , "___id": "T000002R002005"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".maximizeButton"
@@ -14985,7 +14985,7 @@
           }
           , "scope": "static"
           , "longname": "Window.maximumHeight"
-          , "___id": "T000002R002021"
+          , "___id": "T000002R002022"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".maximumHeight"
@@ -15018,7 +15018,7 @@
           }
           , "scope": "static"
           , "longname": "Window.maximumWidth"
-          , "___id": "T000002R002018"
+          , "___id": "T000002R002019"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".maximumWidth"
@@ -15054,7 +15054,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.menu"
-          , "___id": "T000002R001967"
+          , "___id": "T000002R001968"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".menu"
@@ -15101,7 +15101,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.minimizeButton"
-          , "___id": "T000002R002005"
+          , "___id": "T000002R002006"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".minimizeButton"
@@ -15134,7 +15134,7 @@
           }
           , "scope": "static"
           , "longname": "Window.minimumHeight"
-          , "___id": "T000002R002015"
+          , "___id": "T000002R002016"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".minimumHeight"
@@ -15167,7 +15167,7 @@
           }
           , "scope": "static"
           , "longname": "Window.minimumWidth"
-          , "___id": "T000002R002012"
+          , "___id": "T000002R002013"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".minimumWidth"
@@ -15214,7 +15214,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.resizable"
-          , "___id": "T000002R002007"
+          , "___id": "T000002R002008"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".resizable"
@@ -15261,7 +15261,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.state"
-          , "___id": "T000002R001973"
+          , "___id": "T000002R001974"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".state"
@@ -15314,7 +15314,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.textured"
-          , "___id": "T000002R001966"
+          , "___id": "T000002R001967"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".textured"
@@ -15361,7 +15361,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.title"
-          , "___id": "T000002R001977"
+          , "___id": "T000002R001978"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".title"
@@ -15411,7 +15411,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.toolbar"
-          , "___id": "T000002R001969"
+          , "___id": "T000002R001970"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".toolbar"
@@ -15457,7 +15457,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.visible"
-          , "___id": "T000002R002003"
+          , "___id": "T000002R002004"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".visible"
@@ -15505,7 +15505,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.width"
-          , "___id": "T000002R001989"
+          , "___id": "T000002R001990"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".width"
@@ -15551,7 +15551,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.x"
-          , "___id": "T000002R001985"
+          , "___id": "T000002R001986"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".x"
@@ -15597,7 +15597,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.y"
-          , "___id": "T000002R001978"
+          , "___id": "T000002R001979"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".y"
@@ -15640,7 +15640,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.bringToFront"
-          , "___id": "T000002R002026"
+          , "___id": "T000002R002027"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".bringToFront"
@@ -15681,7 +15681,7 @@
           ]
           , "scope": "static"
           , "longname": "Window.destroy"
-          , "___id": "T000002R002024"
+          , "___id": "T000002R002025"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".destroy"
@@ -15711,7 +15711,7 @@
           , "description": "Fires when the window looses focus from the mouse or keyboard."
           , "scope": "static"
           , "longname": "Window.event:blur"
-          , "___id": "T000002R001935"
+          , "___id": "T000002R001936"
           , "___s": true
           , "attribs": ""
           , "id": ".event:blur"
@@ -15738,7 +15738,7 @@
           , "description": "Fires when the window is destroyed and resources are released, this is \n             fired just before the window is closed."
           , "scope": "static"
           , "longname": "Window.event:close"
-          , "___id": "T000002R001931"
+          , "___id": "T000002R001932"
           , "___s": true
           , "attribs": ""
           , "id": ".event:close"
@@ -15765,7 +15765,7 @@
           , "description": "Fires after the window has been destroyed and all resources have been\n             released.  Do not refer to the window during this event."
           , "scope": "static"
           , "longname": "Window.event:closed"
-          , "___id": "T000002R001940"
+          , "___id": "T000002R001941"
           , "___s": true
           , "attribs": ""
           , "id": ".event:closed"
@@ -15792,7 +15792,7 @@
           , "description": "Fires when the window is entering into full screen mode."
           , "scope": "static"
           , "longname": "Window.event:enter-fullscreen"
-          , "___id": "T000002R001932"
+          , "___id": "T000002R001933"
           , "___s": true
           , "attribs": ""
           , "id": ".event:enter-fullscreen"
@@ -15819,7 +15819,7 @@
           , "description": "Fires when the window gains focus from the mouse or keyboard."
           , "scope": "static"
           , "longname": "Window.event:focus"
-          , "___id": "T000002R001934"
+          , "___id": "T000002R001935"
           , "___s": true
           , "attribs": ""
           , "id": ".event:focus"
@@ -15846,7 +15846,7 @@
           , "description": "Fires when the window is exiting into full screen mode."
           , "scope": "static"
           , "longname": "Window.event:leave-fullscreen"
-          , "___id": "T000002R001933"
+          , "___id": "T000002R001934"
           , "___s": true
           , "attribs": ""
           , "id": ".event:leave-fullscreen"
@@ -15873,7 +15873,7 @@
           , "description": "Fires when the state of the window becomes maximized, or if the window\n             is \"zoomed\" (e.g., made to its largest window size available) on operating\n             systems without the concept of maximize.  Note this does NOT mean fullscreen\n             and does not fire during fullscreen transitions."
           , "scope": "static"
           , "longname": "Window.event:maximize"
-          , "___id": "T000002R001958"
+          , "___id": "T000002R001959"
           , "___s": true
           , "attribs": ""
           , "id": ".event:maximize"
@@ -15900,7 +15900,7 @@
           , "description": "Fires when the state of the window becomes minimized."
           , "scope": "static"
           , "longname": "Window.event:minimize"
-          , "___id": "T000002R001936"
+          , "___id": "T000002R001937"
           , "___s": true
           , "attribs": ""
           , "id": ".event:minimize"
@@ -15927,7 +15927,7 @@
           , "description": "Fires when the window is moved by the user through the title bar."
           , "scope": "static"
           , "longname": "Window.event:move"
-          , "___id": "T000002R001938"
+          , "___id": "T000002R001939"
           , "___s": true
           , "attribs": ""
           , "id": ".event:move"
@@ -15954,7 +15954,7 @@
           , "description": "Fires when the window is resized by the user."
           , "scope": "static"
           , "longname": "Window.event:resize"
-          , "___id": "T000002R001939"
+          , "___id": "T000002R001940"
           , "___s": true
           , "attribs": ""
           , "id": ".event:resize"
@@ -15981,7 +15981,7 @@
           , "description": "Fires when the state of the window goes from being minimized into a new state."
           , "scope": "static"
           , "longname": "Window.event:restore"
-          , "___id": "T000002R001937"
+          , "___id": "T000002R001938"
           , "___s": true
           , "attribs": ""
           , "id": ".event:restore"
@@ -16002,7 +16002,7 @@
             , "lineno": 25
             , "path": "/Users/trevorlinton/Projects/foundation-site/.tint/modules/Window"
             , "code": {
-                "id": "astnode100027615"
+                "id": "astnode100027624"
               , "name": "Window"
               , "type": "FunctionDeclaration"
               , "paramnames": [
@@ -16049,7 +16049,7 @@
           , "kind": "constructs"
           , "scope": "static"
           , "params": []
-          , "___id": "T000002R001923"
+          , "___id": "T000002R001924"
           , "___s": true
           , "attribs": "<span class=\"type-signature\">(static) </span>"
           , "id": ".Window"
