@@ -34,6 +34,7 @@ if(process.env.NODE_ENV === 'production') {
     res.header('Strict-Transport-Security','max-age=500');
     res.header('X-Frame-Options','DENY');
     res.header('Server','');
+    res.header('Via','');
     next();
   });
 }
