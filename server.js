@@ -30,12 +30,12 @@ if(process.env.NODE_ENV === 'production') {
       next();
     }
   });
+  app.all('*',function(req,res,next) {
+    res.header('Strict-Transport-Security','max-age=500');
+    res.header('X-Frame-Options','DENY');
+    next();
+  });
 }
-app.all('*',function(req,res,next) {
-  res.header('Strict-Transport-Security','max-age=500');
-  res.header('X-Frame-Options','DENY');
-  next();
-})
 app.use(express.static('.build'));
 app.post('/api/order', function(req, res) {
   var details = req.body;
