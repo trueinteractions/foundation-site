@@ -16,11 +16,22 @@ var payments = new AuthorizeNet({
 var mail = new Mailin('https://api.sendinblue.com/v2.0', process.env.MAIL_SERVER_API);
 
 app.use(compress());
-app.use(express.static('.build'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'jade');
-
+// for PCI DDS, not sure why they care..
+app.disable('x-powered-by');
+/// this must come first.
+if(process.env.NODE_ENV === 'production') {
+  app.all('*',function(req,res,next){
+    if(req.headers['x-forwarded-proto'] !== 'https') {
+      res.redirect('https://www.trueinteractions.com'+req.url);
+    } else {
+      next();
+    }
+  });
+}
+app.use(express.static('.build'));
 app.post('/api/order', function(req, res) {
   var details = req.body;
 
