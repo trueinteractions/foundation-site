@@ -32,6 +32,7 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 app.all('*',function(req,res,next) {
+  res.header('Strict-Transport-Security','max-age=500');
   res.header('X-Frame-Options','DENY');
   next();
 })
