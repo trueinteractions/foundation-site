@@ -31,6 +31,10 @@ if(process.env.NODE_ENV === 'production') {
     }
   });
 }
+app.all('*',function(req,res,next) {
+  res.header('X-Frame-Options','DENY');
+  next();
+})
 app.use(express.static('.build'));
 app.post('/api/order', function(req, res) {
   var details = req.body;
