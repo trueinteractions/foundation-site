@@ -47,6 +47,7 @@ function deny405(req, res, next) {
 }
 
 // more pci dss req.
+app.options('*', deny405);
 app.checkout('*', deny405);
 app.connect('*', deny405);
 app.copy('*', deny405);
