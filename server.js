@@ -37,6 +37,36 @@ if(process.env.NODE_ENV === 'production') {
     next();
   });
 }
+
+function deny405(req, res, next) {
+  res.status(405).send('Method Not Allowed');
+  res.end();
+}
+
+// more pci dss req.
+app.checkout('*', deny405);
+app.connect('*', deny405);
+app.copy('*', deny405);
+app.delete('*', deny405);
+app.lock('*', deny405);
+app.merge('*', deny405);
+app.mkactivity('*', deny405);
+app.mkcol('*', deny405);
+app.move('*', deny405);
+app['m-search']('*', deny405);
+app.notify('*', deny405);
+app.patch('*', deny405);
+app.propfind('*', deny405);
+app.proppatch('*', deny405);
+app.purge('*', deny405);
+app.report('*', deny405);
+app.search('*', deny405);
+app.subscribe('*', deny405);
+app.trace('*', deny405);
+app.unlock('*', deny405);
+app.unsubscribe('*', deny405);
+// end more pci req.
+
 app.use(express.static('.build'));
 app.post('/api/order', function(req, res) {
   var details = req.body;
