@@ -25,7 +25,10 @@ app.disable('x-powered-by');
 if(process.env.NODE_ENV === 'production') {
   app.all('*',function(req,res,next){
     if(req.headers['x-forwarded-proto'] !== 'https') {
-      res.redirect('https://www.trueinteractions.com'+req.url);
+      res.header('Strict-Transport-Security','max-age=500');
+      res.header('X-Frame-Options','DENY');
+      res.header('Server','');
+      res.redirect(301, 'https://www.trueinteractions.com'+req.url);
     } else {
       next();
     }
