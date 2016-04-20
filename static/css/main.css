@@ -231,8 +231,8 @@ h1,h2,h3,h4,h5 {
 
 .product-matrix-section {
 	width:100%;
-	padding: 0.1rem 2rem;
-	background-color: rgba(244,232,211,0.25);
+	padding: 5rem 2rem;
+	background-color: #fff2e7;
 }
 
 .product-matrix-section h2 {
