@@ -1752,6 +1752,12 @@
     , "url": "System.html#takeSnapshotOfWindow"
   }
   , {
+      "title": "System.tmpDirectory"
+    , "description": "Returns the directory path for temporary files that could potentially\n             be removed upon restart."
+    , "kind": "method"
+    , "url": "System.html#tmpDirectory"
+  }
+  , {
       "title": "System.trashFile"
     , "description": "Moves the file or directory to the recycling bin or trash on the OS."
     , "kind": "method"
