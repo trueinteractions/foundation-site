@@ -160,6 +160,9 @@ app.post('/api/order', function(req, res) {
 
 });
 
+app.get('/docs', function(req, res) {
+  res.redirect('/docs/tutorial-gettingstarted.html');
+});
 
 // MUST BE LAST.
 app.use(function(req, res, next) {
