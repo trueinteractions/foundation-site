@@ -164,6 +164,10 @@ app.get('/docs', function(req, res) {
   res.redirect('/docs/tutorial-gettingstarted.html');
 });
 
+app.get('/tint2/docs', function(req, res) {
+  res.redirect('/docs/tutorial-gettingstarted.html');
+});
+
 // MUST BE LAST.
 app.use(function(req, res, next) {
   res.status(404).send('Sorry cant find that!');
